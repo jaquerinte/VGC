@@ -2,6 +2,7 @@ package com.jsadevtech.jsa.vgc;
 
 import android.app.Activity;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ public class main_screen extends Activity {
 
         textoinicio = (TextView) findViewById(R.id.texto);
         Button bt = (Button) findViewById(R.id.buttonNotifications);
+        Button buttonInvitados =(Button) findViewById(R.id.buttonInvitados);
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         bt.setOnClickListener(new OnClickListener() {
 
@@ -38,6 +40,12 @@ public class main_screen extends Activity {
 
             }
 
+        });
+        buttonInvitados.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this ,invitados_screen.class ));
+            }
         });
 
 
