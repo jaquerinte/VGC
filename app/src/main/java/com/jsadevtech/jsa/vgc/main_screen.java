@@ -26,6 +26,8 @@ public class main_screen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
+
+
         textoinicio = (TextView) findViewById(R.id.texto);
         Button bt = (Button) findViewById(R.id.buttonNotifications);
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
