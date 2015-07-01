@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VGC</string>
+
+    <string name="hello_world">Hola mundo con ñ</string>
+    <string name="action_settings">Settings</string>
+    <string name="getNotifications">Descargar notificaciones</string>
+    <string name="invitadosEvento">Invitados</string>
+    <string name="dondeComprar">Donde Puedes Comprar?</string>
+    <string name="horarios">Horarios en el envento</string>
+    <string name="planoRecinto">Plano del recinto</string>
+    <string name="imagenPrincipal">iconoPrincipal</string>
+</resources>
