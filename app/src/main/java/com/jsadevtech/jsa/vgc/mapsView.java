@@ -28,6 +28,9 @@ public class mapsView extends FragmentActivity implements OnMapReadyCallback {
         LatLng ifa = new LatLng(38.296248,-0.575816);
         map.setMyLocationEnabled(true);
         map.addMarker(new MarkerOptions().position(ifa).title("IFA, donde se celebra la VGC"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(ifa));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(ifa,10));
+        //map.moveCamera(CameraUpdateFactory.newLatLng(ifa));
+
+
     }
 }
