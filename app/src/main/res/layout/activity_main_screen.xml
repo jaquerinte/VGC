@@ -86,7 +86,10 @@
         android:id="@+id/buttonMap"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/buttonPlano"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/buttonNotifications"
+        android:layout_alignStart="@+id/buttonNotifications"
+        android:layout_alignRight="@+id/buttonNotifications"
+        android:layout_alignEnd="@+id/buttonNotifications" />
 
 
 </RelativeLayout>
