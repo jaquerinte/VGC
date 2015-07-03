@@ -9,4 +9,5 @@
     <string name="horarios">Horarios en el envento</string>
     <string name="planoRecinto">Plano del recinto</string>
     <string name="imagenPrincipal">iconoPrincipal</string>
+    <string name="title_activity_maps_view">Map</string>
 </resources>

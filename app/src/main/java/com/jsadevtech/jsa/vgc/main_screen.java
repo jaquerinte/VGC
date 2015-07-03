@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.StrictMode;
-import android.support.v7.app.ActionBarActivity;
+//import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,6 +38,7 @@ public class main_screen extends Activity {
         Button buttonHorarios =(Button) findViewById(R.id.buttonHoraio);
         Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
+        Button buttonMapa =(Button)findViewById(R.id.buttonMap);
 
         //fin de buttons
 
@@ -77,6 +78,12 @@ public class main_screen extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main_screen.this,plano_screen.class));
+            }
+        });
+        buttonMapa.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this,mapsView.class));
             }
         });
 

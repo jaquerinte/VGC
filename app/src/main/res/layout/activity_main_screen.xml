@@ -21,11 +21,11 @@
         android:layout_height="wrap_content"
         android:text="@string/getNotifications"
         android:id="@+id/buttonNotifications"
-        android:layout_below="@+id/buttonPlano"
-        android:layout_alignLeft="@+id/buttonComprar"
-        android:layout_alignStart="@+id/buttonComprar"
-        android:layout_marginTop="50dp"
-        android:width="@android:dimen/thumbnail_width" />
+        android:width="@android:dimen/thumbnail_width"
+        android:layout_below="@+id/buttonMap"
+        android:layout_alignLeft="@+id/buttonPlano"
+        android:layout_alignStart="@+id/buttonPlano"
+        android:layout_marginTop="25dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:clickable="false"
         android:layout_below="@+id/iconoprincipal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
 
     <Button
@@ -46,7 +46,7 @@
         android:layout_below="@+id/buttonInvitados"
         android:layout_alignRight="@+id/buttonComprar"
         android:layout_alignEnd="@+id/buttonComprar"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
 
     <Button
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:text="@string/dondeComprar"
         android:id="@+id/buttonComprar"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:layout_below="@+id/buttonHoraio"
         android:layout_centerHorizontal="true"
         android:width="@android:dimen/thumbnail_width" />
@@ -66,7 +66,7 @@
         android:id="@+id/buttonPlano"
         android:layout_below="@+id/buttonComprar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
 
     <ImageView
@@ -79,6 +79,14 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Como Llegar"
+        android:id="@+id/buttonMap"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/buttonPlano"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
