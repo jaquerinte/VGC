@@ -7,7 +7,7 @@ android {
         encoding "UTF-8"
     }
     defaultConfig {
-        applicationId "com.example.jsa.vgc"
+        applicationId "com.jsadevtech.jsa.vgc"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
