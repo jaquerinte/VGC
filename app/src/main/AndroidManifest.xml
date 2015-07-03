@@ -23,8 +23,20 @@
         <activity
             android:name=".invitados_screen"
             android:label="VGC Invitados">
-
         </activity>
+
+        <activity android:name=".horarios_screen"
+            android:label="Horarios VGC">
+        </activity>
+
+        <activity android:name=".plano_screen"
+            android:label="Plano VGC">
+        </activity>
+
+        <activity android:name=".comprar_screen"
+            android:label="Donde Comprar">
+        </activity>
+
     </application>
 
 </manifest>

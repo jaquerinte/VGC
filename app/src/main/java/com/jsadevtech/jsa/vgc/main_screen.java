@@ -27,12 +27,22 @@ public class main_screen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
-
+        //declaracion de notificaciones
+        nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        //fin de declaracion de notificaciones
 
         textoinicio = (TextView) findViewById(R.id.texto);
+        //buttons declaracion
         Button bt = (Button) findViewById(R.id.buttonNotifications);
         Button buttonInvitados =(Button) findViewById(R.id.buttonInvitados);
-        nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        Button buttonHorarios =(Button) findViewById(R.id.buttonHoraio);
+        Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
+        Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
+
+        //fin de buttons
+
+
+        //enlace de botonos
         bt.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
@@ -41,13 +51,36 @@ public class main_screen extends Activity {
             }
 
         });
+
         buttonInvitados.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_screen.this ,invitados_screen.class ));
+                startActivity(new Intent(main_screen.this, invitados_screen.class));
+            }
+        });
+        buttonHorarios.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this,horarios_screen.class));
+
             }
         });
 
+        buttonComprar.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this,comprar_screen.class));
+            }
+        });
+
+        buttonPlano.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this,plano_screen.class));
+            }
+        });
+
+        //FIn enlace bottones
 
 
              // textoinicio.setText(Time.fechaHoraActual());
