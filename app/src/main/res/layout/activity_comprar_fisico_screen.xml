@@ -1,0 +1,16 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/fondo">
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/map"
+    tools:context="com.jsadevtech.jsa.vgc.comprar_fisico_screen"
+    android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+
+
+
+</ScrollView>

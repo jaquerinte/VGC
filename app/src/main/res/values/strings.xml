@@ -11,4 +11,5 @@
     <string name="imagenPrincipal">iconoPrincipal</string>
     <string name="title_activity_maps_view">Map</string>
     <string name="action_about">Acerca de</string>
+    <string name="title_activity_comprar_fisico">Map</string>
 </resources>
