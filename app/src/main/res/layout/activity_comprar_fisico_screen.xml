@@ -1,16 +1,54 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView"
+    android:background="@drawable/fondo">
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/fondo">
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:id="@+id/map"
-    tools:context="com.jsadevtech.jsa.vgc.comprar_fisico_screen"
-    android:name="com.google.android.gms.maps.SupportMapFragment" />
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_map_height" android:id="@+id/map"
+        tools:context="com.jsadevtech.jsa.vgc.comprar_fisico_screen"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon"
+
+        android:layout_marginTop="20dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="46dp"
+        android:id="@+id/imagen_distribuidor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/venta_basic"
+            android:id="@+id/texto_distibuidoror"
+            android:layout_alignTop="@+id/imagen_distribuidor"
+            android:layout_toRightOf="@+id/imagen_distribuidor"
+            android:layout_toEndOf="@+id/imagen_distribuidor" />
+    </RelativeLayout>
 
 
-
-
-
-</ScrollView>
+</RelativeLayout>
+    </ScrollView>

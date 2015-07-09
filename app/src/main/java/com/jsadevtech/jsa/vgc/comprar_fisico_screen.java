@@ -1,7 +1,9 @@
 package com.jsadevtech.jsa.vgc;
 
+import android.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,6 +21,8 @@ public class comprar_fisico_screen extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comprar_fisico_screen);
+        Fragment fragmento =getFragmentManager().findFragmentById(R.id.map);
+
         setUpMapIfNeeded();
     }
 
@@ -46,6 +50,10 @@ public class comprar_fisico_screen extends FragmentActivity {
     private void setUpMap() {
 
         LatLng ifaPosition = new LatLng(38.296248,-0.575816);
+
+
+
+
         Marker ifa = mMap.addMarker(new MarkerOptions()
                         .position(ifaPosition)
                         .title("VGC 2015")
