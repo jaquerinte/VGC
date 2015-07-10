@@ -47,13 +47,6 @@
             android:label="Donde Comprar" >
         </activity>
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/google_maps_key" />
-
         <activity
             android:name=".mapsView"
             android:label="@string/title_activity_maps_view" >
@@ -62,6 +55,12 @@
             android:name=".comprar_fisico_screen"
             android:label="@string/title_activity_comprar_fisico" >
         </activity>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA9hAPI5Y-VdhhXqSCm_p9qqZEU9cgcLFU" />
     </application>
 
 </manifest>
