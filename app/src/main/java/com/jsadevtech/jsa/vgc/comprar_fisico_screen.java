@@ -63,7 +63,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                         .position(latMonografic)
                         .title("Monografic")
                         .snippet("Comics y merchandising")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markervgc))
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markermono))
 
 
         );
@@ -71,7 +71,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                         .position(latFnac)
                         .title("FNAC")
                         .snippet("Toda la cultura y la tecnologia")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markervgc))
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markerfnac))
 
 
         );
@@ -79,7 +79,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                         .position(latAteneo)
                         .title("Ateneo")
                         .snippet("Comics")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markervgc))
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markerate))
 
 
         );
@@ -87,7 +87,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                         .position(latComixcity)
                         .title("Comix City")
                         .snippet("")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markervgc))
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markercomix))
 
 
         );
@@ -95,7 +95,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                         .position(latHomelands)
                         .title("Homelands")
                         .snippet("Tienda de ocio alternativo")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markervgc))
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markerhome))
 
 
         );
@@ -103,7 +103,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                         .position(latSpiderland)
                         .title("Spiderland")
                         .snippet("Comics")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markervgc))
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markersp))
 
 
         );

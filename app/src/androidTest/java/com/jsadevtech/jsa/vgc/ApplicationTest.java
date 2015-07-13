@@ -1,4 +1,4 @@
-package com.example.jsa.vgc;
+package com.jsadevtech.jsa.vgc;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
