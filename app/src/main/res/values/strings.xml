@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">VGC</string>
-
-    <string name="hello_world">Hola mundo con ñ</string>
     <string name="action_settings">Settings</string>
     <string name="getNotifications">Descargar notificaciones</string>
     <string name="invitadosEvento">Invitados</string>
@@ -14,4 +12,6 @@
     <string name="title_activity_comprar_fisico">Map</string>
     <!-- strings de los lugares de venta-->
     <string name="venta_basic"> Aqui mostramos la locacizacion de los puntos de venta de las entradas para la VGC pincha sobre ellos para obtener mas informacion</string>
+
+    <string name="facebook_app_id">1440183462973613</string>
 </resources>

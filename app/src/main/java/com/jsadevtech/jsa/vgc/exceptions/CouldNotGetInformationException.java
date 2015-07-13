@@ -10,6 +10,6 @@ public class CouldNotGetInformationException extends Exception
 
     public String getMessage()
     {
-        return "ERROR: No ha sido posible obtener la informacion de los eventos.\n";
+        return "ERROR: No ha sido posible obtener la informacion.\n";
     }
 }

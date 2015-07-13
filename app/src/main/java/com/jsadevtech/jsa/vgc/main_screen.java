@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-
+//import com.facebook.FacebookSdk;
 import java.util.Vector;
 
 
@@ -40,10 +40,15 @@ public class main_screen extends Activity {
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
 
+
+        textoinicio.setText(Time.fechaHoraActual());
         //fin de buttons
 
+        //FacebookSdk.sdkInitialize(getApplicationContext());
+        // Initialize the SDK before executing any other operations,
+        // especially, if you're using Facebook UI elements.
 
-        //enlace de botonos
+        //enlace de botones
         bt.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
@@ -96,7 +101,7 @@ public class main_screen extends Activity {
          }
 
 
-    public void getData()
+    private void getData()
     {
         Vector<Evento> aux;
         String result = "RESULTADOS: \n";
