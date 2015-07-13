@@ -18,7 +18,7 @@ public class comprar_online_screen extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_horarios_screen);
+        setContentView(R.layout.activity_comprar_online);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
 
         paginaIfa = (WebView) findViewById(R.id.webifa);
@@ -29,7 +29,7 @@ public class comprar_online_screen extends Activity{
         setings.setJavaScriptEnabled(true);
 
         //url
-        paginaIfa.loadUrl("http://google.com");
+        paginaIfa.loadUrl("http://www.vgcomic.com/entradas/");
 
         //forzamos el webView para que abra los enlaces internos de la APP
         paginaIfa.setWebViewClient(new WebViewClient());

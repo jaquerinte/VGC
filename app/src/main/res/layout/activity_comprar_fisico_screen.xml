@@ -1,15 +1,8 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/scrollView"
-    android:background="@drawable/fondo">
-
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-   >
+    android:background="@drawable/fondo">
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
@@ -46,9 +39,9 @@
             android:id="@+id/texto_distibuidoror"
             android:layout_alignTop="@+id/imagen_distribuidor"
             android:layout_toRightOf="@+id/imagen_distribuidor"
-            android:layout_toEndOf="@+id/imagen_distribuidor" />
+            android:layout_toEndOf="@+id/imagen_distribuidor"
+            android:textSize="16sp"/>
     </RelativeLayout>
 
 
 </RelativeLayout>
-    </ScrollView>
