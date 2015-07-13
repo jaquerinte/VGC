@@ -23,14 +23,14 @@ import java.util.ArrayList;
 public class InvitadoBD
 {
     private static final String phpFile = "http://jsadevtech.site40.net/getInvitados.php";
-    private static final String phpFileTipos = "http://jsadevtech.site40.net/getInvitadosTipos.php";
-    private static final String phpFileByTipo = "http://jsadevtech.site40.net/getInvitadosbYTipos.php";
+    private static final String phpFileTipos = "http://jsadevtech.site40.net/getInvitadosTipo.php";
+    private static final String phpFileByTipo = "http://jsadevtech.site40.net/getInvitadosByTipo.php?argument1=";
 
     public InvitadoBD()
     {}
 
     public static ArrayList<Invitado> getAllInvitados() throws ConnectionFailedException, CouldNotConvertFormatException,
-            CouldNotGetInformationException
+            CouldNotGetInformationException, JSONException
     {
         ArrayList<Invitado> resultado;
         try
@@ -44,6 +44,8 @@ public class InvitadoBD
         { throw new CouldNotConvertFormatException(); }
         catch(CouldNotGetInformationException ex)
         { throw new CouldNotGetInformationException(); }
+        catch(JSONException e)
+        {throw e;}
     }
 
     public static ArrayList<String> getTipos() throws ConnectionFailedException, CouldNotConvertFormatException,
@@ -64,7 +66,7 @@ public class InvitadoBD
     }
 
     public static ArrayList<Invitado> getInvitadosByTipo(String tipo) throws ConnectionFailedException, CouldNotConvertFormatException,
-            CouldNotGetInformationException
+            CouldNotGetInformationException, JSONException
     {
         ArrayList<Invitado> resultado;
         try
@@ -78,10 +80,12 @@ public class InvitadoBD
         { throw new CouldNotConvertFormatException(); }
         catch(CouldNotGetInformationException ex)
         { throw new CouldNotGetInformationException(); }
+        catch(JSONException e)
+        {throw e;}
     }
 
     private static ArrayList<Invitado> getDatos(String connectionUrl) throws ConnectionFailedException, CouldNotConvertFormatException,
-            CouldNotGetInformationException
+            CouldNotGetInformationException, JSONException
     {
         ArrayList<Invitado> resultado = new ArrayList<>();
         String aux;
@@ -92,6 +96,7 @@ public class InvitadoBD
             URL url = new URL(connectionUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             input = new BufferedInputStream(connection.getInputStream());
+
         }
         catch(Exception e)
         { throw new ConnectionFailedException(); }
@@ -132,7 +137,9 @@ public class InvitadoBD
             }
         }
         catch (Exception e)
-        { throw new CouldNotGetInformationException(); }
+        { //throw new CouldNotGetInformationException();
+            throw e;
+        }
 
         return resultado;
     }
@@ -149,6 +156,7 @@ public class InvitadoBD
             URL url = new URL(connectionUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             input = new BufferedInputStream(connection.getInputStream());
+
         }
         catch(Exception e)
         { throw new ConnectionFailedException(); }

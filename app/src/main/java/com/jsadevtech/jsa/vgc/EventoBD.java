@@ -24,7 +24,6 @@ public class EventoBD
 {
     private static final String phpFile = "http://jsadevtech.site40.net/getEventos.php";
     private static final String phpFileFromFecha = "http://jsadevtech.site40.net/getEventosFromFecha.php?argument1=";
-    public static final int N_COLUMNAS = 6; //ID, Nombre, Lugar, Persona destacada, hora inicio, hora fin
 
     public EventoBD()
     {}

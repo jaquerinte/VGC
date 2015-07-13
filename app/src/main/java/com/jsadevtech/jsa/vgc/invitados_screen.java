@@ -5,6 +5,7 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -21,7 +22,9 @@ import java.util.List;
  *
  * clase encargada de manejar la pantalla de invitados
  */
-public class invitados_screen extends ListActivity {
+public class invitados_screen extends Activity {
+    // more efficient than HashMap for mapping integers to objects
+    SparseArray<Group> groups = new SparseArray<Group>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,23 +32,11 @@ public class invitados_screen extends ListActivity {
         setContentView(R.layout.activity_invitados_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
 
-        ListView invitados = (ListView) findViewById(R.id.invitadosList);
-
-        ArrayList<String>  invitadosList = new ArrayList<>();
-
-        try {
-            invitadosList = InvitadoBD.getTipos();
-        }
-        catch(Exception e)
-        {
-            invitadosList.add("ERROR: No se ha podido obtener la lista de invitados.");
-        }
-
-        InvitadosAdapter adapter = new InvitadosAdapter(this, invitadosList);
-        setListAdapter(adapter);
-
-
-
+        createData();
+        ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
+        InvitadosAdapter adapter = new InvitadosAdapter(this,
+                groups);
+        listView.setAdapter(adapter);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,31 +61,33 @@ public class invitados_screen extends ListActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void createData()
+    {
+        ArrayList<String> tipoInvitados = new ArrayList<>();
+        String error="";
+        try {
+            tipoInvitados  = InvitadoBD.getTipos();
+        }
+        catch(Exception e)
+        {
+            tipoInvitados.add("ERROR: No se ha podido recuperar la informacion.");
+            error = e.getMessage();
+        }
 
-
-    private class StableArrayAdapter extends ArrayAdapter<String> {
-
-        HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
-
-        public StableArrayAdapter(Context context, int textViewResourceId,
-                                  List<String> objects) {
-            super(context, textViewResourceId, objects);
-            for (int i = 0; i < objects.size(); ++i) {
-                mIdMap.put(objects.get(i), i);
+        for(int i=0; i<tipoInvitados.size(); i++) {
+            Group group = new Group(tipoInvitados.get(i));
+            ArrayList<Invitado> invitados = new ArrayList<>();
+            try {
+                invitados = InvitadoBD.getInvitadosByTipo(tipoInvitados.get(i));
+            } catch (Exception e)
+            { invitados.add(new Invitado(e.getMessage(), "", "", "", "", "")); }
+            for(int j=0; j<invitados.size(); j++)
+            {
+                group.children.add(invitados.get(j).getNombre());
             }
-        }
+            groups.append(i, group);
 
-        @Override
-        public long getItemId(int position) {
-            String item = getItem(position);
-            return mIdMap.get(item);
         }
-
-        @Override
-        public boolean hasStableIds() {
-            return true;
-        }
-
     }
 
 }
