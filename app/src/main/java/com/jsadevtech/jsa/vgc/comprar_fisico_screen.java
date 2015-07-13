@@ -58,6 +58,7 @@ public class comprar_fisico_screen extends FragmentActivity {
         LatLng latHomelands =new LatLng(38.268102, -0.694669);
         LatLng latSpiderland =new LatLng(38.263011,-0.702073);
         //fin de las latitudes
+        mMap.setMyLocationEnabled(true);
         //inicio de los markers
         final Marker monografic = mMap.addMarker(new MarkerOptions()
                         .position(latMonografic)
