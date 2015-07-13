@@ -3,6 +3,7 @@ package com.jsadevtech.jsa.vgc;
 import android.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 //import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -58,7 +59,7 @@ public class comprar_fisico_screen extends FragmentActivity {
         LatLng latSpiderland =new LatLng(38.263011,-0.702073);
         //fin de las latitudes
         //inicio de los markers
-        Marker monografic = mMap.addMarker(new MarkerOptions()
+        final Marker monografic = mMap.addMarker(new MarkerOptions()
                         .position(latMonografic)
                         .title("Monografic")
                         .snippet("Comics y merchandising")
@@ -66,7 +67,7 @@ public class comprar_fisico_screen extends FragmentActivity {
 
 
         );
-        Marker fnac = mMap.addMarker(new MarkerOptions()
+       final Marker fnac = mMap.addMarker(new MarkerOptions()
                         .position(latFnac)
                         .title("FNAC")
                         .snippet("Toda la cultura y la tecnologia")
@@ -74,7 +75,7 @@ public class comprar_fisico_screen extends FragmentActivity {
 
 
         );
-        Marker ateneo = mMap.addMarker(new MarkerOptions()
+        final Marker ateneo = mMap.addMarker(new MarkerOptions()
                         .position(latAteneo)
                         .title("Ateneo")
                         .snippet("Comics")
@@ -82,7 +83,7 @@ public class comprar_fisico_screen extends FragmentActivity {
 
 
         );
-        Marker comixcity = mMap.addMarker(new MarkerOptions()
+       final Marker comixcity = mMap.addMarker(new MarkerOptions()
                         .position(latComixcity)
                         .title("Comix City")
                         .snippet("")
@@ -90,7 +91,7 @@ public class comprar_fisico_screen extends FragmentActivity {
 
 
         );
-        Marker homelands = mMap.addMarker(new MarkerOptions()
+        final Marker homelands = mMap.addMarker(new MarkerOptions()
                         .position(latHomelands)
                         .title("Homelands")
                         .snippet("Tienda de ocio alternativo")
@@ -98,7 +99,7 @@ public class comprar_fisico_screen extends FragmentActivity {
 
 
         );
-        Marker spiderland = mMap.addMarker(new MarkerOptions()
+        final Marker spiderland = mMap.addMarker(new MarkerOptions()
                         .position(latSpiderland)
                         .title("Spiderland")
                         .snippet("Comics")
@@ -109,6 +110,46 @@ public class comprar_fisico_screen extends FragmentActivity {
 
 
         //fin de los markers
+
+        //incio de los liseners de los markers
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                TextView textoInformativo = (TextView) findViewById(R.id.texto_distibuidoror);
+            @Override
+            public boolean onMarkerClick(final Marker marker) {
+
+                if (marker.equals(monografic))
+                {
+                    textoInformativo.setText("Pinchado en monografic");
+
+                    return true;
+                }
+               else if(marker.equals(fnac)){
+                    textoInformativo.setText("Pinchado en FNAC");
+                    return true;
+                }
+                else if(marker.equals(ateneo)){
+                    textoInformativo.setText("Pinchado en Ateneo");
+                    return true;
+                }
+                else if(marker.equals(comixcity)){
+                    textoInformativo.setText("Pinchado en ComixCity");
+                    return true;
+                }
+                else if(marker.equals(homelands)){
+                    textoInformativo.setText("Pinchado en HomeLands");
+                    return true;
+                }
+                else if(marker.equals(spiderland)){
+                    textoInformativo.setText("Pinchado en Spiderlan");
+                    return true;
+                }
+
+                else {
+                return false;
+                }
+            }
+        });
+
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ifaPosition, 10));
         //monografic.showInfoWindow();
     }
