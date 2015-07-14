@@ -8,10 +8,16 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckedTextView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+/*
+* Created by Shirkam on 14/07/2015
+*
+* Clase que hace de adaptador de datos para una expandable list view.
+* en concreto, trabaja con invitados.
+ */
 public class InvitadosAdapter extends BaseExpandableListAdapter {
 
     private final SparseArray<Group> groups;
@@ -34,6 +40,7 @@ public class InvitadosAdapter extends BaseExpandableListAdapter {
         return 0;
     }
 
+    //Metodo que devuelve el hijo pedido de un grupo "dado".
     @Override
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
@@ -44,6 +51,9 @@ public class InvitadosAdapter extends BaseExpandableListAdapter {
         }
         text = (TextView) convertView.findViewById(R.id.textView1);
         text.setText(children);
+
+
+
         convertView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +103,7 @@ public class InvitadosAdapter extends BaseExpandableListAdapter {
         Group group = (Group) getGroup(groupPosition);
         ((CheckedTextView) convertView).setText(group.string);
         ((CheckedTextView) convertView).setChecked(isExpanded);
+
         return convertView;
     }
 

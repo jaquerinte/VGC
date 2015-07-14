@@ -6,7 +6,7 @@
     android:clickable="true"
     android:orientation="vertical"
     android:paddingLeft="40dp"
-    tools:context=".MainActivity" >
+    tools:context=".invitados_screen" >
 
     <TextView
         android:id="@+id/textView1"
@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:drawablePadding="5dp"
         android:gravity="center_vertical"
-        android:textSize="32px"
-        android:textStyle="bold" >
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center">
     </TextView>
 
     <View
