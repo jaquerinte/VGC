@@ -18,8 +18,7 @@
         android:id="@+id/buttonNotifications"
         android:width="@android:dimen/thumbnail_width"
         android:layout_below="@+id/buttonMap"
-        android:layout_alignLeft="@+id/buttonPlano"
-        android:layout_alignStart="@+id/buttonPlano"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp" />
 
     <Button
@@ -33,16 +32,21 @@
         android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
 
+    <!-- TODO Volver a poner este en visible -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/horarios"
         android:id="@+id/buttonHoraio"
+        android:enabled="false"
+        android:visibility="gone"
         android:layout_below="@+id/buttonInvitados"
         android:layout_alignRight="@+id/buttonComprar"
         android:layout_alignEnd="@+id/buttonComprar"
         android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
+
+    <!-- TODO Cambiar esto mas adelante para que este bajo del boton de horario-->
 
     <Button
         android:layout_width="wrap_content"
@@ -50,16 +54,19 @@
         android:text="@string/dondeComprar"
         android:id="@+id/buttonComprar"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/buttonHoraio"
+        android:layout_below="@+id/buttonInvitados"
         android:layout_centerHorizontal="true"
         android:width="@android:dimen/thumbnail_width" />
 
+    <!-- TODO Volver a ponerlo enabled -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/planoRecinto"
         android:id="@+id/buttonPlano"
         android:layout_below="@+id/buttonComprar"
+        android:enabled="false"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
@@ -74,17 +81,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <!-- TODO Volver a ponerlo debajo del plano del recinto -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Como Llegar"
         android:id="@+id/buttonMap"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/buttonPlano"
-        android:layout_alignLeft="@+id/buttonNotifications"
-        android:layout_alignStart="@+id/buttonNotifications"
-        android:layout_alignRight="@+id/buttonNotifications"
-        android:layout_alignEnd="@+id/buttonNotifications" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonComprar"/>
 
     <TextView
         android:layout_width="wrap_content"
