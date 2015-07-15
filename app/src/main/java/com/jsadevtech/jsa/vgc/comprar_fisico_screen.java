@@ -127,32 +127,32 @@ public class comprar_fisico_screen extends FragmentActivity {
 
                 if (marker.equals(monografic))
                 {
-                    textoInformativo.setText("Pinchado en monografic");
+                    textoInformativo.setText(R.string.monograficDesciption);
                     imagenInformativo.setImageResource(R.drawable.monograficlogo);
                     return true;
                 }
                else if(marker.equals(fnac)){
-                    textoInformativo.setText("Pinchado en FNAC");
+                    textoInformativo.setText(R.string.fnacDesciption);
                     imagenInformativo.setImageResource(R.drawable.fnaclogo);
                     return true;
                 }
                 else if(marker.equals(ateneo)){
-                    textoInformativo.setText("Pinchado en Ateneo");
+                    textoInformativo.setText(R.string.ateneoDesciption);
                     imagenInformativo.setImageResource(R.drawable.ateneologo);
                     return true;
                 }
                 else if(marker.equals(comixcity)){
-                    textoInformativo.setText("Pinchado en ComixCity");
+                    textoInformativo.setText(R.string.comixcityDesciption);
                     imagenInformativo.setImageResource(R.drawable.comixcitylogo);
                     return true;
                 }
                 else if(marker.equals(homelands)){
-                    textoInformativo.setText("Pinchado en HomeLands");
+                    textoInformativo.setText(R.string.homelandsDesciption);
                     imagenInformativo.setImageResource(R.drawable.homelans);
                     return true;
                 }
                 else if(marker.equals(spiderland)){
-                    textoInformativo.setText("Pinchado en Spiderlan");
+                    textoInformativo.setText(R.string.spiderlandDesciption);
                     imagenInformativo.setImageResource(R.drawable.spiderlandlogo);
                     return true;
                 }
