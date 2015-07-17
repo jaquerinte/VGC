@@ -128,7 +128,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                 if (marker.equals(monografic))
                 {
                     textoInformativo.setText(R.string.monograficDesciption);
-                    imagenInformativo.setImageResource(R.drawable.monografic);
+                    imagenInformativo.setImageResource(R.drawable.monografic_logo);
                     return true;
                 }
                else if(marker.equals(fnac)){
@@ -138,22 +138,22 @@ public class comprar_fisico_screen extends FragmentActivity {
                 }
                 else if(marker.equals(ateneo)){
                     textoInformativo.setText(R.string.ateneoDesciption);
-                    imagenInformativo.setImageResource(R.drawable.ateneo);
+                    imagenInformativo.setImageResource(R.drawable.ateneo_logo);
                     return true;
                 }
                 else if(marker.equals(comixcity)){
                     textoInformativo.setText(R.string.comixcityDesciption);
-                    imagenInformativo.setImageResource(R.drawable.comixcity);
+                    imagenInformativo.setImageResource(R.drawable.comixcity_logo);
                     return true;
                 }
                 else if(marker.equals(homelands)){
                     textoInformativo.setText(R.string.homelandsDesciption);
-                    imagenInformativo.setImageResource(R.drawable.homelands);
+                    imagenInformativo.setImageResource(R.drawable.homelands_logo);
                     return true;
                 }
                 else if(marker.equals(spiderland)){
                     textoInformativo.setText(R.string.spiderlandDesciption);
-                    imagenInformativo.setImageResource(R.drawable.spiderland);
+                    imagenInformativo.setImageResource(R.drawable.spiderland_logo);
                     return true;
                 }
 
