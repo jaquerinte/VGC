@@ -128,32 +128,32 @@ public class comprar_fisico_screen extends FragmentActivity {
                 if (marker.equals(monografic))
                 {
                     textoInformativo.setText(R.string.monograficDesciption);
-                    imagenInformativo.setImageResource(R.drawable.monograficlogo);
+                    imagenInformativo.setImageResource(R.drawable.monografic);
                     return true;
                 }
                else if(marker.equals(fnac)){
                     textoInformativo.setText(R.string.fnacDesciption);
-                    imagenInformativo.setImageResource(R.drawable.fnaclogo);
+                    imagenInformativo.setImageResource(R.drawable.fnac);
                     return true;
                 }
                 else if(marker.equals(ateneo)){
                     textoInformativo.setText(R.string.ateneoDesciption);
-                    imagenInformativo.setImageResource(R.drawable.ateneologo);
+                    imagenInformativo.setImageResource(R.drawable.ateneo);
                     return true;
                 }
                 else if(marker.equals(comixcity)){
                     textoInformativo.setText(R.string.comixcityDesciption);
-                    imagenInformativo.setImageResource(R.drawable.comixcitylogo);
+                    imagenInformativo.setImageResource(R.drawable.comixcity);
                     return true;
                 }
                 else if(marker.equals(homelands)){
                     textoInformativo.setText(R.string.homelandsDesciption);
-                    imagenInformativo.setImageResource(R.drawable.homelans);
+                    imagenInformativo.setImageResource(R.drawable.homelands);
                     return true;
                 }
                 else if(marker.equals(spiderland)){
                     textoInformativo.setText(R.string.spiderlandDesciption);
-                    imagenInformativo.setImageResource(R.drawable.spiderlandlogo);
+                    imagenInformativo.setImageResource(R.drawable.spiderland);
                     return true;
                 }
 

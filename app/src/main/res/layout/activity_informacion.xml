@@ -1,0 +1,157 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".informacion"
+        android:background="@drawable/fondo">
+
+        <View
+            android:id="@+id/separador1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/colaboradoresText"
+            android:layout_below="@+id/separador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/colaboradores"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <View
+            android:id="@+id/separador2"
+            android:layout_below="@+id/colaboradoresText"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fnac_logo"
+            android:src="@drawable/fnac"
+            android:layout_below="@+id/separador2"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pureGamingLogo"
+            android:layout_below="@+id/separador2"
+            android:layout_toEndOf="@+id/fnac_logo"
+            android:src="@drawable/pure_gaming"
+            android:layout_alignBottom="@+id/fnac_logo"
+            android:layout_toRightOf="@+id/fnac_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ipoLogo"
+            android:src="@drawable/ipo_logo190x100"
+            android:maxHeight="50dp"
+            android:layout_below="@+id/fnac_logo"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/monografic_logo"
+            android:layout_below="@+id/ipoLogo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/monografic"
+            android:layout_toLeftOf="@+id/pureGamingLogo"
+            android:layout_toStartOf="@+id/pureGamingLogo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ateneo"
+            android:src="@drawable/ateneo"
+            android:layout_alignTop="@+id/monografic_logo"
+            android:layout_toEndOf="@+id/monografic_logo"
+            android:layout_alignBottom="@+id/monografic_logo"
+            android:layout_toRightOf="@+id/monografic_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spiderland"
+            android:src="@drawable/spiderland"
+            android:layout_below="@+id/monografic_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/ateneo"
+            android:layout_toStartOf="@+id/ateneo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comixcity"
+            android:src="@drawable/comixcity"
+            android:layout_alignBottom="@+id/spiderland"
+            android:layout_toRightOf="@+id/spiderland"
+            android:layout_alignTop="@+id/spiderland"
+            android:layout_alignRight="@+id/ateneo"
+            android:layout_alignEnd="@+id/ateneo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homelands"
+            android:src="@drawable/homelands"
+            android:layout_below="@+id/spiderland"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/comixcity"
+            android:layout_toLeftOf="@+id/comixcity"
+            android:maxHeight="30dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/club_batman"
+            android:src="@drawable/clubbatman"
+            android:layout_alignTop="@+id/homelands"
+            android:layout_toRightOf="@+id/homelands"
+            android:layout_toEndOf="@+id/homelands"
+            android:maxHeight="30dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fusion_freak"
+            android:src="@drawable/fusion_freak"
+            android:layout_below="@+id/homelands"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/homelands"
+            android:layout_alignEnd="@+id/homelands"
+            android:maxHeight="30dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alicante_otaku"
+            android:src="@drawable/alicante_otaku"
+            android:layout_alignTop="@+id/fusion_freak"
+            android:layout_toRightOf="@+id/fusion_freak"
+            android:layout_toEndOf="@+id/fusion_freak"
+            android:maxHeight="30dp" />
+
+    </RelativeLayout>
+
+</ScrollView>
