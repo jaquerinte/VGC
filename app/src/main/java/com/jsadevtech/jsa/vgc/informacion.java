@@ -1,13 +1,13 @@
 package com.jsadevtech.jsa.vgc;
 
+import android.app.Activity;
 import android.os.StrictMode;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class informacion extends ActionBarActivity {
+public class informacion extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

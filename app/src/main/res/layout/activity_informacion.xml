@@ -44,7 +44,8 @@
             android:id="@+id/fnac_logo"
             android:src="@drawable/fnac"
             android:layout_below="@+id/separador2"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -63,7 +64,8 @@
             android:src="@drawable/ipo_logo190x100"
             android:maxHeight="50dp"
             android:layout_below="@+id/fnac_logo"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -72,15 +74,16 @@
             android:layout_below="@+id/ipoLogo"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:src="@drawable/monografic"
+            android:src="@drawable/monografic_logo"
             android:layout_toLeftOf="@+id/pureGamingLogo"
-            android:layout_toStartOf="@+id/pureGamingLogo" />
+            android:layout_toStartOf="@+id/pureGamingLogo"
+            android:layout_marginTop="10dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ateneo"
-            android:src="@drawable/ateneo"
+            android:id="@+id/fusion_freak"
+            android:src="@drawable/fusion_freak"
             android:layout_alignTop="@+id/monografic_logo"
             android:layout_toEndOf="@+id/monografic_logo"
             android:layout_alignBottom="@+id/monografic_logo"
@@ -90,66 +93,114 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spiderland"
-            android:src="@drawable/spiderland"
+            android:src="@drawable/spiderland_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/fusion_freak"
             android:layout_below="@+id/monografic_logo"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toLeftOf="@+id/ateneo"
-            android:layout_toStartOf="@+id/ateneo" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/comixcity"
-            android:src="@drawable/comixcity"
-            android:layout_alignBottom="@+id/spiderland"
-            android:layout_toRightOf="@+id/spiderland"
-            android:layout_alignTop="@+id/spiderland"
-            android:layout_alignRight="@+id/ateneo"
-            android:layout_alignEnd="@+id/ateneo" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/homelands"
-            android:src="@drawable/homelands"
-            android:layout_below="@+id/spiderland"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/comixcity"
-            android:layout_toLeftOf="@+id/comixcity"
-            android:maxHeight="30dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/club_batman"
-            android:src="@drawable/clubbatman"
-            android:layout_alignTop="@+id/homelands"
-            android:layout_toRightOf="@+id/homelands"
-            android:layout_toEndOf="@+id/homelands"
-            android:maxHeight="30dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/fusion_freak"
-            android:src="@drawable/fusion_freak"
-            android:layout_below="@+id/homelands"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/homelands"
-            android:layout_alignEnd="@+id/homelands"
-            android:maxHeight="30dp" />
+            android:layout_toLeftOf="@+id/fusion_freak"
+            android:layout_marginTop="10dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/alicante_otaku"
             android:src="@drawable/alicante_otaku"
-            android:layout_alignTop="@+id/fusion_freak"
-            android:layout_toRightOf="@+id/fusion_freak"
-            android:layout_toEndOf="@+id/fusion_freak"
+            android:layout_alignBottom="@+id/spiderland"
+            android:layout_toRightOf="@+id/spiderland"
+            android:layout_alignTop="@+id/spiderland" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/club_batman"
+            android:src="@drawable/clubbatman"
+            android:maxHeight="30dp"
+            android:layout_below="@+id/spiderland"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homelands"
+            android:src="@drawable/homelands_logo"
+            android:layout_alignTop="@+id/club_batman"
+            android:layout_toEndOf="@+id/club_batman"
+            android:layout_alignBottom="@+id/club_batman"
+            android:layout_toRightOf="@+id/club_batman" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/equipo_b"
+            android:src="@drawable/equipo_b_logo"
+            android:layout_below="@+id/club_batman"
+            android:layout_toLeftOf="@+id/homelands"
+            android:layout_toStartOf="@+id/homelands"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hawk"
+            android:src="@drawable/hawk"
+            android:layout_alignTop="@+id/equipo_b"
+            android:layout_toEndOf="@+id/equipo_b"
+            android:layout_alignBottom="@+id/equipo_b"
+            android:layout_alignLeft="@+id/homelands"
+            android:layout_alignStart="@+id/homelands" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comix_city"
+            android:src="@drawable/comixcity_logo"
+            android:layout_below="@+id/equipo_b"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arcade_vintage"
+            android:src="@drawable/arcadevintage"
+            android:layout_alignTop="@+id/comix_city"
+            android:layout_toEndOf="@+id/comix_city"
+            android:layout_alignBottom="@+id/comix_city"
+            android:layout_toRightOf="@+id/comix_city" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forbidden"
+            android:src="@drawable/forbidden_logo"
+            android:maxHeight="30dp"
+            android:layout_below="@+id/comix_city"
+            android:layout_toLeftOf="@+id/hawk"
+            android:layout_toStartOf="@+id/hawk" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alcn"
+            android:src="@drawable/alcn"
+            android:maxHeight="30dp"
+            android:layout_alignTop="@+id/forbidden"
+            android:layout_toEndOf="@+id/comix_city"
+            android:layout_toRightOf="@+id/comix_city"
+            android:layout_marginTop="-30dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ajacc"
+            android:src="@drawable/ajacc_logo"
+            android:layout_below="@+id/forbidden"
+            android:layout_centerHorizontal="true"
+            android:layout_alignRight="@+id/ipoLogo"
+            android:layout_alignEnd="@+id/ipoLogo"
+            android:layout_marginTop="10dp"
             android:maxHeight="30dp" />
 
     </RelativeLayout>
