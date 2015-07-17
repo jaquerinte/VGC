@@ -20,7 +20,7 @@ import android.widget.Toast;
  */
 public class InvitadosAdapter extends BaseExpandableListAdapter {
 
-    private final SparseArray<Group> groups;
+    private SparseArray<Group> groups;
     public LayoutInflater inflater;
     public Activity activity;
 
