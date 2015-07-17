@@ -153,7 +153,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                 }
                 else if(marker.equals(spiderland)){
                     textoInformativo.setText(R.string.spiderlandDesciption);
-                    imagenInformativo.setImageResource(R.drawable.spiderland);
+                    imagenInformativo.setImageResource(R.drawable.spiderland_logo);
                     return true;
                 }
 
