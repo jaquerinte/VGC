@@ -1,21 +1,20 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
-import android.app.ListActivity;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
-import android.widget.TextView;
+
+import com.jsadevtech.jsa.vgc.auxiliars.Group;
+import com.jsadevtech.jsa.vgc.auxiliars.Invitado;
+import com.jsadevtech.jsa.vgc.auxiliars.InvitadoBD;
+import com.jsadevtech.jsa.vgc.auxiliars.InvitadosAdapter;
+import com.jsadevtech.jsa.vgc.R;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by Shirkam on 14/07/2015.

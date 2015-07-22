@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.auxiliars;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.jsadevtech.jsa.vgc.R;
 
 /**
  * Created by Ivan on 01/07/2015.

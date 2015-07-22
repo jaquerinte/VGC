@@ -1,32 +1,33 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.StrictMode;
+import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
 
-/**
- * Created by Ivan on 01/07/2015.
- */
-public class plano_screen extends Activity {
+import com.jsadevtech.jsa.vgc.auxiliars.Group;
+import com.jsadevtech.jsa.vgc.R;
+
+// TODO hay que cambiarle el nombre a informacion_screen
+public class informacion extends Activity {
+    // more efficient than HashMap for mapping integers to objects
+    private SparseArray<Group> groups = new SparseArray<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plano_screen);
-        StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
-
+        setContentView(R.layout.activity_informacion);
+        //StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
     }
 
 
-    @Override
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_informacion, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -42,5 +43,4 @@ public class plano_screen extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }

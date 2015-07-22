@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.screens;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -13,8 +13,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.jsadevtech.jsa.vgc.R;
 
-public class mapsView extends FragmentActivity implements OnMapReadyCallback {
+public class mapsView_screen extends FragmentActivity implements OnMapReadyCallback {
 
 
 

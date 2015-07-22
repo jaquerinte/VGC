@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.auxiliars;
 
 import android.app.Activity;
 import android.util.SparseArray;
@@ -8,9 +8,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckedTextView;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jsadevtech.jsa.vgc.R;
 
 /*
 * Created by Shirkam on 14/07/2015

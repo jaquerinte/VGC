@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.auxiliars;
 
 import com.jsadevtech.jsa.vgc.exceptions.ConnectionFailedException;
 import com.jsadevtech.jsa.vgc.exceptions.CouldNotConvertFormatException;

@@ -1,8 +1,6 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Fragment;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -16,8 +14,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.net.URI;
+import com.jsadevtech.jsa.vgc.R;
 
 public class comprar_fisico_screen extends FragmentActivity {
 
