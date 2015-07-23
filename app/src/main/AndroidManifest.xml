@@ -64,6 +64,11 @@
             android:label="@string/title_activity_informacion" >
         </activity>
 
+        <activity
+            android:name=".screens.invitados_asy_screen"
+            android:label="@string/title_activity_informacion" >
+        </activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

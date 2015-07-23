@@ -46,7 +46,7 @@ public class main_screen extends Activity {
         buttonInvitados.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_screen.this, invitados_screen.class));
+                startActivity(new Intent(main_screen.this, invitados_asy_screen.class));
             }
         });
         buttonHorarios.setOnClickListener(new OnClickListener() {
