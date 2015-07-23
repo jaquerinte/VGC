@@ -205,12 +205,51 @@
             android:layout_height="wrap_content"
             android:id="@+id/ajacc"
             android:src="@drawable/ajacc_logo"
+            android:maxHeight="30dp"
             android:layout_below="@+id/forbidden"
-            android:layout_centerHorizontal="true"
-            android:layout_alignRight="@+id/ipoLogo"
-            android:layout_alignEnd="@+id/ipoLogo"
-            android:layout_marginTop="10dp"
-            android:maxHeight="30dp" />
+            android:layout_alignRight="@+id/forbidden"
+            android:layout_alignEnd="@+id/forbidden" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clueca"
+            android:src="@drawable/clueca_logo"
+            android:maxHeight="30dp"
+            android:layout_alignBottom="@+id/alcn"
+            android:layout_toRightOf="@+id/ajacc"
+            android:layout_toEndOf="@+id/ajacc" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/renfe"
+            android:src="@drawable/renfe_logo"
+            android:maxHeight="30dp"
+            android:layout_below="@+id/alcn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/clueca"
+            android:layout_toStartOf="@+id/clueca" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unicomic"
+            android:src="@drawable/unicomic_logo"
+            android:maxHeight="30dp"
+            android:layout_below="@+id/ajacc"
+            android:layout_toEndOf="@+id/renfe"
+            android:layout_alignBottom="@+id/renfe"
+            android:layout_toRightOf="@+id/renfe" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/iberia_logo"
+            android:layout_below="@+id/renfe"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
