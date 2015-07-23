@@ -11,13 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageButton;
 //import com.facebook.FacebookSdk;
-import java.util.Vector;
 
 
 public class main_screen extends Activity {
-    TextView textoinicio;
     private static final int NOTIFICACION_PRUEBA = 1;
     private Notifications newNotificacionConst;
     NotificationManager nt;
@@ -31,33 +29,17 @@ public class main_screen extends Activity {
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         //fin de declaracion de notificaciones
 
-        textoinicio = (TextView) findViewById(R.id.texto);
         //buttons declaracion
-        Button bt = (Button) findViewById(R.id.buttonNotifications);
         Button buttonInvitados =(Button) findViewById(R.id.buttonInvitados);
         Button buttonHorarios =(Button) findViewById(R.id.buttonHoraio);
         Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
+        ImageButton informacion = (ImageButton) findViewById(R.id.informacionButton);
 
-
-        textoinicio.setText(Time.fechaHoraActual());
         //fin de buttons
 
-        //FacebookSdk.sdkInitialize(getApplicationContext());
-        // Initialize the SDK before executing any other operations,
-        // especially, if you're using Facebook UI elements.
-
         //enlace de botones
-        bt.setOnClickListener(new OnClickListener() {
-
-            public void onClick(View v) {
-                getData();
-
-            }
-
-        });
-
         buttonInvitados.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,15 +74,20 @@ public class main_screen extends Activity {
             }
         });
 
+        informacion.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this, informacion.class));
+            }
+        });
+
         //FIn enlace bottones
-
-
-             // textoinicio.setText(Time.fechaHoraActual());
 
 
          }
 
-
+    //TODO Este es el metodo para usar las notificacion, NO BORRAR
+/*
     private void getData()
     {
         Vector<Evento> aux;
@@ -124,7 +111,7 @@ public class main_screen extends Activity {
         catch(Exception ex)
         { textoinicio.setText(ex.getMessage()); }
     }
-
+*/
 
 
 

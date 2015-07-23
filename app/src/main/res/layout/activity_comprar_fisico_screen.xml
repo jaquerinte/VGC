@@ -37,10 +37,13 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/venta_basic"
             android:id="@+id/texto_distibuidoror"
+            android:textSize="16sp"
             android:layout_alignTop="@+id/imagen_distribuidor"
             android:layout_toRightOf="@+id/imagen_distribuidor"
-            android:layout_toEndOf="@+id/imagen_distribuidor"
-            android:textSize="16sp"/>
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="39dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
 

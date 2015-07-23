@@ -1,8 +1,11 @@
 package com.jsadevtech.jsa.vgc;
 
 import android.app.Fragment;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 //import android.widget.Button;
 
@@ -13,6 +16,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.net.URI;
 
 public class comprar_fisico_screen extends FragmentActivity {
 
@@ -115,33 +120,40 @@ public class comprar_fisico_screen extends FragmentActivity {
         //incio de los liseners de los markers
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                 TextView textoInformativo = (TextView) findViewById(R.id.texto_distibuidoror);
+                ImageView imagenInformativo = (ImageView) findViewById(R.id.imagen_distribuidor);
+
             @Override
             public boolean onMarkerClick(final Marker marker) {
 
                 if (marker.equals(monografic))
                 {
-                    textoInformativo.setText("Pinchado en monografic");
-
+                    textoInformativo.setText(R.string.monograficDesciption);
+                    imagenInformativo.setImageResource(R.drawable.monografic_logo);
                     return true;
                 }
                else if(marker.equals(fnac)){
-                    textoInformativo.setText("Pinchado en FNAC");
+                    textoInformativo.setText(R.string.fnacDesciption);
+                    imagenInformativo.setImageResource(R.drawable.fnac);
                     return true;
                 }
                 else if(marker.equals(ateneo)){
-                    textoInformativo.setText("Pinchado en Ateneo");
+                    textoInformativo.setText(R.string.ateneoDesciption);
+                    imagenInformativo.setImageResource(R.drawable.ateneo_logo);
                     return true;
                 }
                 else if(marker.equals(comixcity)){
-                    textoInformativo.setText("Pinchado en ComixCity");
+                    textoInformativo.setText(R.string.comixcityDesciption);
+                    imagenInformativo.setImageResource(R.drawable.comixcity_logo);
                     return true;
                 }
                 else if(marker.equals(homelands)){
-                    textoInformativo.setText("Pinchado en HomeLands");
+                    textoInformativo.setText(R.string.homelandsDesciption);
+                    imagenInformativo.setImageResource(R.drawable.homelands_logo);
                     return true;
                 }
                 else if(marker.equals(spiderland)){
-                    textoInformativo.setText("Pinchado en Spiderlan");
+                    textoInformativo.setText(R.string.spiderlandDesciption);
+                    imagenInformativo.setImageResource(R.drawable.spiderland_logo);
                     return true;
                 }
 

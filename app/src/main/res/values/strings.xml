@@ -10,8 +10,23 @@
     <string name="title_activity_maps_view">Map</string>
     <string name="action_about">Acerca de</string>
     <string name="title_activity_comprar_fisico">Map</string>
+    <string name="button_comprar_fisico">EN TIENDA</string>
+    <string name="button_comprar_online">ONLINE</string>
+    <string name="button_informacion">Botón de información</string>
+    <string name="button_mapa">Como llegar</string>
+    <string name="colaboradores">Colaboradores</string>
     <!-- strings de los lugares de venta-->
-    <string name="venta_basic"> Aqui mostramos la locacizacion de los puntos de venta de las entradas para la VGC pincha sobre ellos para obtener mas informacion</string>
-
+    <string name="venta_basic"> Puntos de venta de las entradas para la VGC  pincha sobre ellos para obtener mas informacion</string>
+    <string name="monograficDesciption"> Tienda de cómics y merchandising Monografic Cómics, situada en el centro de la ciudad de Elche (Alicante)  <br /> Direccion: C/ Porta d\'Alacant n 7, 03202 Elche</string>
+    <string name="fnacDesciption">Dirección: Avenida la Estación, 5-7, 03003 Alicante</string>
+    <string name="spiderlandDesciption">Dirección: C/ Major del pla 26, 03201,Elche (Alicante)</string>
+    <string name="ateneoDesciption">Librería especializada en cómics, literatura fantástica y Sci-fi, juegos de mesa y cartas, merchandising... <br /> Direccion: C/ Serrano, nº 10, 03003 Alicante </string>
+    <string name="comixcityDesciption">Comic, manga, europeo, merchandising, magic, yu-gi-oh, warhammer, juegos de mesa,... ¡todo lo que necesites para tu ocio! <br /> Dirección: C/ Serrano, nº 15, 03003 Alicante </string>
+    <string name="homelandsDesciption">Tienda Homelands encontrarás juegos de mesa y juegos de cartas coleccionables,además de multitud de figuras de tus series favoritas <br/> : Dirección: C/ Sant Vicent 19 bajo izquierda, 03202 Elche</string>
+    <!--string de api facebook -->
     <string name="facebook_app_id">1440183462973613</string>
+    <string name="title_activity_informacion">Informacion</string>
+
+
+    <string name="hello_world">Hello world!</string>
 </resources>

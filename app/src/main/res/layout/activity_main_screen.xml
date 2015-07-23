@@ -1,26 +1,17 @@
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/fondo">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".main_screen">
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/getNotifications"
-        android:id="@+id/buttonNotifications"
-        android:width="@android:dimen/thumbnail_width"
-        android:layout_below="@+id/buttonMap"
-        android:layout_alignLeft="@+id/buttonPlano"
-        android:layout_alignStart="@+id/buttonPlano"
-        android:layout_marginTop="25dp" />
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".main_screen">
 
     <Button
         android:layout_width="wrap_content"
@@ -33,16 +24,21 @@
         android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
 
+    <!-- TODO Volver a poner este en visible -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/horarios"
         android:id="@+id/buttonHoraio"
+        android:enabled="false"
+        android:visibility="gone"
         android:layout_below="@+id/buttonInvitados"
         android:layout_alignRight="@+id/buttonComprar"
         android:layout_alignEnd="@+id/buttonComprar"
         android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
+
+    <!-- TODO Cambiar esto mas adelante para que este bajo del boton de horario-->
 
     <Button
         android:layout_width="wrap_content"
@@ -50,16 +46,19 @@
         android:text="@string/dondeComprar"
         android:id="@+id/buttonComprar"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/buttonHoraio"
+        android:layout_below="@+id/buttonInvitados"
         android:layout_centerHorizontal="true"
         android:width="@android:dimen/thumbnail_width" />
 
+    <!-- TODO Volver a ponerlo enabled -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/planoRecinto"
         android:id="@+id/buttonPlano"
         android:layout_below="@+id/buttonComprar"
+        android:enabled="false"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:width="@android:dimen/thumbnail_width" />
@@ -69,30 +68,35 @@
         android:layout_height="wrap_content"
         android:id="@+id/iconoprincipal"
         android:src="@drawable/iconoprincipal"
+        android:layout_below="@+id/informacionButton"
         android:contentDescription="@string/imagenPrincipal"
         android:layout_marginTop="44dp"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <!-- TODO Volver a ponerlo debajo del plano del recinto -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Como Llegar"
         android:id="@+id/buttonMap"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/buttonPlano"
-        android:layout_alignLeft="@+id/buttonNotifications"
-        android:layout_alignStart="@+id/buttonNotifications"
-        android:layout_alignRight="@+id/buttonNotifications"
-        android:layout_alignEnd="@+id/buttonNotifications" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonComprar"
+        android:contentDescription="@string/button_mapa" />
 
-    <TextView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/texto"
-        android:layout_below="@+id/buttonNotifications"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/informacionButton"
+        android:src="@drawable/informacion_0"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/button_informacion"
+        android:maxHeight="@dimen/abc_action_bar_default_height_material"
+        android:maxWidth="@dimen/abc_action_bar_default_height_material" />
+
+
 
 
 </RelativeLayout>
