@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
+<<<<<<< HEAD
     android:versionCode="4"
     android:versionName="0.1.7" >
+=======
+    android:versionCode="5"
+    android:versionName="0.1.8" >
+>>>>>>> origin/master
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
