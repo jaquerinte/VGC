@@ -72,12 +72,11 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:android_layout_height="match_parent"
                 android:id="@+id/gamer_logo"
                 android:src="@drawable/zona_gamer_logo_nuevo"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
             <TextView
                 android:layout_width="wrap_content"

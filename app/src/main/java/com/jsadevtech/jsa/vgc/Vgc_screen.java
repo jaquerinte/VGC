@@ -1,12 +1,12 @@
 package com.jsadevtech.jsa.vgc;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Vgc_screen extends ActionBarActivity {
+public class Vgc_screen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
