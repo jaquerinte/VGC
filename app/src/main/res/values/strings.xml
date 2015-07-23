@@ -25,10 +25,18 @@
     <string name="ateneoDesciption">Librería especializada en cómics, literatura fantástica y Sci-fi, juegos de mesa y cartas, merchandising... <br /> Direccion: C/ Serrano, nº 10, 03003 Alicante </string>
     <string name="comixcityDesciption">Comic, manga, europeo, merchandising, magic, yu-gi-oh, warhammer, juegos de mesa,... ¡todo lo que necesites para tu ocio! <br /> Dirección: C/ Serrano, nº 15, 03003 Alicante </string>
     <string name="homelandsDesciption">Tienda Homelands encontrarás juegos de mesa y juegos de cartas coleccionables,además de multitud de figuras de tus series favoritas <br/> : Dirección: C/ Sant Vicent 19 bajo izquierda, 03202 Elche</string>
+    <!-- strings de la activity vgc -->
+    <string name="titulo_vgc">Salón del cómic, videojuegos, series de tv, juegos de estrategia, coleccionismo…. y mucho más.</string>
+    <string name="primer_parrafo_vgc">El  Salón VIDEO GAME COMIC (VGC) se desarrollará en IFA (Institución Ferial Alicantina) durante los días 26 y 27 de Septiembre de 2015.</string>
+    <string name="segundo_parrafo_vgc">Pretendemos que el Salón VGC sea un referente nacional, acogiendo las distintas formas de entretenimiento y arte en tres pilares fundamentales: videojuegos, cómics y juegos de estrategia. Podremos disfrutar de diferentes conferencias en torno a torneos de videojuegos, concursos, exposiciones. Dispondremos de diferentes zonas:</string>
+    <string name="zona_gamer_titulo">ZONA GAMER</string>
+    <string name="zona_gamer_desc">Aquí podrás descubrir y jugar a las últimas novedades pero también a los clásicos del videojuego. Además se realizarán distintos torneos de los videojuegos más importantes: FIFA, Street Fighter, etc… ¡¡Inscríbete y participa!!</string>
+
     <!--string de api facebook -->
     <string name="facebook_app_id">1440183462973613</string>
     <string name="title_activity_informacion">Informacion</string>
      <!--string de colores -->
     <color name="white">#FFFFFF</color>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_vgc_screen">Vgc_screen</string>
 </resources>

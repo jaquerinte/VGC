@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
+<<<<<<< HEAD
     android:versionCode="6"
     android:versionName="0.1.9" >
+=======
+<<<<<<< HEAD
+    android:versionCode="4"
+    android:versionName="0.1.7" >
+=======
+    android:versionCode="5"
+    android:versionName="0.1.8" >
+>>>>>>> origin/master
+>>>>>>> origin/master
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -58,7 +68,6 @@
             android:name=".comprar_online_screen"
             android:label="Comprar Online" >
         </activity>
-
         <activity
             android:name=".informacion"
             android:label="@string/title_activity_informacion" >
@@ -70,6 +79,11 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyA9hAPI5Y-VdhhXqSCm_p9qqZEU9cgcLFU" />
+
+        <activity
+            android:name=".Vgc_screen"
+            android:label="@string/title_activity_vgc_screen" >
+        </activity>
     </application>
 
 </manifest>
