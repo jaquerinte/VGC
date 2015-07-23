@@ -32,8 +32,12 @@ public class invitados_screen extends Activity {
         setContentView(R.layout.activity_invitados_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
 
-        createData();
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
+
+        if(listView.isInEditMode())
+            //Poner algo para mostrar de ejemplo en el IDE
+
+        createData();
         InvitadosAdapter adapter = new InvitadosAdapter(this,
                 groups);
         listView.setAdapter(adapter);
