@@ -71,7 +71,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/iconoprincipal"
         android:src="@drawable/iconoprincipal"
-        android:layout_below="@+id/informacionButton"
         android:contentDescription="@string/imagenPrincipal"
         android:layout_marginTop="44dp"
         android:layout_centerHorizontal="true" />
@@ -88,20 +87,6 @@
         android:contentDescription="@string/button_mapa"
         android:width="@android:dimen/thumbnail_width"
         android:drawableLeft="@drawable/maps30x30"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/informacionButton"
-        android:src="@drawable/informacion_0"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp"
-        android:layout_alignParentRight="true"
-        android:contentDescription="@string/button_informacion"
-        android:maxHeight="@dimen/abc_action_bar_default_height_material"
-        android:maxWidth="@dimen/abc_action_bar_default_height_material" />
-
-
 
 
 </RelativeLayout>
