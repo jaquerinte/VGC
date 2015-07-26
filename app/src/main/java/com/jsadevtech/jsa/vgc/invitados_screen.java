@@ -67,28 +67,35 @@ public class invitados_screen extends Activity {
 
     private void createData()
     {
+        //Este array va a guardar los tipos de invitados almacenados en la bd. CINE, COMIC...
         ArrayList<String> tipoInvitados = new ArrayList<>();
-        String error="";
         try {
+            //Obtenemos valores de la bd
             tipoInvitados  = InvitadoBD.getTipos();
         }
         catch(Exception e)
-        {
-            tipoInvitados.add("ERROR: No se ha podido recuperar la informacion.");
-            error = e.getMessage();
-        }
+        { tipoInvitados.add("ERROR: No se ha podido recuperar la informacion."); }
 
+        //Y para todos los tipos de invitados que tenemos, obtenemos sus invitados correspondientes
         for(int i=0; i<tipoInvitados.size(); i++) {
+            //Creamos un grupo de titulo tipo de invitado y contenido los invitados que hay
             Group group = new Group(tipoInvitados.get(i));
             ArrayList<Invitado> invitados = new ArrayList<>();
+
             try {
+                //Cojemos los invitados por tipo
                 invitados = InvitadoBD.getInvitadosByTipo(tipoInvitados.get(i));
             } catch (Exception e)
             { invitados.add(new Invitado(e.getMessage(), "", "", "", "", "")); }
+            //Y para todos los invitados que nos ha devuelto, los anaydimos al grupo
             for(int j=0; j<invitados.size(); j++)
             {
                 group.children.add(invitados.get(j).getNombre());
             }
+
+
+            //por ultimo, ponemos el grupo recien creado en el array que
+            //va a usar la expandable list view.
             groups.append(i, group);
 
         }
