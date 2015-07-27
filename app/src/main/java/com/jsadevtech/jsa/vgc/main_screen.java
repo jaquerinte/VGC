@@ -11,13 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-//import android.widget.ImageButton;
+import android.widget.ImageButton;
 //import com.facebook.FacebookSdk;
 
 
 public class main_screen extends Activity {
-    //private static final int NOTIFICACION_PRUEBA = 1;
-    //private Notifications newNotificacionConst;
+    private static final int NOTIFICACION_PRUEBA = 1;
+    private Notifications newNotificacionConst;
     NotificationManager nt;
 
     @Override
@@ -73,6 +73,13 @@ public class main_screen extends Activity {
                 startActivity(new Intent(main_screen.this,mapsView.class));
             }
         });
+
+       /* informacion.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this, informacion.class));
+            }
+        });*/
 
         //FIn enlace bottones
 

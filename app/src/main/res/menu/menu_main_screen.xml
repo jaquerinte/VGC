@@ -5,9 +5,11 @@
 
     <item android:id="@+id/action_colaboradores" android:title="@string/action_colaboradores"
         android:orderInCategory="100" app:showAsAction="never"/>
+    <!--
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="200" app:showAsAction="never" />
     <item android:id="@+id/action_about" android:title="@string/action_about"
         android:orderInCategory="300" app:showAsAction="never"/>
+        -->
 
 </menu>
