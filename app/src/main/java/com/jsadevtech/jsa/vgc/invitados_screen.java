@@ -67,7 +67,6 @@ public class invitados_screen extends Activity {
 
     private void createData()
     {
-<<<<<<< HEAD
         //Este array va a guardar los tipos de invitados almacenados en la bd. CINE, COMIC...
         ArrayList<String> tipoInvitados = new ArrayList<>();
         try {
@@ -76,37 +75,18 @@ public class invitados_screen extends Activity {
         }
         catch(Exception e)
         { tipoInvitados.add("ERROR: No se ha podido recuperar la informacion."); }
-=======
-        //Conseguimos todos los tipos de invitados que hay (comic, cine...).
-        ArrayList<String> tipoInvitados = new ArrayList<>();
-        try {
-            //Obtenemos los tipos de la bd.
-            tipoInvitados  = InvitadoBD.getTipos();
-        }
-        catch(Exception e)
-        {
-            //Si da error, vamos a mostrar esto por pantalla.
-            tipoInvitados.add("ERROR: No se ha podido recuperar la informacion.");
-        }
->>>>>>> origin/master
 
         //Y para todos los tipos de invitados que tenemos, obtenemos sus invitados correspondientes
-        for(int i=0; i<tipoInvitados.size(); i++) {
-<<<<<<< HEAD
-            //Creamos un grupo de titulo tipo de invitado y contenido los invitados que hay
-=======
+        for(int i=0; i<tipoInvitados.size(); i++)
+        {
             //Creamos un nuevo grupo de datos. Cabecera el tipo de invitados, y
             //subgrupo, todos los invitados de esa categoria.
->>>>>>> origin/master
             Group group = new Group(tipoInvitados.get(i));
             ArrayList<Invitado> invitados = new ArrayList<>();
 
             try {
-<<<<<<< HEAD
                 //Cojemos los invitados por tipo
-=======
                 //Invitados de una determinada categoria.
->>>>>>> origin/master
                 invitados = InvitadoBD.getInvitadosByTipo(tipoInvitados.get(i));
             } catch (Exception e) //Si no se pueden mostrar invitados, se muestra el error en su lugar.
             { invitados.add(new Invitado(e.getMessage(), "", "", "", "", "")); }
@@ -116,13 +96,9 @@ public class invitados_screen extends Activity {
                 group.children.add(invitados.get(j).getNombre());
             }
 
-<<<<<<< HEAD
-
             //por ultimo, ponemos el grupo recien creado en el array que
             //va a usar la expandable list view.
-=======
             //Ponemos el grupo de datos con el resto.
->>>>>>> origin/master
             groups.append(i, group);
 
         }

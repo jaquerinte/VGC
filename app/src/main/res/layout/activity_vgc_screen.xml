@@ -111,7 +111,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:id="@+id/gamer_logo"
+                android:id="@+id/conciertos_logo"
                 android:src="@drawable/zona_gamer_logo_nuevo"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -124,7 +124,7 @@
                 android:text="@string/zona_gamer_desc"
                 android:textColor="@android:color/black"
                 android:textSize= "15dp"
-                android:id="@+id/zona_gamer_desc" />
+                android:id="@+id/zona_conciertos_desc" />
 
         </TableLayout>
 

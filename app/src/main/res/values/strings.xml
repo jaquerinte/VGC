@@ -32,6 +32,7 @@
     <string name="segundo_parrafo_vgc">Pretendemos que el Salón VGC sea un referente nacional, acogiendo las distintas formas de entretenimiento y arte en tres pilares fundamentales: videojuegos, cómics y juegos de estrategia. Podremos disfrutar de diferentes conferencias en torno a torneos de videojuegos, concursos, exposiciones. Dispondremos de diferentes zonas:</string>
     <string name="zona_gamer_titulo">ZONA GAMER</string>
     <string name="zona_gamer_desc">Aquí podrás descubrir y jugar a las últimas novedades pero también a los clásicos del videojuego. Además se realizarán distintos torneos de los videojuegos más importantes: FIFA, Street Fighter, etc… ¡¡Inscríbete y participa!!</string>
+    <string name="zona_conciertos_titulo">ZONA CONCIERTOS</string>
 
     <!--string de api facebook -->
     <string name="facebook_app_id" translatable="false">1440183462973613</string>
