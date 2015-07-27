@@ -86,8 +86,7 @@
                 android:textColor="@android:color/black"
                 android:textSize= "15dp"
                 android:id="@+id/zona_gamer_desc" />
-
-            </TableLayout>
+        </TableLayout>
 
 
         <!-- TODO poner el resto de las zonas-->
@@ -96,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_below="@+id/separador1_vgc"
+            android:layout_below="@+id/zona_gamer_table"
             android:text="@string/zona_conciertos_titulo"
             android:textColor="@android:color/black"
             android:textStyle="bold"
@@ -107,7 +106,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/zona_vgc"
-            android:layout_below="@+id/zona_gamer_titulo">
+            android:layout_below="@+id/zona_conciertos_titulo">
 
             <ImageView
                 android:layout_width="match_parent"
