@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.auxiliars;
 
 /**
  * Created by shirkam on 16/06/2015.

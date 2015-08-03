@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
+<<<<<<< HEAD
+    android:versionCode="14"
+    android:versionName="0.2.4" >
+=======
     android:versionCode="13"
     android:versionName="0.2.2" >
 
+>>>>>>> master
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,7 +28,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".main_screen"
+            android:name=".screens.main_screen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,35 +37,40 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".invitados_screen"
+            android:name=".screens.invitados_screen"
             android:label="VGC Invitados" >
         </activity>
         <activity
-            android:name=".horarios_screen"
+            android:name=".screens.horarios_screen"
             android:label="Horarios VGC" >
         </activity>
         <activity
-            android:name=".plano_screen"
+            android:name=".screens.plano_screen"
             android:label="Plano VGC" >
         </activity>
         <activity
-            android:name=".comprar_screen"
+            android:name=".screens.comprar_screen"
             android:label="Donde Comprar" >
         </activity>
         <activity
-            android:name=".mapsView"
+            android:name=".screens.mapsView_screen"
             android:label="@string/title_activity_maps_view" >
         </activity>
         <activity
-            android:name=".comprar_fisico_screen"
+            android:name=".screens.comprar_fisico_screen"
             android:label="@string/title_activity_comprar_fisico" >
         </activity>
         <activity
-            android:name=".comprar_online_screen"
+            android:name=".screens.comprar_online_screen"
             android:label="Comprar Online" >
         </activity>
         <activity
-            android:name=".informacion"
+            android:name=".screens.informacion"
+            android:label="@string/title_activity_informacion" >
+        </activity>
+
+        <activity
+            android:name=".screens.invitados_asy_screen"
             android:label="@string/title_activity_informacion" >
         </activity>
 

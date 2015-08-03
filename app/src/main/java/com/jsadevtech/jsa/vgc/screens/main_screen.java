@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
 import android.app.NotificationManager;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.jsadevtech.jsa.vgc.auxiliars.Notifications;
+import com.jsadevtech.jsa.vgc.R;
 //import com.facebook.FacebookSdk;
 
 
@@ -43,7 +46,7 @@ public class main_screen extends Activity {
         buttonInvitados.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_screen.this, invitados_screen.class));
+                startActivity(new Intent(main_screen.this, invitados_asy_screen.class));
             }
         });
         buttonHorarios.setOnClickListener(new OnClickListener() {
@@ -70,14 +73,14 @@ public class main_screen extends Activity {
         buttonMapa.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_screen.this,mapsView.class));
+                startActivity(new Intent(main_screen.this,mapsView_screen.class));
             }
         });
 
        /* informacion.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_screen.this, informacion.class));
+                startActivity(new Intent(main_screen.this, com.jsadevtech.jsa.vgc.screens.informacion.class));
             }
         });*/
 

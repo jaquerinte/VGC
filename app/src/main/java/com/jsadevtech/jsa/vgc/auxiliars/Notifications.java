@@ -1,4 +1,4 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.auxiliars;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
