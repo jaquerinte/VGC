@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
     android:versionCode="14"
-    android:versionName="0.2.3" >
+    android:versionName="0.2.4" >
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
