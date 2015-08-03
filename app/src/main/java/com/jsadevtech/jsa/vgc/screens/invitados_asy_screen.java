@@ -1,7 +1,11 @@
 package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
+import android.app.IntentService;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -10,8 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jsadevtech.jsa.vgc.R;
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
@@ -24,21 +30,28 @@ import java.util.ArrayList;
 /**
  * Created by Ivan on 22/07/2015.
  */
-public class invitados_asy_screen extends Activity{
+public class invitados_asy_screen extends Activity {
     // more efficient than HashMap for mapping integers to objects
     SparseArray<Group> groups = new SparseArray<Group>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invitados_screen);
-        StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet, ¡¡¡esto poboca que no se pueda usar wassap mietras nuetra app esta activa XD!!!!
+        StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
 
-        createData();
+      //  createData();
+        invitadors_asy descargar = new invitadors_asy();
+        descargar.execute();
         //Linkamos con el objeto del xml
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
-        //Creamos su adaptador de datos
 
+        //Creamos su adaptador de datos
+        InvitadosAdapter adapter = new InvitadosAdapter(this,
+                groups);
+        //Y se lo ponemos
+        listView.setAdapter(adapter);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,24 +78,7 @@ public class invitados_asy_screen extends Activity{
 
     private void createData()
     {
-
-        informacionAsyc infoAsyc = new informacionAsyc();
-        infoAsyc.execute();
-    }
-
-
-
-
-
-private class informacionAsyc extends AsyncTask<Void, Integer, Boolean>{
-
-    ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBarInvitados);
-    ExpandableListView lista =(ExpandableListView) findViewById(R.id.listView);
-    SparseArray<Group> auxGroups = new SparseArray<Group>();
-    @Override
-    protected Boolean doInBackground(Void... params) {
-
-//Conseguimos todos los tipos de invitados que hay (comic, cine...).
+        //Conseguimos todos los tipos de invitados que hay (comic, cine...).
         ArrayList<String> tipoInvitados = new ArrayList<>();
         try {
             //Obtenemos los tipos de la bd.
@@ -107,53 +103,79 @@ private class informacionAsyc extends AsyncTask<Void, Integer, Boolean>{
             for(int j=0; j<invitados.size(); j++)
             {
                 group.children.add(invitados.get(j).getNombre());
-                publishProgress(j * 10);
             }
 
             //Ponemos el grupo de datos con el resto.
-            auxGroups.append(i, group);
-            publishProgress(i * 10);
-            if(isCancelled()) {
-                break;
+            groups.append(i, group);
+
+        }
+    }
+
+    private class invitadors_asy extends AsyncTask<Void, Integer, Boolean> {
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+
+                createData();
+
+                if(isCancelled()) {
+
+                }
+
+
+            return true;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            int progreso = values[0].intValue();
+
+
+        }
+
+        @Override
+        protected void onPreExecute() {
+
+
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            if(result)
+            {
+                ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
+                //Creamos su adaptador de datos
+                InvitadosAdapter adapter = new InvitadosAdapter(invitados_asy_screen.this, groups);
+                //Y se lo ponemos
+                listView.setAdapter(adapter);
+
+                listView.setVisibility(View.VISIBLE);
+
+
             }
         }
-        return true;
-    }
 
-    @Override
-    protected void onProgressUpdate(Integer... values) {
-        int progreso = values[0].intValue();
-
-        progressBar.setProgress(progreso);
-    }
-
-    @Override
-    protected void onPreExecute() {
-        progressBar.setMax(100);
-        progressBar.setProgress(0);
-        lista.setVisibility(View.INVISIBLE);
-    }
-
-    @Override
-    protected void onPostExecute(Boolean result) {
-        if(result)
-        {
-
-            InvitadosAdapter adapter = new InvitadosAdapter(invitados_asy_screen.this,auxGroups);
-            lista.setAdapter(adapter);
-            System.out.println(auxGroups.toString());
-            progressBar.setVisibility(View.INVISIBLE);
-            lista.setVisibility(View.VISIBLE);
-
-            
+        @Override
+        protected void onCancelled() {
+            startActivity(new Intent(invitados_asy_screen.this,main_screen.class));
         }
     }
 
-    @Override
-    protected void onCancelled() {
-        startActivity(new Intent(invitados_asy_screen.this, com.jsadevtech.jsa.vgc.screens.main_screen.class));
 
-    }
+
+
+
+
+
+
+
+
 }
 
-}
+
+
+
+
+
+
+
