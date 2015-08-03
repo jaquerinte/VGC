@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
-<<<<<<< HEAD
+
     android:versionCode="14"
     android:versionName="0.2.4" >
-=======
-    android:versionCode="13"
-    android:versionName="0.2.2" >
 
->>>>>>> master
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -82,7 +78,7 @@
             android:value="AIzaSyA9hAPI5Y-VdhhXqSCm_p9qqZEU9cgcLFU" />
 
         <activity
-            android:name=".Vgc_screen"
+            android:name=".screens.Vgc_screen"
             android:label="@string/title_activity_vgc_screen" >
         </activity>
     </application>
