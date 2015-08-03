@@ -6,4 +6,12 @@
 /build
 /captures
 .idea/gradle.xml
+<<<<<<< HEAD
 .idea/runConfigurations.xml
+=======
+.idea/misc.xml
+app/app.iml
+.idea/dictionaries/Andrés.xml
+.idea/encodings.xml
+.idea/misc.xml
+>>>>>>> master

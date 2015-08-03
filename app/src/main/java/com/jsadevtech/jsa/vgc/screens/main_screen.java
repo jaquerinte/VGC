@@ -38,7 +38,7 @@ public class main_screen extends Activity {
         Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
-        ImageButton informacion = (ImageButton) findViewById(R.id.informacionButton);
+       // ImageButton informacion = (ImageButton) findViewById(R.id.informacionButton);
 
         //fin de buttons
 
@@ -77,12 +77,12 @@ public class main_screen extends Activity {
             }
         });
 
-        informacion.setOnClickListener(new OnClickListener() {
+       /* informacion.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main_screen.this, com.jsadevtech.jsa.vgc.screens.informacion.class));
             }
-        });
+        });*/
 
         //FIn enlace bottones
 
@@ -135,6 +135,10 @@ public class main_screen extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+        if (id == R.id.action_colaboradores) {
+            startActivity(new Intent(main_screen.this, informacion.class));
             return true;
         }
 

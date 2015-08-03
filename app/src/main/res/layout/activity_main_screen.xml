@@ -1,6 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:focusable="true"
+    android:alpha="0.90"
     android:background="@drawable/fondo">
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,7 +24,11 @@
         android:layout_below="@+id/iconoprincipal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:width="@android:dimen/thumbnail_width" />
+        android:width="@android:dimen/thumbnail_width"
+        android:drawableLeft="@drawable/logo_vgc_blanco30x30"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:alpha="1" />
 
     <!-- TODO Volver a poner este en visible -->
     <Button
@@ -36,7 +42,7 @@
         android:layout_alignRight="@+id/buttonComprar"
         android:layout_alignEnd="@+id/buttonComprar"
         android:layout_marginTop="25dp"
-        android:width="@android:dimen/thumbnail_width" />
+        android:width="@android:dimen/thumbnail_width"/>
 
     <!-- TODO Cambiar esto mas adelante para que este bajo del boton de horario-->
 
@@ -48,7 +54,11 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/buttonInvitados"
         android:layout_centerHorizontal="true"
-        android:width="@android:dimen/thumbnail_width" />
+        android:width="@android:dimen/thumbnail_width"
+        android:drawableLeft="@drawable/entrada_icon30x30"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:alpha="1" />
 
     <!-- TODO Volver a ponerlo enabled -->
     <Button
@@ -61,19 +71,21 @@
         android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:width="@android:dimen/thumbnail_width" />
+        android:width="@android:dimen/thumbnail_width"
+        android:alpha="1" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/iconoprincipal"
-        android:src="@drawable/iconoprincipal"
-        android:layout_below="@+id/informacionButton"
+        android:src="@drawable/logo_vgc_blanco125"
         android:contentDescription="@string/imagenPrincipal"
-        android:layout_marginTop="44dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:alpha="1"/>
 
     <!-- TODO Volver a ponerlo debajo del plano del recinto -->
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,21 +94,12 @@
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/buttonComprar"
-        android:contentDescription="@string/button_mapa" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/informacionButton"
-        android:src="@drawable/informacion_0"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp"
-        android:layout_alignParentRight="true"
-        android:contentDescription="@string/button_informacion"
-        android:maxHeight="@dimen/abc_action_bar_default_height_material"
-        android:maxWidth="@dimen/abc_action_bar_default_height_material" />
-
-
+        android:contentDescription="@string/button_mapa"
+        android:width="@android:dimen/thumbnail_width"
+        android:drawableLeft="@drawable/maps30x30"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:alpha="1" />
 
 
 </RelativeLayout>

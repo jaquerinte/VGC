@@ -1,5 +1,6 @@
 package com.jsadevtech.jsa.vgc.screens;
 
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -8,10 +9,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
+<<<<<<< HEAD:app/src/main/java/com/jsadevtech/jsa/vgc/screens/invitados_screen.java
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
 import com.jsadevtech.jsa.vgc.auxiliars.Invitado;
 import com.jsadevtech.jsa.vgc.auxiliars.InvitadoBD;
 import com.jsadevtech.jsa.vgc.auxiliars.InvitadosAdapter;
+=======
+import com.jsadevtech.jsa.vgc.Group;
+import com.jsadevtech.jsa.vgc.Invitado;
+import com.jsadevtech.jsa.vgc.InvitadoBD;
+import com.jsadevtech.jsa.vgc.InvitadosAdapter;
+>>>>>>> master:app/src/main/java/com/jsadevtech/jsa/vgc/invitados_screen.java
 import com.jsadevtech.jsa.vgc.R;
 
 import java.util.ArrayList;
@@ -66,33 +74,37 @@ public class invitados_screen extends Activity {
 
     private void createData()
     {
-        //Conseguimos todos los tipos de invitados que hay (comic, cine...).
+        //Este array va a guardar los tipos de invitados almacenados en la bd. CINE, COMIC...
         ArrayList<String> tipoInvitados = new ArrayList<>();
         try {
-            //Obtenemos los tipos de la bd.
+            //Obtenemos valores de la bd
             tipoInvitados  = InvitadoBD.getTipos();
         }
         catch(Exception e)
-        {
-            //Si da error, vamos a mostrar esto por pantalla.
-            tipoInvitados.add("ERROR: No se ha podido recuperar la informacion.");
-        }
+        { tipoInvitados.add("ERROR: No se ha podido recuperar la informacion."); }
 
-        for(int i=0; i<tipoInvitados.size(); i++) {
+        //Y para todos los tipos de invitados que tenemos, obtenemos sus invitados correspondientes
+        for(int i=0; i<tipoInvitados.size(); i++)
+        {
             //Creamos un nuevo grupo de datos. Cabecera el tipo de invitados, y
             //subgrupo, todos los invitados de esa categoria.
             Group group = new Group(tipoInvitados.get(i));
             ArrayList<Invitado> invitados = new ArrayList<>();
+
             try {
+                //Cojemos los invitados por tipo
                 //Invitados de una determinada categoria.
                 invitados = InvitadoBD.getInvitadosByTipo(tipoInvitados.get(i));
             } catch (Exception e) //Si no se pueden mostrar invitados, se muestra el error en su lugar.
             { invitados.add(new Invitado(e.getMessage(), "", "", "", "", "")); }
+            //Y para todos los invitados que nos ha devuelto, los anaydimos al grupo
             for(int j=0; j<invitados.size(); j++)
             {
                 group.children.add(invitados.get(j).getNombre());
             }
 
+            //por ultimo, ponemos el grupo recien creado en el array que
+            //va a usar la expandable list view.
             //Ponemos el grupo de datos con el resto.
             groups.append(i, group);
 
@@ -100,5 +112,4 @@ public class invitados_screen extends Activity {
     }
 
 }
-
 
