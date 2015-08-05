@@ -23,7 +23,9 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:drawableTop="@drawable/entrada_icon"/>
+            android:drawableTop="@drawable/entrada_icon"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white" />
 
         <Button
             android:layout_width="wrap_content"
@@ -35,7 +37,9 @@
             android:layout_alignTop="@+id/button_comprarFisico"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:drawableTop="@drawable/ifa_online"/>
+            android:drawableTop="@drawable/ifa_online"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white" />
 
     </RelativeLayout>
 
