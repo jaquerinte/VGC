@@ -15,10 +15,18 @@ import android.widget.ImageButton;
 
 import com.jsadevtech.jsa.vgc.auxiliars.Notifications;
 import com.jsadevtech.jsa.vgc.R;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import io.fabric.sdk.android.Fabric;
 //import com.facebook.FacebookSdk;
 
 
 public class main_screen extends Activity {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "XIvJydx7ZcQovBSAOzMltxxyZ";
+    private static final String TWITTER_SECRET = "KuC1QuvOAWOvJYKd2sZIZlbfVAwWWFSZlseBAldbvkeqtyWB67";
+
     private static final int NOTIFICACION_PRUEBA = 1;
     private Notifications newNotificacionConst;
     NotificationManager nt;
@@ -26,6 +34,8 @@ public class main_screen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
         //declaracion de notificaciones

@@ -9,17 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
-<<<<<<< HEAD:app/src/main/java/com/jsadevtech/jsa/vgc/screens/invitados_screen.java
+
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
 import com.jsadevtech.jsa.vgc.auxiliars.Invitado;
 import com.jsadevtech.jsa.vgc.auxiliars.InvitadoBD;
 import com.jsadevtech.jsa.vgc.auxiliars.InvitadosAdapter;
-=======
-import com.jsadevtech.jsa.vgc.Group;
-import com.jsadevtech.jsa.vgc.Invitado;
-import com.jsadevtech.jsa.vgc.InvitadoBD;
-import com.jsadevtech.jsa.vgc.InvitadosAdapter;
->>>>>>> master:app/src/main/java/com/jsadevtech/jsa/vgc/invitados_screen.java
+
 import com.jsadevtech.jsa.vgc.R;
 
 import java.util.ArrayList;

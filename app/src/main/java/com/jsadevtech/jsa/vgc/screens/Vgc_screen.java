@@ -1,9 +1,11 @@
-package com.jsadevtech.jsa.vgc;
+package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.jsadevtech.jsa.vgc.R;
 
 
 public class Vgc_screen extends Activity {
