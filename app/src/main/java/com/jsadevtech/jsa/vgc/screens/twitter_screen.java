@@ -1,32 +1,27 @@
 package com.jsadevtech.jsa.vgc.screens;
 
-import android.app.Activity;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
+
 
 
 import com.jsadevtech.jsa.vgc.R;
 import com.twitter.sdk.android.Twitter;
-import com.twitter.sdk.android.core.Result;
+
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import io.fabric.sdk.android.Fabric;
 
-import com.twitter.sdk.android.core.Callback;
+
 import com.twitter.sdk.android.core.TwitterCore;
-import com.twitter.sdk.android.core.models.Tweet;
-import com.twitter.sdk.android.core.TwitterException;
-import com.twitter.sdk.android.tweetui.CompactTweetView;
 import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
 import com.twitter.sdk.android.tweetui.TweetUi;
-import com.twitter.sdk.android.tweetui.TweetViewFetchAdapter;
 import com.twitter.sdk.android.tweetui.UserTimeline;
 
-import java.util.Arrays;
-import java.util.List;
+
 
 /**
  * Created by Ivan on 06/08/2015.
