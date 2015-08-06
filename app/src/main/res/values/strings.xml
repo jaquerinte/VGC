@@ -17,6 +17,8 @@
     <string name="button_mapa">Cómo llegar</string>
     <string name="colaboradores">Colaboradores</string>
     <string name="title_activity_informacion">Información</string>
+    <string name="twitter_button">Redes Sociales</string>
+    <string name="loadingTwits">Loading...</string>
 
     <!-- strings de los lugares de venta-->
     <string name="venta_basic"> Puntos de venta de las entradas para la VGC  pincha sobre ellos para obtener mas información.</string>

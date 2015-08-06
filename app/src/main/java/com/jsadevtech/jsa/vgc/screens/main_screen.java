@@ -15,9 +15,7 @@ import android.widget.ImageButton;
 
 import com.jsadevtech.jsa.vgc.auxiliars.Notifications;
 import com.jsadevtech.jsa.vgc.R;
-import com.twitter.sdk.android.Twitter;
-import com.twitter.sdk.android.core.TwitterAuthConfig;
-import io.fabric.sdk.android.Fabric;
+
 //import com.facebook.FacebookSdk;
 
 
@@ -34,8 +32,7 @@ public class main_screen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new Twitter(authConfig));
+
         setContentView(R.layout.activity_main_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
         //declaracion de notificaciones
@@ -48,6 +45,7 @@ public class main_screen extends Activity {
         Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
+        Button buttonTwitter = (Button) findViewById(R.id.button_twitter);
        // ImageButton informacion = (ImageButton) findViewById(R.id.informacionButton);
 
         //fin de buttons
@@ -84,6 +82,12 @@ public class main_screen extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main_screen.this,mapsView_screen.class));
+            }
+        });
+        buttonTwitter.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this,twitter_screen.class));
             }
         });
 
