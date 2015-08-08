@@ -31,7 +31,8 @@
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 
     <!-- TODO Volver a poner este en visible -->
     <Button
@@ -63,7 +64,8 @@
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 
     <!-- TODO Volver a ponerlo enabled -->
     <Button
@@ -105,7 +107,7 @@
         android:textColor="@android:color/white"
         android:alpha="1"
         android:paddingLeft="10dp"
-        />
+        android:paddingRight="10dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -120,7 +122,8 @@
         android:paddingLeft="10dp"
         android:layout_below="@+id/buttonMap"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:paddingRight="10dp" />
 
 
 </RelativeLayout>

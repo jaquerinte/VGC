@@ -24,7 +24,7 @@ import com.twitter.sdk.android.tweetui.UserTimeline;
 
 
 /**
- * Created by Ivan on 06/08/2015.
+ * Created by Ivan on 06/08/2015. screen encargada de controlar la api de twitter
  */
 public class twitter_screen extends ListActivity {
 
