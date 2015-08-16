@@ -142,6 +142,11 @@ public class main_screen extends Activity {
             return true;
         }
 
+        if(id == R.id.action_about) {
+            startActivity(new Intent(main_screen.this, about_screen.class));
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 

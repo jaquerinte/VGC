@@ -120,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="@string/zona_gamer_desc"
+                android:text="@string/zona_conciertos_desc"
                 android:textColor="@android:color/black"
                 android:textSize= "15dp"
                 android:id="@+id/zona_conciertos_desc" />

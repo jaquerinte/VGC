@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">VGC</string>
-    <string name="version">16</string>
-    <string name="version_name">0.2.6</string>
     <string name="action_settings">Settings</string>
     <string name="action_colaboradores">Colaboradores de la VGC</string>
     <string name="action_principal">Página principal</string>
@@ -39,6 +37,7 @@
     <string name="zona_gamer_titulo">ZONA GAMER</string>
     <string name="zona_gamer_desc">Aquí podrás descubrir y jugar a las últimas novedades pero también a los clásicos del videojuego. Además se realizarán distintos torneos de los videojuegos más importantes: FIFA, Street Fighter, etc… ¡¡Inscríbete y participa!!</string>
     <string name="zona_conciertos_titulo">ZONA CONCIERTOS</string>
+    <string name="zona_conciertos_desc">Para que no tengas ni un minuto de respiro tendremos un escenario principal donde podrás encontrar música en directo, dj, conciertos y, ¡Mucho más!</string>
 
     <!--string de api facebook -->
     <string name="facebook_app_id" translatable="false">1440183462973613</string>
