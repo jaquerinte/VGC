@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
-    android:versionCode="14"
-    android:versionName="0.2.4" >
+    android:versionCode="16"
+    android:versionName="0.2.6" >
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -77,6 +77,10 @@
         <activity
             android:name=".screens.Vgc_screen"
             android:label="@string/title_activity_vgc_screen" >
+        </activity>
+        <activity
+            android:name=".screens.about_screen"
+            android:label="@string/title_activity_about" >
         </activity>
     </application>
 

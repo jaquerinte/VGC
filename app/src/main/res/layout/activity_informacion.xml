@@ -13,7 +13,6 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         tools:context=".informacion">
 
-
         <View
             android:id="@+id/separador1"
             android:layout_width="match_parent"
@@ -47,7 +46,8 @@
             android:layout_marginRight="10dp"
             android:layout_below="@+id/separador2"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:maxHeight="125dp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -69,7 +69,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignRight="@+id/fnac_logo"
-            android:layout_alignEnd="@+id/fnac_logo" />
+            android:layout_alignEnd="@+id/fnac_logo"
+            android:maxHeight="125dp" />
 
 
         <ImageView
@@ -90,9 +91,11 @@
             android:id="@+id/cultura_elche"
             android:src="@drawable/elche_juventud_logo"
             android:layout_below="@+id/juventud_aliacnte_logo"
-            android:layout_marginRight="10dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:maxHeight="125dp"
+            android:layout_alignRight="@+id/juventud_aliacnte_logo"
+            android:layout_alignEnd="@+id/juventud_aliacnte_logo" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -110,7 +113,8 @@
             android:id="@+id/ipo_logo"
             android:src="@drawable/ipo_logo"
             android:layout_below="@+id/cultura_elche"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:maxHeight="125dp" />
 
         <View
             android:id="@+id/separador3"
@@ -119,6 +123,315 @@
             android:background="@android:color/black"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/ipo_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/monografic_logo"
+            android:src="@drawable/monografic_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/separador3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fusion_freak_logo"
+            android:src="@drawable/fusion_freak_logo"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/separador3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spiderland_logo"
+            android:src="@drawable/spiderland_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/separador3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alicante_otaku_logo"
+            android:src="@drawable/alicante_otaku_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/monografic_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/club_batman_logo"
+            android:src="@drawable/clubbatman_logo"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/fusion_freak_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homelands_logo"
+            android:src="@drawable/homelands_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/spiderland_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/equipo_b_logo"
+            android:src="@drawable/equipo_b_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/club_batman_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hawk_logo"
+            android:src="@drawable/hawk_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/equipo_b_logo"
+            android:layout_marginTop="30dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comixcity_logo"
+            android:src="@drawable/comixcity_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/equipo_b_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arcade_vintage_logo"
+            android:src="@drawable/arcadevintage_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/equipo_b_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forbbiden_logo"
+            android:src="@drawable/forbidden_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/arcade_vintage_logo"
+            android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alc_logo"
+            android:src="@drawable/alcn_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/arcade_vintage_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ajacc_logo"
+            android:src="@drawable/ajacc_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/arcade_vintage_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clueca_logo"
+            android:src="@drawable/clueca_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/ajacc_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/renfe_logo"
+            android:src="@drawable/renfe_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ajacc_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unicomic_logo"
+            android:src="@drawable/unicomic_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ajacc_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iberia_logo"
+            android:src="@drawable/iberia_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/unicomic_logo"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/heroes_logo"
+            android:src="@drawable/heroes_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/unicomic_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/darbel_logo"
+            android:src="@drawable/darbel_logo"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/unicomic_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hanoa_logo"
+            android:src="@drawable/hanoa_logo"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/darbel_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lightTeamBolt_logo"
+            android:src="@drawable/lightteambolt_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/darbel_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/asmodee_logo"
+            android:src="@drawable/asmodee_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/darbel_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alipod_logo"
+            android:src="@drawable/alipodcast_logo"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/asmodee_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/acme_logo"
+            android:src="@drawable/acme_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/asmodee_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mercurio_logo"
+            android:src="@drawable/mercurio_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/asmodee_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alicantardis_logo"
+            android:src="@drawable/alicantetardis_logo"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/mercurio_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/zacatrus_logo"
+            android:src="@drawable/zacatrus_logo"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/mercurio_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/supervivientes_de_endor_logo"
+            android:src="@drawable/supervivientes_endor_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/mercurio_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swa_logo"
+            android:src="@drawable/swa_logo"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/supervivientes_de_endor_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tcp_logo"
+            android:src="@drawable/tcp_logo"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/supervivientes_de_endor_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cia_logo"
+            android:src="@drawable/cia_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/supervivientes_de_endor_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/morapiaf_logo"
+            android:src="@drawable/morapiaf_logo"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/cia_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/freaks_logo"
+            android:src="@drawable/freaks_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/cia_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/legion_501_logo"
+            android:src="@drawable/legion_501_logo"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/freaks_logo"
+            android:layout_alignRight="@+id/cultura_elche"
+            android:layout_alignEnd="@+id/cultura_elche" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/asoc_501_logo"
+            android:src="@drawable/asoc_501_logo"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/legion_501_logo"
+            android:layout_toRightOf="@+id/juventud_aliacnte_logo"
+            android:layout_toEndOf="@+id/juventud_aliacnte_logo" />
 
 
     </RelativeLayout>

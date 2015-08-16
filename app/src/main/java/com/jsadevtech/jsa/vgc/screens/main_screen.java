@@ -133,12 +133,12 @@ public class main_screen extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.action_colaboradores) {
             startActivity(new Intent(main_screen.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(main_screen.this, Vgc_screen.class));
             return true;
         }
 
