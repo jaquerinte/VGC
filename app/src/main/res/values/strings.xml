@@ -42,4 +42,5 @@
     <!-- strings auxiliares secundarias -->
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_vgc_screen">Vgc_screen</string>
+    <string name="title_activity_test_grid">test_grid</string>
 </resources>

@@ -130,7 +130,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                 }
                else if(marker.equals(fnac)){
                     textoInformativo.setText(R.string.fnacDesciption);
-                    imagenInformativo.setImageResource(R.drawable.fnac);
+                    imagenInformativo.setImageResource(R.drawable.fnac_logo);
                     return true;
                 }
                 else if(marker.equals(ateneo)){
