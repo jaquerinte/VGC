@@ -1,6 +1,7 @@
 package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,7 +32,17 @@ public class about_screen extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_colaboradores) {
+            startActivity(new Intent(about_screen.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(about_screen.this, Vgc_screen.class));
+            return true;
+        }
+        if(id == R.id.action_principal) {
+            startActivity(new Intent(about_screen.this, main_screen.class));
             return true;
         }
 
