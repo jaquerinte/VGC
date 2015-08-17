@@ -34,7 +34,6 @@ public class main_screen extends Activity {
 
         //buttons declaracion
         Button buttonInvitados =(Button) findViewById(R.id.buttonInvitados);
-        Button buttonHorarios =(Button) findViewById(R.id.buttonHoraio);
         Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
@@ -49,13 +48,7 @@ public class main_screen extends Activity {
                 startActivity(new Intent(main_screen.this, invitados_asy_screen.class));
             }
         });
-        buttonHorarios.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(main_screen.this,horarios_screen.class));
 
-            }
-        });
 
         buttonComprar.setOnClickListener(new OnClickListener() {
             @Override

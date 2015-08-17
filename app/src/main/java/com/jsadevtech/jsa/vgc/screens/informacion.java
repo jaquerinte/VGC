@@ -1,6 +1,7 @@
 package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.Menu;
@@ -22,7 +23,7 @@ public class informacion extends Activity {
     }
 
 
-        @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_informacion, menu);
@@ -37,7 +38,20 @@ public class informacion extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_colaboradores) {
+            startActivity(new Intent(informacion.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(informacion.this, Vgc_screen.class));
+            return true;
+        }
+        if(id == R.id.action_about) {
+            startActivity(new Intent(informacion.this, about_screen.class));
+            return true;
+        }
+        if(id == R.id.action_principal) {
+            startActivity(new Intent(informacion.this, main_screen.class));
             return true;
         }
 

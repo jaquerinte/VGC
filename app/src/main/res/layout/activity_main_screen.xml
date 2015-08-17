@@ -31,20 +31,6 @@
         android:alpha="1"
         android:paddingLeft="10dp" />
 
-    <!-- TODO Volver a poner este en visible -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/horarios"
-        android:id="@+id/buttonHoraio"
-        android:enabled="false"
-        android:visibility="gone"
-        android:layout_below="@+id/buttonInvitados"
-        android:layout_alignRight="@+id/buttonComprar"
-        android:layout_alignEnd="@+id/buttonComprar"
-        android:layout_marginTop="25dp"
-        android:width="@android:dimen/thumbnail_width"/>
-
     <!-- TODO Cambiar esto mas adelante para que este bajo del boton de horario-->
 
     <Button

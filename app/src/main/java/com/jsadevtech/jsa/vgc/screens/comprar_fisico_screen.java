@@ -166,10 +166,11 @@ public class comprar_fisico_screen extends FragmentActivity {
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ifaPosition, 10));
         //monografic.showInfoWindow();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_about, menu);
+        getMenuInflater().inflate(R.menu.menu_comprar_fisico_screen, menu);
         return true;
     }
 
