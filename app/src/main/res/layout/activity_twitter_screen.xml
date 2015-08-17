@@ -13,7 +13,8 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
 
             <TextView android:id="@id/android:empty"
                 android:layout_width="match_parent"
@@ -33,12 +34,14 @@
 
 
         </LinearLayout>
+
     </FrameLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp">
 
         <Button
             android:layout_width="wrap_content"
@@ -47,15 +50,17 @@
             android:id="@+id/button"
             android:layout_alignTop="@+id/button2"
             android:layout_toLeftOf="@+id/button2"
-            android:layout_toStartOf="@+id/button2" />
+            android:layout_toStartOf="@+id/button2"
+            android:visibility="invisible" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="New Buttonhh"
             android:id="@+id/button2"
             android:layout_alignTop="@+id/button3"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
 
         <Button
             android:layout_width="wrap_content"
@@ -65,7 +70,24 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/button2"
             android:layout_toEndOf="@+id/button2"
-            android:layout_marginTop="45dp" />
+            android:layout_marginTop="45dp"
+            android:visibility="invisible" />
+
     </RelativeLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_new_twit"
+        android:id="@+id/button_new_twit"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="true"
+        android:background="@android:color/background_dark"
+        android:textColor="@android:color/white"
+        android:drawableLeft="@drawable/tw__ic_logo_default"
+        android:paddingLeft="30dp"
+        android:paddingEnd="60dp" />
 
 </RelativeLayout>

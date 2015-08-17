@@ -115,7 +115,7 @@
         android:text="@string/twitter_button"
         android:id="@+id/button_twitter"
         android:width="@android:dimen/thumbnail_width"
-        android:drawableLeft="@drawable/maps30x30"
+        android:drawableLeft="@drawable/tw__ic_logo_default"
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
