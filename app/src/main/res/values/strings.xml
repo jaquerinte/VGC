@@ -39,6 +39,14 @@
     <string name="zona_conciertos_titulo">ZONA CONCIERTOS</string>
     <string name="zona_conciertos_desc">Para que no tengas ni un minuto de respiro tendremos un escenario principal donde podrás encontrar música en directo, dj, conciertos y, ¡Mucho más!</string>
 
+    <!-- strings de about -->
+    <string name="cabecera_about">Aplicacion oficial de la VGC de Alicante 2015</string>
+    <string name="version_text">Version:</string>
+    <string name="version_number" translatable="false">0.2.6</string>
+    <string name="hecho_por_cabecera">Hecho por:</string>
+    <string name="jsadevtech">JSA DevTech®</string>
+
+
     <!--string de api facebook -->
     <string name="facebook_app_id" translatable="false">1440183462973613</string>
 
