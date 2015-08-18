@@ -41,6 +41,14 @@
     <string name="zona_gamer_desc">Aquí podrás descubrir y jugar a las últimas novedades pero también a los clásicos del videojuego. Además se realizarán distintos torneos de los videojuegos más importantes: FIFA, Street Fighter, etc… ¡¡Inscríbete y participa!!</string>
     <string name="zona_conciertos_titulo">ZONA CONCIERTOS</string>
     <string name="zona_conciertos_desc">Para que no tengas ni un minuto de respiro tendremos un escenario principal donde podrás encontrar música en directo, dj, conciertos y, ¡Mucho más!</string>
+    <string name="zona_market_titulo">ZONA MARKET</string>
+    <string name="zona_market_desc">Aquí podrás encontrar desde las últimas novedades en videojuegos a los clásicos del cómic, merchandising, figuras, juguetes, coleccionismo… y mucho más.</string>
+    <string name="zona_hablamos_titulo">ZONA HABLAMOS</string>
+    <string name="zona_hablamos_desc">Conferencias, debates y mesas redondas donde autores, críticos, profesionales del sector y cualquier aficionado pueda hablar y escuchar sobre los temas que nos interesan, tratando los mismos con la seriedad y la pasión que se merecen.</string>
+    <string name="zona_talleres_titulo">ZONA TALLERES</string>
+    <string name="zona_talleres_desc">Espacio dedicado al aprendizaje, donde se realizarán multitud de talleres interesantes: cómo hacer un cómic, autoedición, manualidades, estructuras de guion, pintura de miniaturas, creación de escenarios, dibujo, etc.</string>
+    <string name="zona_estrategia_titulo">ZONA ESTRATEGIA</string>
+    <string name="zona_estrategia_desc">Conoce y prueba las últimas novedades en juegos que acaban de salir al mercado. También se llevarán a cabo distintos campeonatos de los juegos más importantes: Magic, Heroclix, Dominion, etc…</string>
 
     <!-- strings de about -->
     <string name="cabecera_about">Aplicacion oficial de la VGC de Alicante 2015</string>

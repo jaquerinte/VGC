@@ -43,7 +43,7 @@ public class informacion extends Activity {
             return true;
         }
         if(id == R.id.action_zonas) {
-            startActivity(new Intent(informacion.this, Vgc_screen.class));
+            startActivity(new Intent(informacion.this, zonas_screen.class));
             return true;
         }
         if(id == R.id.action_about) {

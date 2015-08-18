@@ -64,7 +64,7 @@ public class comprar_online_screen extends Activity{
             return true;
         }
         if(id == R.id.action_zonas) {
-            startActivity(new Intent(comprar_online_screen.this, Vgc_screen.class));
+            startActivity(new Intent(comprar_online_screen.this, zonas_screen.class));
             return true;
         }
         if(id == R.id.action_about) {

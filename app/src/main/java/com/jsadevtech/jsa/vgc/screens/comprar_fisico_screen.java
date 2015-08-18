@@ -187,7 +187,7 @@ public class comprar_fisico_screen extends FragmentActivity {
             return true;
         }
         if(id == R.id.action_zonas) {
-            startActivity(new Intent(comprar_fisico_screen.this, Vgc_screen.class));
+            startActivity(new Intent(comprar_fisico_screen.this, zonas_screen.class));
             return true;
         }
         if(id == R.id.action_about) {

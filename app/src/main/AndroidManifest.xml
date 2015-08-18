@@ -72,7 +72,7 @@
             android:value="AIzaSyA9hAPI5Y-VdhhXqSCm_p9qqZEU9cgcLFU" />
 
         <activity
-            android:name=".screens.Vgc_screen"
+            android:name=".screens.zonas_screen"
             android:label="@string/title_activity_vgc_screen" >
         </activity>
         <activity

@@ -73,7 +73,7 @@ public class twitter_screen extends ListActivity {
             return true;
         }
         if(id == R.id.action_zonas) {
-            startActivity(new Intent(twitter_screen.this, Vgc_screen.class));
+            startActivity(new Intent(twitter_screen.this, zonas_screen.class));
             return true;
         }
         if(id == R.id.action_about) {

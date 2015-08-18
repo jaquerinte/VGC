@@ -71,7 +71,7 @@ public class mapsView_screen extends FragmentActivity implements OnMapReadyCallb
             return true;
         }
         if(id == R.id.action_zonas) {
-            startActivity(new Intent(mapsView_screen.this, Vgc_screen.class));
+            startActivity(new Intent(mapsView_screen.this, zonas_screen.class));
             return true;
         }
         if(id == R.id.action_about) {

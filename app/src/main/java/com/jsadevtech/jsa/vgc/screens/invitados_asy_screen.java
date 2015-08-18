@@ -1,11 +1,7 @@
 package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
-import android.app.IntentService;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -14,10 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jsadevtech.jsa.vgc.R;
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
@@ -74,7 +66,7 @@ public class invitados_asy_screen extends Activity {
             return true;
         }
         if(id == R.id.action_zonas) {
-            startActivity(new Intent(invitados_asy_screen.this, Vgc_screen.class));
+            startActivity(new Intent(invitados_asy_screen.this, zonas_screen.class));
             return true;
         }
         if(id == R.id.action_about) {

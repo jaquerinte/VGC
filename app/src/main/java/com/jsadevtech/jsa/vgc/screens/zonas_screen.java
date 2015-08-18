@@ -9,12 +9,12 @@ import android.view.MenuItem;
 import com.jsadevtech.jsa.vgc.R;
 
 
-public class Vgc_screen extends Activity {
+public class zonas_screen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vgc_screen);
+        setContentView(R.layout.activity_zonas_screen);
     }
 
 
@@ -34,15 +34,15 @@ public class Vgc_screen extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_colaboradores) {
-            startActivity(new Intent(Vgc_screen.this, informacion.class));
+            startActivity(new Intent(zonas_screen.this, informacion.class));
             return true;
         }
         if(id == R.id.action_about) {
-            startActivity(new Intent(Vgc_screen.this, about_screen.class));
+            startActivity(new Intent(zonas_screen.this, about_screen.class));
             return true;
         }
         if(id == R.id.action_principal) {
-            startActivity(new Intent(Vgc_screen.this, main_screen.class));
+            startActivity(new Intent(zonas_screen.this, main_screen.class));
             return true;
         }
 
