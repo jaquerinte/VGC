@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
-    android:versionCode="16"
-    android:versionName="0.2.6" >
+    android:versionCode="18"
+    android:versionName="0.3.0" >
+
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -78,6 +79,14 @@
             android:name=".screens.about_screen"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name=".screens.twitter_screen"
+            android:label="@string/twitter_button" >
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8bdf62d39f6bd7d6c366e4c24f2376e8c1f9f198" />
+
     </application>
 
 </manifest>
