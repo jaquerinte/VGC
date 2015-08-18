@@ -56,10 +56,9 @@ public class twitter_screen extends ListActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_twitter_screen, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -69,11 +68,20 @@ public class twitter_screen extends ListActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.action_colaboradores) {
             startActivity(new Intent(twitter_screen.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(twitter_screen.this, Vgc_screen.class));
+            return true;
+        }
+        if(id == R.id.action_about) {
+            startActivity(new Intent(twitter_screen.this, about_screen.class));
+            return true;
+        }
+        if(id == R.id.action_principal) {
+            startActivity(new Intent(twitter_screen.this, main_screen.class));
             return true;
         }
 

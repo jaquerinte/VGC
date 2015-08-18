@@ -78,7 +78,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como Llegar"
+        android:text="@string/button_mapa"
         android:id="@+id/buttonMap"
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
@@ -86,6 +86,22 @@
         android:contentDescription="@string/button_mapa"
         android:width="@android:dimen/thumbnail_width"
         android:drawableLeft="@drawable/maps30x30"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:alpha="1"
+        android:paddingLeft="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_mapa"
+        android:id="@+id/button_twitter"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonMap"
+        android:contentDescription="@string/twitter_button"
+        android:width="@android:dimen/thumbnail_width"
+        android:drawableLeft="@drawable/tw__ic_logo_default"
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
