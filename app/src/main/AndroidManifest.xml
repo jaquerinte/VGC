@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
-    android:versionCode="19"
-    android:versionName="0.3.1" >
+    android:versionCode="20"
+    android:versionName="0.3.2" >
 
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -82,6 +82,10 @@
         <activity
             android:name=".screens.twitter_screen"
             android:label="@string/twitter_button" >
+        </activity>
+        <activity
+            android:name=".screens.twitter_send_tweet"
+            android:label="@string/text_button_new_twit" >
         </activity>
         <meta-data
             android:name="io.fabric.ApiKey"

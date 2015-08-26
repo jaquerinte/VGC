@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 
 import com.jsadevtech.jsa.vgc.R;
@@ -17,9 +19,11 @@ import io.fabric.sdk.android.Fabric;
 
 
 import com.twitter.sdk.android.core.TwitterCore;
+import com.twitter.sdk.android.tweetcomposer.TweetComposer;
 import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
 import com.twitter.sdk.android.tweetui.TweetUi;
 import com.twitter.sdk.android.tweetui.UserTimeline;
+
 
 
 
@@ -39,9 +43,21 @@ public class twitter_screen extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new TwitterCore(authConfig), new TweetUi(), new Twitter(authConfig), new TweetUi());
 
         setContentView(R.layout.activity_twitter_screen);
+        Button buttonEnviarTweet =(Button) findViewById(R.id.button_new_twit);
+
+        buttonEnviarTweet.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               /* startActivity(new Intent(twitter_screen.this, twitter_send_tweet.class));*/
+                create_tweet();
+            }
+        });
+
+        Fabric.with(this, new TwitterCore(authConfig), new TweetUi(), new Twitter(authConfig), new TweetUi());
+
+
 
         final UserTimeline userTimeline = new UserTimeline.Builder()
                 .screenName("VGComic")
@@ -51,8 +67,17 @@ public class twitter_screen extends ListActivity {
                 .build();
         setListAdapter(adapter);
 
+
+
     }
 
+    private void create_tweet(){
+        TwitterAuthConfig authConfig =  new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new TwitterCore(authConfig), new TweetComposer());
+        TweetComposer.Builder builder = new TweetComposer.Builder(this)
+                .text("@VGComic");
+        builder.show();
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
