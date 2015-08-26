@@ -24,12 +24,14 @@
         android:layout_below="@+id/iconoprincipal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:width="@android:dimen/thumbnail_width"
+        android:width="@dimen/buton_width"
         android:drawableLeft="@drawable/logo_vgc_blanco30x30"
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:paddingEnd="40dp"
+        android:paddingRight="40dp"/>
 
     <!-- TODO Cambiar esto mas adelante para que este bajo del boton de horario-->
 
@@ -41,7 +43,7 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/buttonInvitados"
         android:layout_centerHorizontal="true"
-        android:width="@android:dimen/thumbnail_width"
+        android:width="@dimen/buton_width"
         android:drawableLeft="@drawable/entrada_icon30x30"
         android:background="@android:color/black"
         android:textColor="@android:color/white"
@@ -84,28 +86,32 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/buttonComprar"
         android:contentDescription="@string/button_mapa"
-        android:width="@android:dimen/thumbnail_width"
+        android:width="@dimen/buton_width"
         android:drawableLeft="@drawable/maps30x30"
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:paddingEnd="30dp"
+        android:paddingRight="30dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_mapa"
+        android:text="@string/twitter_button"
         android:id="@+id/button_twitter"
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/buttonMap"
         android:contentDescription="@string/twitter_button"
-        android:width="@android:dimen/thumbnail_width"
+        android:width="@dimen/buton_width"
         android:drawableLeft="@drawable/tw__ic_logo_default"
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:paddingEnd="50dp"
+        android:paddingRight="50dp"/>
 
     <Button
         android:layout_width="wrap_content"

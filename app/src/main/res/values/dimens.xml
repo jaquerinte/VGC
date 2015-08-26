@@ -3,5 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fragment_map_height">300dp</dimen>
+    <dimen name="buton_width">250dp</dimen>
 
 </resources>

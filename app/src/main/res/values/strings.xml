@@ -54,7 +54,7 @@
     <!-- strings de about -->
     <string name="cabecera_about">Aplicacion oficial de la VGC de Alicante 2015</string>
     <string name="version_text">Version:</string>
-    <string name="version_number" translatable="false">0.2.6</string>
+    <string name="version_number" translatable="false">0.3.0</string>
     <string name="hecho_por_cabecera">Hecho por:</string>
     <string name="jsadevtech">JSA DevTech®</string>
 
