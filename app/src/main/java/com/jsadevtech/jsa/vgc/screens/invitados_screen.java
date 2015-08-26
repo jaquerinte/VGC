@@ -13,7 +13,7 @@ import android.widget.ExpandableListView;
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
 import com.jsadevtech.jsa.vgc.auxiliars.Invitado;
 import com.jsadevtech.jsa.vgc.auxiliars.InvitadoBD;
-import com.jsadevtech.jsa.vgc.auxiliars.InvitadosAdapter;
+import com.jsadevtech.jsa.vgc.auxiliars.ExpandableListAdapter;
 
 import com.jsadevtech.jsa.vgc.R;
 
@@ -39,7 +39,7 @@ public class invitados_screen extends Activity {
         //Linkamos con el objeto del xml
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
         //Creamos su adaptador de datos
-        InvitadosAdapter adapter = new InvitadosAdapter(this,
+        ExpandableListAdapter adapter = new ExpandableListAdapter(this,
                 groups);
         //Y se lo ponemos
         listView.setAdapter(adapter);

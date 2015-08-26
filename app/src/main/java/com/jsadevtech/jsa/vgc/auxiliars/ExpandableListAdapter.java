@@ -19,13 +19,13 @@ import com.jsadevtech.jsa.vgc.R;
 * Clase que hace de adaptador de datos para una expandable list view.
 * en concreto, trabaja con invitados.
  */
-public class InvitadosAdapter extends BaseExpandableListAdapter {
+public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private SparseArray<Group> groups;
     public LayoutInflater inflater;
     public Activity activity;
 
-    public InvitadosAdapter(Activity act, SparseArray<Group> groups) {
+    public ExpandableListAdapter(Activity act, SparseArray<Group> groups) {
         activity = act;
         this.groups = groups;
         inflater = act.getLayoutInflater();
@@ -115,6 +115,6 @@ public class InvitadosAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return false;
+        return true;
     }
 }

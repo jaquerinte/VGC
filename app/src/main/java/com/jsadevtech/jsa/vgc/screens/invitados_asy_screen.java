@@ -15,7 +15,7 @@ import com.jsadevtech.jsa.vgc.R;
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
 import com.jsadevtech.jsa.vgc.auxiliars.Invitado;
 import com.jsadevtech.jsa.vgc.auxiliars.InvitadoBD;
-import com.jsadevtech.jsa.vgc.auxiliars.InvitadosAdapter;
+import com.jsadevtech.jsa.vgc.auxiliars.ExpandableListAdapter;
 
 import java.util.ArrayList;
 
@@ -24,7 +24,7 @@ import java.util.ArrayList;
  */
 public class invitados_asy_screen extends Activity {
     // more efficient than HashMap for mapping integers to objects
-    SparseArray<Group> groups = new SparseArray<Group>();
+    SparseArray<Group> groups = new SparseArray<>();
 
 
     @Override
@@ -34,13 +34,14 @@ public class invitados_asy_screen extends Activity {
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
 
       //  createData();
+        //ejecutamos la descarga e interpretacion de datos en modo asincrono
         invitadors_asy descargar = new invitadors_asy();
         descargar.execute();
         //Linkamos con el objeto del xml
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
 
         //Creamos su adaptador de datos
-        InvitadosAdapter adapter = new InvitadosAdapter(this,
+        ExpandableListAdapter adapter = new ExpandableListAdapter(this,
                 groups);
         //Y se lo ponemos
         listView.setAdapter(adapter);
@@ -150,7 +151,7 @@ public class invitados_asy_screen extends Activity {
             {
                 ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
                 //Creamos su adaptador de datos
-                InvitadosAdapter adapter = new InvitadosAdapter(invitados_asy_screen.this, groups);
+                ExpandableListAdapter adapter = new ExpandableListAdapter(invitados_asy_screen.this, groups);
                 //Y se lo ponemos
                 listView.setAdapter(adapter);
 
