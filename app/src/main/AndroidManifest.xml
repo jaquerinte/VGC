@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jsadevtech.jsa.vgc"
+<<<<<<< HEAD
     android:versionCode="101"
     android:versionName="1.0.1" >
 
+=======
+    android:versionCode="18"
+    android:versionName="0.3.0" >
+>>>>>>> origin/master
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -83,14 +88,15 @@
             android:name=".screens.twitter_screen"
             android:label="@string/twitter_button" >
         </activity>
-        <activity
-            android:name=".screens.twitter_send_tweet"
-            android:label="@string/text_button_new_twit" >
-        </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="8bdf62d39f6bd7d6c366e4c24f2376e8c1f9f198" />
 
+        <activity
+            android:name=".screens.actividades_screen"
+            android:label="@string/title_activity_actividades_screeen" >
+        </activity>
     </application>
 
 </manifest>

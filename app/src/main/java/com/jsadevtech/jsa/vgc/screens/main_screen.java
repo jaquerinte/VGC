@@ -44,6 +44,7 @@ public class main_screen extends Activity {
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
         Button buttonTwitter = (Button) findViewById(R.id.button_twitter);
+        Button buttonActividades = (Button) findViewById(R.id.button_actividades);
        // ImageButton informacion = (ImageButton) findViewById(R.id.informacionButton);
 
         //fin de buttons
@@ -80,6 +81,12 @@ public class main_screen extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main_screen.this,twitter_screen.class));
+            }
+        });
+        buttonActividades.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this,actividades_screen.class));
             }
         });
 
