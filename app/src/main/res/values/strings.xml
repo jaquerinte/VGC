@@ -32,7 +32,8 @@
     <string name="ateneoDesciption">Librería especializada en cómics, literatura fantástica y Sci-fi, juegos de mesa y cartas, merchandising... <br /> Direccion: C/ Serrano, nº 10, 03003 Alicante </string>
     <string name="comixcityDesciption">Comic, manga, europeo, merchandising, magic, yu-gi-oh, warhammer, juegos de mesa,... ¡todo lo que necesites para tu ocio! <br /> Dirección: C/ Serrano, nº 15, 03003 Alicante </string>
     <string name="homelandsDesciption">Tienda Homelands encontrarás juegos de mesa y juegos de cartas coleccionables,además de multitud de figuras de tus series favoritas. <br/> : Dirección: C/ Sant Vicent 19 bajo izquierda, 03202 Elche</string>
-
+    <string name="fnacMDesciption">Dirección: Centro Comercial Nueva Condomina ,Autopista A-7, km 760 30110 Murcia</string>
+    <string name="heroes7Description">‘7Heroes’ está en la Calle Alfonso Palazón Clemares, Nº4, 30009. <br /> En Murcia.Frente al McDonald’s del Zig Zag.</string>
     <!-- strings de la activity vgc -->
     <string name="titulo_vgc">Salón del cómic, videojuegos, series de tv, juegos de estrategia, coleccionismo…. y mucho más.</string>
     <string name="primer_parrafo_vgc">El  Salón VIDEO GAME COMIC (VGC) se desarrollará en IFA (Institución Ferial Alicantina) durante los días 26 y 27 de Septiembre de 2015.</string>

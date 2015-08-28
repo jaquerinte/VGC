@@ -1,7 +1,11 @@
 package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -62,6 +66,8 @@ public class comprar_fisico_screen extends FragmentActivity {
         LatLng latComixcity =new LatLng(38.344635, -0.493694);
         LatLng latHomelands =new LatLng(38.268102, -0.694669);
         LatLng latSpiderland =new LatLng(38.263011,-0.702073);
+        LatLng lat7heroes =new LatLng(37.999417, -1.138713);
+        LatLng latFnacM =new LatLng(38.040213, -1.149364);
         //fin de las latitudes
         mMap.setMyLocationEnabled(true);
         //inicio de los markers
@@ -113,6 +119,20 @@ public class comprar_fisico_screen extends FragmentActivity {
 
 
         );
+        final Marker heroes7 =mMap.addMarker(new MarkerOptions()
+                        .position(lat7heroes)
+                        .title("7Heroes")
+                        .snippet("Tienda de Comics murcia")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker7heroes))
+
+        );
+        final Marker fnacM =mMap.addMarker(new MarkerOptions()
+                        .position(latFnacM)
+                        .title("FNAC")
+                        .snippet("Toda la cultura y la tecnologia")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.markerfnac))
+
+        );
 
 
         //fin de los markers
@@ -156,6 +176,16 @@ public class comprar_fisico_screen extends FragmentActivity {
                     imagenInformativo.setImageResource(R.drawable.spiderland_logo);
                     return true;
                 }
+                else if(marker.equals(heroes7)){
+                    textoInformativo.setText(R.string.heroes7Description);
+                    imagenInformativo.setImageResource(R.drawable.heroes_logo);
+                    return true;
+                }
+                else if(marker.equals(fnacM)){
+                    textoInformativo.setText(R.string.fnacMDesciption);
+                    imagenInformativo.setImageResource(R.drawable.fnac_logo);
+                    return true;
+                }
 
                 else {
                 return false;
@@ -163,7 +193,24 @@ public class comprar_fisico_screen extends FragmentActivity {
             }
         });
 
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ifaPosition, 10));
+        // Get LocationManager object from System Service LOCATION_SERVICE
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        // Create a criteria object to retrieve provider
+        Criteria criteria = new Criteria();
+        // Get the name of the best provider
+        String provider = locationManager.getBestProvider(criteria, true);
+        // Get Current Location
+        Location myLocation = locationManager.getLastKnownLocation(provider);
+        // Get latitude of the current location
+        double latitude = myLocation.getLatitude();
+        // Get longitude of the current location
+        double longitude = myLocation.getLongitude();
+        // Create a LatLng object for the current location
+        LatLng position = new LatLng(latitude, longitude);
+        // Show the current location in Google Map
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 10));
+
+        /*mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ifaPosition, 10));*/
         //monografic.showInfoWindow();
     }
 
