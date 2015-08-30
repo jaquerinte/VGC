@@ -15,7 +15,7 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         tools:context=".actividades_screen">
 
-
+        <!-- Campeonatos -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -63,6 +63,133 @@
             android:background="@android:color/white"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_campeonatos_infinity"
+            android:layout_below="@id/button_infinity"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <!-- Concursos -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separador_campeonatos_infinity"
+            android:text="@string/concursos_titulo"
+            android:id="@+id/concursos_titulo"
+            android:textColor="@android:color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:background="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concursos_cosplay"
+            android:id="@+id/button_cosplay"
+            android:layout_below="@+id/concursos_titulo"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_concursos_cosplay"
+            android:layout_below="@id/button_cosplay"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <!-- Torneos -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separador_concursos_cosplay"
+            android:text="@string/torneos_titulo"
+            android:id="@+id/torneos_titulo"
+            android:textColor="@android:color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:background="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_USFIV"
+            android:id="@+id/button_USFIV"
+            android:layout_below="@+id/torneos_titulo"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_torneos_USFIV"
+            android:layout_below="@id/button_USFIV"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+        <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/torneos_SFII"
+        android:id="@+id/button_SFII"
+        android:layout_below="@+id/separador_torneos_USFIV"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginLeft="40dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_torneos_SFII"
+            android:layout_below="@id/button_SFII"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_SSB"
+            android:id="@+id/button_SSB"
+            android:layout_below="@+id/separador_torneos_SFII"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_torneos_SSB"
+            android:layout_below="@id/button_SSB"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
 
     </RelativeLayout>
 </ScrollView>

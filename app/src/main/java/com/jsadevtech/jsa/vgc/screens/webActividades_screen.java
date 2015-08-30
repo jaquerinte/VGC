@@ -1,5 +1,6 @@
 package com.jsadevtech.jsa.vgc.screens;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +48,20 @@ public class webActividades_screen extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_colaboradores) {
+            startActivity(new Intent(webActividades_screen.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(webActividades_screen.this, zonas_screen.class));
+            return true;
+        }
+        if(id == R.id.action_about) {
+            startActivity(new Intent(webActividades_screen.this, about_screen.class));
+            return true;
+        }
+        if(id == R.id.action_principal) {
+            startActivity(new Intent(webActividades_screen.this, main_screen.class));
             return true;
         }
 

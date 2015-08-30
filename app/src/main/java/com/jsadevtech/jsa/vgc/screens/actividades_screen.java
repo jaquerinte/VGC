@@ -33,6 +33,10 @@ public class actividades_screen extends Activity {
 
         Button magicButton = (Button)findViewById(R.id.button_magic);
         Button infinityButton = (Button) findViewById(R.id.button_infinity);
+        Button cosplayButton = (Button) findViewById(R.id.button_cosplay);
+        Button usfIVButton = (Button) findViewById(R.id.button_USFIV);
+        Button sfIIButton = (Button) findViewById(R.id.button_SFII);
+        Button ssbButton = (Button) findViewById(R.id.button_SSB);
 
         magicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +64,42 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.campeonatos_infinity)));
                 i.putExtra("title", getString(R.string.campeonatos_infinity));
+                startActivity(i);
+            }
+        });
+        cosplayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.concursos_cosplay)));
+                i.putExtra("title", getString(R.string.concursos_cosplay));
+                startActivity(i);
+            }
+        });
+        usfIVButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_USFIV)));
+                i.putExtra("title", getString(R.string.torneos_USFIV));
+                startActivity(i);
+            }
+        });
+        sfIIButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_SFII)));
+                i.putExtra("title", getString(R.string.torneos_SFII));
+                startActivity(i);
+            }
+        });
+        ssbButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_SSB)));
+                i.putExtra("title", getString(R.string.torneos_SSB));
                 startActivity(i);
             }
         });
