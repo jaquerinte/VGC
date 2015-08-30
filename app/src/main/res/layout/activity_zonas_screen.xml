@@ -1,0 +1,295 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:background="@drawable/fondo">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.jsadevtech.jsa.vgc.screens.zonas_screen">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_vgc"
+            android:textStyle= "bold"
+            android:textColor="@android:color/black"
+            android:textSize= "22dp"
+            android:id="@+id/titulo_vgc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/titulo_vgc"
+            android:text="@string/primer_parrafo_vgc"
+            android:textColor="@android:color/black"
+            android:textSize= "18dp"
+            android:id="@+id/primer_parrafo_vgc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/primer_parrafo_vgc"
+            android:text="@string/segundo_parrafo_vgc"
+            android:textColor="@android:color/black"
+            android:textSize= "18dp"
+            android:id="@+id/segundo_parrafo_vgc" />
+
+        <View
+            android:id="@+id/separador1_vgc"
+            android:layout_below="@+id/segundo_parrafo_vgc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="20dp" />
+
+        <!-- Zona Gamer -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/separador1_vgc"
+            android:text="@string/zona_gamer_titulo"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize= "18dp"
+            android:id="@+id/zona_gamer_titulo" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/zona_gamer_table"
+            android:layout_below="@+id/zona_gamer_titulo"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/gamer_logo"
+                android:src="@drawable/zona_gamer_logo_nuevo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/zona_gamer_desc"
+                android:textColor="@android:color/black"
+                android:textSize= "15dp"
+                android:id="@+id/zona_gamer_desc" />
+        </TableLayout>
+
+
+        <!-- Zona de conciertos-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/zona_gamer_table"
+            android:text="@string/zona_conciertos_titulo"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize= "18dp"
+            android:id="@+id/zona_conciertos_titulo" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/zona_conciertos_table"
+            android:layout_below="@+id/zona_conciertos_titulo"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/conciertos_logo"
+                android:src="@drawable/zona_conciertos_logo_nuevo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/zona_conciertos_desc"
+                android:textColor="@android:color/black"
+                android:textSize= "15dp"
+                android:id="@+id/zona_conciertos_desc" />
+
+        </TableLayout>
+
+        <!-- Zona Market -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/zona_conciertos_table"
+            android:text="@string/zona_market_titulo"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize= "18dp"
+            android:id="@+id/zona_market_titulo" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/zona_market_table"
+            android:layout_below="@+id/zona_market_titulo"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/market_logo"
+                android:src="@drawable/zona_market_logo_nuevo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/zona_market_desc"
+                android:textColor="@android:color/black"
+                android:textSize= "15dp"
+                android:id="@+id/zona_market_desc" />
+
+        </TableLayout>
+
+        <!-- Zona hablamos -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/zona_market_table"
+            android:text="@string/zona_hablamos_titulo"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize= "18dp"
+            android:id="@+id/zona_hablamos_titulo" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/zona_hablamos_table"
+            android:layout_below="@+id/zona_hablamos_titulo"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/hablamos_logo"
+                android:src="@drawable/zona_hablamos_logo_nuevo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/zona_hablamos_desc"
+                android:textColor="@android:color/black"
+                android:textSize= "15dp"
+                android:id="@+id/zona_hablamos_desc" />
+
+        </TableLayout>
+
+        <!-- Zona Talleres -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/zona_hablamos_table"
+            android:text="@string/zona_talleres_titulo"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize= "18dp"
+            android:id="@+id/zona_talleres_titulo" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/zona_talleres_table"
+            android:layout_below="@+id/zona_talleres_titulo"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/talleres_logo"
+                android:src="@drawable/zona_talleres_logo_nuevo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/zona_talleres_desc"
+                android:textColor="@android:color/black"
+                android:textSize= "15dp"
+                android:id="@+id/zona_talleres_desc" />
+
+        </TableLayout>
+
+        <!-- Zona estrategia -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/zona_talleres_table"
+            android:text="@string/zona_estrategia_titulo"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize= "18dp"
+            android:id="@+id/zona_estrategia_titulo" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/zona_estrategia_table"
+            android:layout_below="@+id/zona_estrategia_titulo"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/estrategia_logo"
+                android:src="@drawable/zona_estrategia_logo_nuevo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/zona_estrategia_desc"
+                android:textColor="@android:color/black"
+                android:textSize= "15dp"
+                android:id="@+id/zona_estrategia_desc" />
+
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
+

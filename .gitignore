@@ -15,3 +15,5 @@ app/app.iml
 .idea/encodings.xml
 .idea/misc.xml
 >>>>>>> master
+.idea/gradle.xml
+.idea/inspectionProfiles/Project_Default.xml

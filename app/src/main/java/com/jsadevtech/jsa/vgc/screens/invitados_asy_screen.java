@@ -1,11 +1,7 @@
 package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
-import android.app.IntentService;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -14,16 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jsadevtech.jsa.vgc.R;
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
 import com.jsadevtech.jsa.vgc.auxiliars.Invitado;
 import com.jsadevtech.jsa.vgc.auxiliars.InvitadoBD;
-import com.jsadevtech.jsa.vgc.auxiliars.InvitadosAdapter;
+import com.jsadevtech.jsa.vgc.auxiliars.ExpandableListAdapter;
 
 import java.util.ArrayList;
 
@@ -32,7 +24,7 @@ import java.util.ArrayList;
  */
 public class invitados_asy_screen extends Activity {
     // more efficient than HashMap for mapping integers to objects
-    SparseArray<Group> groups = new SparseArray<Group>();
+    SparseArray<Group> groups = new SparseArray<>();
 
 
     @Override
@@ -42,24 +34,25 @@ public class invitados_asy_screen extends Activity {
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
 
       //  createData();
+        //ejecutamos la descarga e interpretacion de datos en modo asincrono
         invitadors_asy descargar = new invitadors_asy();
         descargar.execute();
         //Linkamos con el objeto del xml
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
 
         //Creamos su adaptador de datos
-        InvitadosAdapter adapter = new InvitadosAdapter(this,
+        ExpandableListAdapter adapter = new ExpandableListAdapter(this,
                 groups);
         //Y se lo ponemos
         listView.setAdapter(adapter);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_invitados_screen, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -69,7 +62,20 @@ public class invitados_asy_screen extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_colaboradores) {
+            startActivity(new Intent(invitados_asy_screen.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(invitados_asy_screen.this, zonas_screen.class));
+            return true;
+        }
+        if(id == R.id.action_about) {
+            startActivity(new Intent(invitados_asy_screen.this, about_screen.class));
+            return true;
+        }
+        if(id == R.id.action_principal) {
+            startActivity(new Intent(invitados_asy_screen.this, main_screen.class));
             return true;
         }
 
@@ -145,7 +151,7 @@ public class invitados_asy_screen extends Activity {
             {
                 ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
                 //Creamos su adaptador de datos
-                InvitadosAdapter adapter = new InvitadosAdapter(invitados_asy_screen.this, groups);
+                ExpandableListAdapter adapter = new ExpandableListAdapter(invitados_asy_screen.this, groups);
                 //Y se lo ponemos
                 listView.setAdapter(adapter);
 

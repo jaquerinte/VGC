@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jsadevtech.jsa.vgc.screens.comprar_online_screen">
+
+    <item android:id="@+id/action_colaboradores" android:title="@string/action_colaboradores"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_zonas" android:title="@string/action_zonas"
+        android:orderInCategory="200" app:showAsAction="never" />
+    <item android:id="@+id/action_about" android:title="@string/action_about"
+        android:orderInCategory="300" app:showAsAction="never" />
+    <item android:id="@+id/action_principal" android:title="@string/action_principal"
+        android:orderInCategory="400" app:showAsAction="never" />
+
+</menu>

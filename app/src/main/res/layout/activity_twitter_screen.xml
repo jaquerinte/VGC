@@ -50,7 +50,8 @@
         android:textColor="@android:color/white"
         android:drawableLeft="@drawable/tw__ic_logo_default"
         android:paddingLeft="30dp"
-        android:paddingEnd="60dp" />
+        android:paddingEnd="60dp"
+        android:paddingRight="60dp"/>
 
     <RelativeLayout
         android:layout_width="fill_parent"

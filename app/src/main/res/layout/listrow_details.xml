@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="40dp"
     android:clickable="true"
+    android:onClick="actividades_screen."
     android:orientation="vertical"
     android:paddingLeft="40dp"
     tools:context=".invitados_screen" >
@@ -16,6 +17,8 @@
         android:gravity="center_vertical"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
         android:textAlignment="center">
     </TextView>
 

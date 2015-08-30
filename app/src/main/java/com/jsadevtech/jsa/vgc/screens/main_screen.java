@@ -11,7 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.jsadevtech.jsa.vgc.auxiliars.Notifications;
 import com.jsadevtech.jsa.vgc.R;
@@ -41,11 +40,11 @@ public class main_screen extends Activity {
 
         //buttons declaracion
         Button buttonInvitados =(Button) findViewById(R.id.buttonInvitados);
-        Button buttonHorarios =(Button) findViewById(R.id.buttonHoraio);
         Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
         Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
         Button buttonTwitter = (Button) findViewById(R.id.button_twitter);
+        Button buttonActividades = (Button) findViewById(R.id.button_actividades);
        // ImageButton informacion = (ImageButton) findViewById(R.id.informacionButton);
 
         //fin de buttons
@@ -57,13 +56,7 @@ public class main_screen extends Activity {
                 startActivity(new Intent(main_screen.this, invitados_asy_screen.class));
             }
         });
-        buttonHorarios.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(main_screen.this,horarios_screen.class));
 
-            }
-        });
 
         buttonComprar.setOnClickListener(new OnClickListener() {
             @Override
@@ -88,6 +81,12 @@ public class main_screen extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main_screen.this,twitter_screen.class));
+            }
+        });
+        buttonActividades.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this,actividades_screen.class));
             }
         });
 
@@ -147,12 +146,17 @@ public class main_screen extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.action_colaboradores) {
             startActivity(new Intent(main_screen.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(main_screen.this, zonas_screen.class));
+            return true;
+        }
+
+        if(id == R.id.action_about) {
+            startActivity(new Intent(main_screen.this, about_screen.class));
             return true;
         }
 

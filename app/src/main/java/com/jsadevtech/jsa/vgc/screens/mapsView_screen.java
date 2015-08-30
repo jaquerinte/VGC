@@ -1,5 +1,6 @@
 package com.jsadevtech.jsa.vgc.screens;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -53,10 +54,9 @@ public class mapsView_screen extends FragmentActivity implements OnMapReadyCallb
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_mapsview_screen, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -66,7 +66,20 @@ public class mapsView_screen extends FragmentActivity implements OnMapReadyCallb
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_colaboradores) {
+            startActivity(new Intent(mapsView_screen.this, informacion.class));
+            return true;
+        }
+        if(id == R.id.action_zonas) {
+            startActivity(new Intent(mapsView_screen.this, zonas_screen.class));
+            return true;
+        }
+        if(id == R.id.action_about) {
+            startActivity(new Intent(mapsView_screen.this, about_screen.class));
+            return true;
+        }
+        if(id == R.id.action_principal) {
+            startActivity(new Intent(mapsView_screen.this, main_screen.class));
             return true;
         }
 
