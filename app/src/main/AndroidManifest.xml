@@ -97,6 +97,11 @@
             android:name=".screens.actividades_screen"
             android:label="@string/title_activity_actividades_screeen" >
         </activity>
+        <activity
+            android:name=".screens.webActividades_screen"
+            android:label="@string/title_activity_web_actividades_screen"
+            android:parentActivityName=".screens.actividades_screen">
+        </activity>
     </application>
 
 </manifest>
