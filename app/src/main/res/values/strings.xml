@@ -58,6 +58,16 @@
     <string name="hecho_por_cabecera">Hecho por:</string>
     <string name="jsadevtech">JSA DevTech®</string>
 
+    <!-- strings de actividades_screen -->
+    <string name="campeonatos_titulo">CAMPEONATOS</string>
+    <string name="concursos_titulo">CONCURSOS</string>
+    <string name="torneos_titulo">TORNEOS</string>
+    <string name="campeonatos_magic" translatable="false">Magic</string>
+    <string name="campeonatos_infinity" translatable="false">Infinity</string>
+    <string name="concursos_cosplay">Cosplay</string>
+    <string name="torneos_USFIV" translatable="false">Ultra Street Fighter IV</string>
+    <string name="torneos_SFII" translatable="false">Street Fighter II Champion Edition</string>
+    <string name="torneos_SSB" translatable="false">Super Smash Bros</string>
 
     <!--string de api facebook -->
     <string name="facebook_app_id" translatable="false">1440183462973613</string>
@@ -67,5 +77,6 @@
     <string name="title_activity_vgc_screen">Vgc_screen</string>
     <string name="title_activity_about">About</string>
     <string name="title_activity_actividades_screeen">actividades_screeen</string>
+    <string name="title_activity_web_actividades_screen">webActividades_screen</string>
 
 </resources>

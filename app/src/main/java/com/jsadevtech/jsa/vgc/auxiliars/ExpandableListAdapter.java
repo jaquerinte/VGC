@@ -21,9 +21,11 @@ import com.jsadevtech.jsa.vgc.R;
  */
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
-    private SparseArray<Group> groups;
+    protected SparseArray<Group> groups;
     public LayoutInflater inflater;
     public Activity activity;
+
+    public ExpandableListAdapter() {}
 
     public ExpandableListAdapter(Activity act, SparseArray<Group> groups) {
         activity = act;
@@ -53,15 +55,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         text = (TextView) convertView.findViewById(R.id.textView1);
         text.setText(children);
 
-
-
         convertView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(activity, children,
-                        Toast.LENGTH_SHORT).show();
+                    //Do Nothing
             }
         });
+
         return convertView;
     }
 

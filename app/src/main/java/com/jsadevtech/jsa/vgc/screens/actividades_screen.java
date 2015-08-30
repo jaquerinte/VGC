@@ -12,6 +12,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 
 import com.jsadevtech.jsa.vgc.R;
@@ -20,94 +21,48 @@ import com.jsadevtech.jsa.vgc.auxiliars.Group;
 
 public class actividades_screen extends Activity {
     private SparseArray<Group> groups = new SparseArray<>();
-    private final String[] tipoActividades = {"CAMPEONATOS", "CONCURSOS", "TORNEOS"};
-    private final String[][] nombreActividades = {{"Magic", "Infinity"}, {"Cosplay"},
-            {"Ultra Street Fighter IV", "Street Fighter II Champion Edition", "Super Smash Bros"}};
+    //private final String[] tipoActividades = {"CAMPEONATOS", "CONCURSOS", "TORNEOS"};
+    //private final String[][] nombreActividades = {{"Magic", "Infinity"}, {"Cosplay"},
+    //        {"Ultra Street Fighter IV", "Street Fighter II Champion Edition", "Super Smash Bros"}};
 
-    private ExpandableListView listView;
-    private WebView web;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_invitados_screen);
-        StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
+        setContentView(R.layout.activity_actividades_screeen);
 
+        Button magicButton = (Button)findViewById(R.id.button_magic);
+        Button infinityButton = (Button) findViewById(R.id.button_infinity);
 
-        //Realizamos la interpretacion de los datos en modo asincrono
-        actividades_asy descargar = new actividades_asy();
-        descargar.execute();
-        //Linkamos con el objeto del xml
-        listView = (ExpandableListView) findViewById(R.id.listView);
-        web = (WebView) findViewById(R.id.webView_actividades);
-
-        //Creamos su adaptador de datos
-        ExpandableListAdapter adapter = new ExpandableListAdapter(this,
-                groups);
-        //Y se lo ponemos
-        listView.setAdapter(adapter);
-
-        listView.setOnChildClickListener( new ExpandableListView.OnChildClickListener(){
+        magicButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id){
-                //Como todas las web tienen la misma estructura de nombre, podemos pasar el nombre de la actividad
-                abrirWeb(nombreActividades[groupPosition][childPosition]);
-
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.campeonatos_magic)));
+                i.putExtra("title", getString(R.string.campeonatos_magic));
+                startActivity(i);
+            }
+        });
+        magicButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                final String magicGif = "http://www.reactiongifs.com/r/mgc.gif";
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", magicGif);
+                i.putExtra("title", getString(R.string.campeonatos_magic));
+                startActivity(i);
                 return true;
             }
         });
-    }
-
-    private void createData()
-    {
-
-        for(int i=0; i<tipoActividades.length; i++)
-        {
-            //Le ponemos el titulo al grupo
-            Group group = new Group(tipoActividades[i]);
-            for(int j=0; j<nombreActividades[i].length; j++)
-            {
-                //Ponemos las actividades dentro de cada grupo
-                group.children.add(nombreActividades[i][j]);
+        infinityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.campeonatos_infinity)));
+                i.putExtra("title", getString(R.string.campeonatos_infinity));
+                startActivity(i);
             }
-
-            groups.append(i, group);
-        }
-    }
-
-    private void abrirWeb(String activity)
-    {
-        listView.setVisibility(View.INVISIBLE);
-
-
-        //Activamos el javascript
-        WebSettings setings = web.getSettings();
-        setings.setJavaScriptEnabled(true);
-
-        //Ponemos la url
-        web.loadUrl(parseURL(activity));
-        //Forzamos la webview para que abra enlaces dentro de la pagina
-        web.setWebViewClient(new WebViewClient());
-        //Y la ponemos visible
-        web.setVisibility(View.VISIBLE);
-    }
-
-    private String parseURL(String activity)
-    {
-        String url = "http://www.vgcomic.com/";
-        String[] partes;
-
-        partes = activity.toLowerCase().split(" ");
-
-        for(int i=0; i<partes.length; i++)
-        {
-            if(i == partes.length-1)
-                url += partes[i]+"/";
-            else
-                url += (partes[i]+"-");
-        }
-
-        return url;
+        });
     }
 
 
@@ -146,46 +101,21 @@ public class actividades_screen extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private class actividades_asy extends AsyncTask<Void, Integer, Boolean>
+    private String parseURL(String activity)
     {
-        @Override
-        protected Boolean doInBackground(Void... params) {
+        String url = "http://www.vgcomic.com/";
+        String[] partes;
 
-            createData();
-            if(isCancelled()) {
-            }
+        partes = activity.toLowerCase().split(" ");
 
-            return true;
+        for(int i=0; i<partes.length; i++)
+        {
+            if(i == partes.length-1)
+                url += partes[i]+"/";
+            else
+                url += (partes[i]+"-");
         }
 
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            int progreso = values[0].intValue();
-        }
-
-        @Override
-        protected void onPreExecute() {
-
-
-        }
-
-        @Override
-        protected void onPostExecute(Boolean result) {
-            if(result)
-            {
-                ExpandableListView listView = (ExpandableListView) findViewById(R.id.listView);
-                //Creamos su adaptador de datos
-                ExpandableListAdapter adapter = new ExpandableListAdapter(actividades_screen.this, groups);
-                //Y se lo ponemos
-                listView.setAdapter(adapter);
-
-                listView.setVisibility(View.VISIBLE);
-            }
-        }
-
-        @Override
-        protected void onCancelled() {
-            startActivity(new Intent(actividades_screen.this,main_screen.class));
-        }
+        return url;
     }
 }

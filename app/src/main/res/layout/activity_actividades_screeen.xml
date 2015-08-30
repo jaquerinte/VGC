@@ -1,23 +1,68 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/fondo"
-    tools:context="com.jsadevtech.jsa.vgc.screens.actividades_screen">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:alpha="0.90"
+    android:background="@drawable/fondo">
 
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView_actividades"
-        android:visibility="invisible"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".actividades_screen">
 
-    <ExpandableListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/actividades_lista"
-        android:layout_below="@+id/webView_actividades"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"/>
-</RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campeonatos_titulo"
+            android:id="@+id/campeonatos_titulo"
+            android:textColor="@android:color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:background="@android:color/white"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campeonatos_magic"
+            android:id="@+id/button_magic"
+            android:layout_below="@+id/campeonatos_titulo"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_campeonatos_magic"
+            android:layout_below="@id/button_magic"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campeonatos_infinity"
+            android:id="@+id/button_infinity"
+            android:layout_below="@+id/separador_campeonatos_magic"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+
+    </RelativeLayout>
+</ScrollView>
