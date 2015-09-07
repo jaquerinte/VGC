@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/Evento.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/EventoBD.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/NotificacionesBD.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/Notifications.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/Time.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/exceptions/TooManyDaysException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/exceptions/TooManyMinutesException.java" charset="UTF-8" />
   </component>
 </project>

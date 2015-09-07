@@ -17,3 +17,10 @@ app/app.iml
 >>>>>>> master
 .idea/gradle.xml
 .idea/inspectionProfiles/Project_Default.xml
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+VGC.iml
