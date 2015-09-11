@@ -193,7 +193,7 @@ public class comprar_fisico_screen extends FragmentActivity {
                 }
             }
         });
-
+/*
         // Get LocationManager object from System Service LOCATION_SERVICE
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         // Create a criteria object to retrieve provider
@@ -210,8 +210,8 @@ public class comprar_fisico_screen extends FragmentActivity {
         LatLng position = new LatLng(latitude, longitude);
         // Show the current location in Google Map
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 10));
-
-        /*mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ifaPosition, 10));*/
+*/
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ifaPosition, 10));
         //monografic.showInfoWindow();
     }
 
