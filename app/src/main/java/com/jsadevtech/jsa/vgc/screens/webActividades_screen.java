@@ -1,6 +1,7 @@
 package com.jsadevtech.jsa.vgc.screens;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class webActividades_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_actividades_screen);
+        StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
         Bundle bundle = getIntent().getExtras();
 
         setTitle(bundle.getString("title"));

@@ -21,9 +21,10 @@ import com.jsadevtech.jsa.vgc.auxiliars.Group;
 
 public class actividades_screen extends Activity {
     private SparseArray<Group> groups = new SparseArray<>();
-    //private final String[] tipoActividades = {"CAMPEONATOS", "CONCURSOS", "TORNEOS"};
-    //private final String[][] nombreActividades = {{"Magic", "Infinity"}, {"Cosplay"},
-    //        {"Ultra Street Fighter IV", "Street Fighter II Champion Edition", "Super Smash Bros"}};
+    //private final String[] tipoActividades = {"CAMPEONATOS", "CONCURSOS", "LAN PARTY","TORNEOS"};
+    //private final String[][] nombreActividades = {{"Magic", "Infinity", "Krosmaster"}, {"Cosplay", "Adivina la cancion"},
+    //        {"LoL 5vs5", "Minecraft"}, {"Ultra Street Fighter IV", "Street Fighter II Champion Edition", "Super Smash Bros", "Naruto Suns Revolution",
+    //          "Mortal Kombat X", "Torneos Fusion Freak"}};
 
 
     @Override
@@ -33,10 +34,17 @@ public class actividades_screen extends Activity {
 
         Button magicButton = (Button)findViewById(R.id.button_magic);
         Button infinityButton = (Button) findViewById(R.id.button_infinity);
+        Button krosmasterButton = (Button) findViewById(R.id.button_krosmaster);
         Button cosplayButton = (Button) findViewById(R.id.button_cosplay);
+        Button adivinaCacionButton = (Button) findViewById(R.id.button_adivina_cancion);
+        Button lolButton = (Button) findViewById(R.id.button_lol_5vs5);
+        Button minecraftButton = (Button) findViewById(R.id.button_minecraft);
         Button usfIVButton = (Button) findViewById(R.id.button_USFIV);
         Button sfIIButton = (Button) findViewById(R.id.button_SFII);
         Button ssbButton = (Button) findViewById(R.id.button_SSB);
+        Button narutoButton = (Button) findViewById(R.id.button_narutoSunsRevolution);
+        Button mkXButton = (Button) findViewById(R.id.button_mkX);
+        Button fusionFreakButton = (Button) findViewById(R.id.button_toneosFusionFreak);
 
         magicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,12 +75,48 @@ public class actividades_screen extends Activity {
                 startActivity(i);
             }
         });
+        krosmasterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.campeonatos_krosmaster)));
+                i.putExtra("title", getString(R.string.campeonatos_krosmaster));
+                startActivity(i);
+            }
+        });
         cosplayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.concursos_cosplay)));
                 i.putExtra("title", getString(R.string.concursos_cosplay));
+                startActivity(i);
+            }
+        });
+        adivinaCacionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.concursos_adivina_cancion)+ " 2"));
+                i.putExtra("title", (getString(R.string.concursos_adivina_cancion)));
+                startActivity(i);
+            }
+        });
+        lolButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.lan_party_lol5vs5)));
+                i.putExtra("title", getString(R.string.lan_party_lol5vs5));
+                startActivity(i);
+            }
+        });
+        minecraftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.lan_party_minecraft)));
+                i.putExtra("title", getString(R.string.lan_party_minecraft));
                 startActivity(i);
             }
         });
@@ -100,6 +144,33 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.torneos_SSB)));
                 i.putExtra("title", getString(R.string.torneos_SSB));
+                startActivity(i);
+            }
+        });
+        narutoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_narutoSunsRevolution)));
+                i.putExtra("title", getString(R.string.torneos_narutoSunsRevolution));
+                startActivity(i);
+            }
+        });
+        mkXButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_mkX)));
+                i.putExtra("title", getString(R.string.torneos_mkX));
+                startActivity(i);
+            }
+        });
+        fusionFreakButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_fusion_freak)));
+                i.putExtra("title", getString(R.string.torneos_fusion_freak));
                 startActivity(i);
             }
         });

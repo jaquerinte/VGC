@@ -49,7 +49,7 @@ public class Notifications {
      * @param vibrate si la aplicacion tendra vibracion
      * @param prioridad prioridad de la aplicacion 0 minima, 1 baja, 2 defaul,3 alta, 4 maxima
      */
-    public Notifications(Context miContexto, String miTiquet,String miTitulo,String miTexto,int miImgSmall,Boolean song,Boolean vibrate,int prioridad){
+    public Notifications(Context miContexto, String miTiquet, String miTitulo, String miTexto, int miImgSmall, Boolean song, Boolean vibrate, int prioridad){
          notification = new NotificationCompat.Builder(miContexto);
         this.setTicket(miTiquet);
         this.setContentTitle(miTitulo);
@@ -116,6 +116,7 @@ public class Notifications {
                    break;
         }
     }
+
     public void setVibracion(){
         long[] pattern = new long[]{1000,500,1000};
         vibracion=true;

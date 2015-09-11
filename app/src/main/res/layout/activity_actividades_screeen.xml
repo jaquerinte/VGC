@@ -73,11 +73,34 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="20dp"/>
 
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campeonatos_krosmaster"
+            android:id="@+id/button_krosmaster"
+            android:layout_below="@+id/separador_campeonatos_infinity"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_campeonatos_krosmaster"
+            android:layout_below="@id/button_krosmaster"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
         <!-- Concursos -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/separador_campeonatos_infinity"
+            android:layout_below="@+id/separador_campeonatos_krosmaster"
             android:text="@string/concursos_titulo"
             android:id="@+id/concursos_titulo"
             android:textColor="@android:color/black"
@@ -110,11 +133,94 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="20dp"/>
 
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concursos_adivina_cancion"
+            android:id="@+id/button_adivina_cancion"
+            android:layout_below="@+id/separador_concursos_cosplay"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_concursos_adivina_cancion"
+            android:layout_below="@id/button_adivina_cancion"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <!-- Concursos -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separador_concursos_adivina_cancion"
+            android:text="@string/lan_party_titulo"
+            android:id="@+id/lan_party_titulo"
+            android:textColor="@android:color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:background="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lan_party_lol5vs5"
+            android:id="@+id/button_lol_5vs5"
+            android:layout_below="@+id/lan_party_titulo"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_lan_party_lol5vs5"
+            android:layout_below="@id/button_lol_5vs5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lan_party_minecraft"
+            android:id="@+id/button_minecraft"
+            android:layout_below="@+id/separador_lan_party_lol5vs5"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_lan_party_minecraft"
+            android:layout_below="@id/button_minecraft"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
         <!-- Torneos -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/separador_concursos_cosplay"
+            android:layout_below="@+id/separador_lan_party_minecraft"
             android:text="@string/torneos_titulo"
             android:id="@+id/torneos_titulo"
             android:textColor="@android:color/black"
@@ -146,19 +252,20 @@
             android:layout_marginTop="5dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="20dp"/>
+
         <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/torneos_SFII"
-        android:id="@+id/button_SFII"
-        android:layout_below="@+id/separador_torneos_USFIV"
-        android:layout_alignParentLeft="true"
-        android:textStyle="bold"
-        android:textSize="22dp"
-        android:layout_marginLeft="40dp"
-        android:background="@android:color/white"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp" />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_SFII"
+            android:id="@+id/button_SFII"
+            android:layout_below="@+id/separador_torneos_USFIV"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
         <View
             android:id="@+id/separador_torneos_SFII"
             android:layout_below="@id/button_SFII"
@@ -168,6 +275,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="20dp"/>
+
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -184,6 +292,75 @@
         <View
             android:id="@+id/separador_torneos_SSB"
             android:layout_below="@id/button_SSB"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_narutoSunsRevolution"
+            android:id="@+id/button_narutoSunsRevolution"
+            android:layout_below="@+id/separador_torneos_SSB"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_torneos_narutoSunsRevolution"
+            android:layout_below="@id/button_narutoSunsRevolution"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_mkX"
+            android:id="@+id/button_mkX"
+            android:layout_below="@+id/separador_torneos_narutoSunsRevolution"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_torneos_mkX"
+            android:layout_below="@id/button_mkX"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_fusion_freak"
+            android:id="@+id/button_toneosFusionFreak"
+            android:layout_below="@+id/separador_torneos_mkX"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp" />
+        <View
+            android:id="@+id/separador_torneos_fusionFreak"
+            android:layout_below="@id/button_toneosFusionFreak"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@android:color/black"

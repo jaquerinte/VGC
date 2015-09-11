@@ -1,8 +1,8 @@
 package com.jsadevtech.jsa.vgc.auxiliars;
 
 import com.jsadevtech.jsa.vgc.exceptions.ConnectionFailedException;
-import com.jsadevtech.jsa.vgc.exceptions.CouldNotGetInformationException;
 import com.jsadevtech.jsa.vgc.exceptions.CouldNotConvertFormatException;
+import com.jsadevtech.jsa.vgc.exceptions.CouldNotGetInformationException;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -105,8 +105,8 @@ public class EventoBD
             {
                 JSONObject json = jArray.getJSONObject(i);
 
-                ev = new Evento(json.getString("id"), json.getString("nombre"), json.getString("lugar"), json.getString("persona_destacada"),
-                        json.getString("fecha_inicio"), json.getString("fecha_fin"));
+                ev = new Evento(json.getString("id"), json.getString("nombre"), json.getString("lugar"), json.getString("descripcion"),
+                        json.getString("persona_destacada"), json.getString("fecha_inicio"), json.getString("fecha_fin"));
 
                 resultado.add(ev);
             }
