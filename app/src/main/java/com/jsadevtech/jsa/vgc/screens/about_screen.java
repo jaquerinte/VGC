@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.jsadevtech.jsa.vgc.R;
 
@@ -14,6 +15,15 @@ public class about_screen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+    try {
+    String versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+        TextView verion = (TextView)findViewById(R.id.version_number);
+        verion.setText(versionName);
+    }
+    catch (android.content.pm.PackageManager.NameNotFoundException ex){
+
+    }
+
     }
 
     @Override

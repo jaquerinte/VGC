@@ -126,7 +126,8 @@
         android:textColor="@android:color/white"
         android:alpha="1"
         android:paddingLeft="10dp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:drawableLeft="@drawable/torunament_icon30x30"/>
 
 
 </RelativeLayout>
