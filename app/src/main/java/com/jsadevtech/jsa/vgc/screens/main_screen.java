@@ -2,7 +2,10 @@ package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
 import android.app.NotificationManager;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
 import android.os.StrictMode;
 //import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.jsadevtech.jsa.vgc.auxiliars.MyService;
 import com.jsadevtech.jsa.vgc.auxiliars.Notifications;
 import com.jsadevtech.jsa.vgc.R;
 
@@ -37,6 +41,7 @@ public class main_screen extends Activity {
         //declaracion de notificaciones
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         //fin de declaracion de notificaciones
+
 
         //buttons declaracion
         Button buttonInvitados =(Button) findViewById(R.id.buttonInvitados);
@@ -128,7 +133,6 @@ public class main_screen extends Activity {
         { textoinicio.setText(ex.getMessage()); }
     }
 */
-
 
 
     @Override

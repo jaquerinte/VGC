@@ -23,6 +23,7 @@ public class NotificacionesBD
     private static final String phpFile = "http://jsadevtech.site40.net/getNotificaciones.php";
     private static final String phpFileFromFecha = "http://jsadevtech.site40.net/getNotificacionesFromFecha.php?argument1=";
     private static final String phpFileFirstFromFecha = "http://jsadevtech.site40.net/getFirstNotificacionFromFecha.php?argument1=";
+    private static final String phpFileById="http://jsadevtech.site40.net/getNotificacionById.php?argument1=";
 
     public NotificacionesBD(){} //Does Nothing
 
@@ -125,5 +126,20 @@ public class NotificacionesBD
         }
 
         return resultado;
+    }
+    public static Vector<Notificacion> getNotificacionesById(String id) throws ConnectionFailedException, CouldNotConvertFormatException, CouldNotGetInformationException
+    {
+        Vector<Notificacion> resultado;
+        try
+        {
+            resultado = getDatos(phpFileById+id);
+            return resultado;
+        }
+        catch(ConnectionFailedException ex)
+        { throw new ConnectionFailedException(); }
+        catch(CouldNotConvertFormatException ex)
+        { throw new CouldNotConvertFormatException(); }
+        catch(CouldNotGetInformationException ex)
+        { throw new CouldNotGetInformationException(); }
     }
 }
