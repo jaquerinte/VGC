@@ -66,11 +66,11 @@ public class NotificationService extends Service{
                     Toast.makeText(cont, "lastId: "+lastId, Toast.LENGTH_SHORT).show();
                     lastId--;
                     Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + lastId);
-                    while (lastId < notificacionesRestantes.size() ){
-                        System.out.println("paso por el for"+lastId);
-                        Notifications a = new Notifications(cont,notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
+                    for(int i=0; i<notificacionesRestantes.size(); i++){
+                        System.out.println("paso por el for"+i+"; Notificacion: "+notificacionesRestantes.get(i).getId());
+                        Notifications a = new Notifications(cont,notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
                         a.setSoundMario();
-                        nt.notify(Integer.parseInt(notificacionesRestantes.get(lastId).getId()), a.getNotificacion());
+                        nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
                         lastId++;
                     }
 
