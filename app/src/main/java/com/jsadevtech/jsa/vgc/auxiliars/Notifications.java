@@ -7,6 +7,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v7.app.NotificationCompat;
 
+import com.jsadevtech.jsa.vgc.R;
+
 /**
  * Created by Jaquer on 11/06/2015.
  * Clase encargada de Simplificar las notificaciones en vison de que sean llamandas de una BBDD
@@ -91,6 +93,11 @@ public class Notifications {
         Uri sonido = RingtoneManager.getDefaultUri(Notification.DEFAULT_SOUND);
         notification.setSound(sonido);
 
+    }
+    public void setSoundMario(){
+        sound=true;
+        Uri sonido = Uri.parse("android.resource://com.jsadevtech.jsa.vgc/" + R.raw.coinmario) ;
+        notification.setSound(sonido);
     }
 
     /**

@@ -63,6 +63,7 @@ public class NotificationService extends Service{
                     Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + lastId);
                     for(int i=0;i<notificacionesRestantes.size();i++){
                         Notifications a = new Notifications(cont,notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
+                        a.setSoundMario();
                         nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
                     }
 

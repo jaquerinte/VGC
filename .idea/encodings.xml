@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/EventoBD.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/Notificacion.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/NotificacionesBD.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/Notifications.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/Notifications.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/auxiliars/Time.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/exceptions/ConnectionFailedException.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/jsadevtech/jsa/vgc/exceptions/CouldNotConvertFormatException.java" charset="windows-1252" />
