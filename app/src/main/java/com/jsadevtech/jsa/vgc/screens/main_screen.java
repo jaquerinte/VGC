@@ -2,10 +2,9 @@ package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
 import android.app.NotificationManager;
-import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.os.IBinder;
+import android.content.SharedPreferences;
 import android.os.StrictMode;
 //import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,9 +14,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.jsadevtech.jsa.vgc.auxiliars.MyService;
 import com.jsadevtech.jsa.vgc.auxiliars.Notifications;
 import com.jsadevtech.jsa.vgc.R;
+import com.jsadevtech.jsa.vgc.auxiliars.NotificationService;
+
 
 //import com.facebook.FacebookSdk;
 
@@ -31,6 +31,9 @@ public class main_screen extends Activity {
     private static final int NOTIFICACION_PRUEBA = 1;
     private Notifications newNotificacionConst;
     NotificationManager nt;
+    private final String ides ="savedlastids";
+    SharedPreferences prefs = getSharedPreferences(ides, Context.MODE_PRIVATE);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +41,11 @@ public class main_screen extends Activity {
 
         setContentView(R.layout.activity_main_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
+
         //declaracion de notificaciones
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         //fin de declaracion de notificaciones
+
 
 
         //buttons declaracion
@@ -91,7 +96,7 @@ public class main_screen extends Activity {
         buttonActividades.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_screen.this,actividades_screen.class));
+                startActivity(new Intent(main_screen.this, actividades_screen.class));
             }
         });
 
@@ -104,6 +109,7 @@ public class main_screen extends Activity {
 
         //FIn enlace bottones
 
+          startService();
 
          }
 
@@ -133,7 +139,9 @@ public class main_screen extends Activity {
         { textoinicio.setText(ex.getMessage()); }
     }
 */
-
+    public void startService() {
+        startService(new Intent(getBaseContext(), NotificationService.class));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

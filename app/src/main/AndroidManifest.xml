@@ -97,7 +97,9 @@
             android:parentActivityName=".screens.actividades_screen">
         </activity>
 
+
         <service android:name=".auxiliars.MyService"/>
+        <service android:name=".auxiliars.NotificationService"/>
     </application>
 
 </manifest>
