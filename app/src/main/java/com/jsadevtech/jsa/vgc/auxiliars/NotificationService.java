@@ -42,22 +42,18 @@ public class NotificationService extends Service{
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         // Let it continue running until it is stopped.
-        Toast.makeText(this, "Service Started", Toast.LENGTH_LONG).show();
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "Service Destroyed", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Service Destroyed", Toast.LENGTH_SHORT).show();
     }
 
     private void getEventNotifications(final Context cont)
     {
-
-
-
-        String horaActual = Time.fechaHoraActual();
+        Toast.makeText(cont, "Intentando pillar not.", Toast.LENGTH_SHORT).show();
         final Timer notificaciones = new Timer("pene");
         TimerTask actualizarNotificaciones = new TimerTask() {
             @Override
@@ -67,10 +63,11 @@ public class NotificationService extends Service{
 
                 try {
                     int lastId= toRestored.getInt("lastid", 0);
+                    Toast.makeText(cont, "lastId: "+lastId, Toast.LENGTH_SHORT).show();
                     lastId--;
                     Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + lastId);
-                    while (lastId > notificacionesRestantes.size() ){
-                        System.out.println("paso por el for"+lastId);
+                    for(int i=0; i<notificacionesRestantes.size(); i++){
+                        Toast.makeText(cont, "Paso por el for: "+i, Toast.LENGTH_LONG).show();
                         Notifications a = new Notifications(cont,notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
                         a.setSoundMario();
                         nt.notify(Integer.parseInt(notificacionesRestantes.get(lastId).getId()), a.getNotificacion());
@@ -93,10 +90,11 @@ public class NotificationService extends Service{
                     toSaved.commit();
                 }
                 catch(Exception ex){
-
+                    Toast.makeText(cont, "ERROR: No ha sido posible obtener las notificaciones.", Toast.LENGTH_LONG).show();
                 }
             }
         };
+        Toast.makeText(cont, "Empezamos a ejecutar el schedule", Toast.LENGTH_SHORT).show();
         notificaciones.schedule(actualizarNotificaciones, new Date(), 60000);
     }
 
