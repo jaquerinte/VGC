@@ -4,6 +4,7 @@ import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.widget.Toast;
@@ -20,6 +21,8 @@ import java.util.Vector;
  */
 public class NotificationService extends Service{
 
+
+    private static final int PREFERENCE_MODE_PRIVATE = 0;
 
     NotificationManager nt;
 
@@ -51,21 +54,43 @@ public class NotificationService extends Service{
 
     private void getEventNotifications(final Context cont)
     {
+
+
+
         String horaActual = Time.fechaHoraActual();
         final Timer notificaciones = new Timer("pene");
         TimerTask actualizarNotificaciones = new TimerTask() {
             @Override
             public void run() {
-                int lastId= 0;
+                SharedPreferences.Editor toSaved = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE).edit();
+                SharedPreferences toRestored = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE);
+
                 try {
+                    int lastId= toRestored.getInt("lastid", 0);
+                    lastId--;
                     Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + lastId);
-                    for(int i=0;i<notificacionesRestantes.size();i++){
+                    while (lastId > notificacionesRestantes.size() ){
+                        System.out.println("paso por el for"+lastId);
+                        Notifications a = new Notifications(cont,notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
+                        a.setSoundMario();
+                        nt.notify(Integer.parseInt(notificacionesRestantes.get(lastId).getId()), a.getNotificacion());
+                        lastId++;
+                    }
+
+                   /* for(int i=lastId;i<notificacionesRestantes.size();i++){
+                        System.out.println("paso por el for"+i);
                         Notifications a = new Notifications(cont,notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
                         a.setSoundMario();
                         nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
-                    }
+                    }*/
 
                     lastId= Integer.parseInt(notificacionesRestantes.get(notificacionesRestantes.size()-1).getId()) ;
+
+                    System.out.println(lastId);
+                    toSaved.putInt("lastid", lastId);
+                   // toSaved.putInt("lastid",0);
+
+                    toSaved.commit();
                 }
                 catch(Exception ex){
 

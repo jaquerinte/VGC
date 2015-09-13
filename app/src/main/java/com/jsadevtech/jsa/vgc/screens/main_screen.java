@@ -143,6 +143,16 @@ public class main_screen extends Activity {
     }
 
     @Override
+    public SharedPreferences getPreferences (int mode){
+      SharedPreferences preferencesUnique;
+      SharedPreferences.Editor preferencesEditosUnique;
+              preferencesUnique = getSharedPreferences("com.jsadevtech.jsa.vgc.saved",mode);
+
+
+        return preferencesUnique;
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main_screen, menu);
