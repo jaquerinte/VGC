@@ -8,7 +8,7 @@ public class Evento
     protected String id;
     protected String nombre;
     protected String lugar;
-    private String descripcion;
+    protected String descripcion;
     private String persona_destacada;
     protected String hora_inicio;
     protected String hora_fin;

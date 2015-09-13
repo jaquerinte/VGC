@@ -116,7 +116,7 @@ public class NotificacionesBD
             for (int i = 0; i < jArray.length(); i++) {
                 JSONObject json = jArray.getJSONObject(i);
 
-                ev = new Notificacion(json.getString("id"), json.getString("nombre"), json.getString("lugar"),
+                ev = new Notificacion(json.getString("id"), json.getString("nombre"), json.getString("lugar"), json.getString("descripcion"),
                         json.getString("fecha_inicio"), json.getString("fecha_fin"));
 
                 resultado.add(ev);
