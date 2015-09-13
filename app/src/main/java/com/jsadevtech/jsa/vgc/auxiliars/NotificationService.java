@@ -67,9 +67,9 @@ public class NotificationService extends Service{
 
                 try {
                     int lastId= toRestored.getInt("lastid", 0);
-                    //int lastId = 0;
+                    lastId--;
                     Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + lastId);
-                    while (lastId < notificacionesRestantes.size() ){
+                    while (lastId > notificacionesRestantes.size() ){
                         System.out.println("paso por el for"+lastId);
                         Notifications a = new Notifications(cont,notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(),notificacionesRestantes.get(lastId).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
                         a.setSoundMario();
