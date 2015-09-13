@@ -31,8 +31,7 @@ public class main_screen extends Activity {
     private static final int NOTIFICACION_PRUEBA = 1;
     private Notifications newNotificacionConst;
     NotificationManager nt;
-    private final String ides ="savedlastids";
-    SharedPreferences prefs = getSharedPreferences(ides, Context.MODE_PRIVATE);
+
 
 
     @Override

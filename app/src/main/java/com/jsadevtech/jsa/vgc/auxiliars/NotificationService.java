@@ -21,9 +21,7 @@ import java.util.Vector;
  * Created by Ivan on 13/09/2015.
  */
 public class NotificationService extends Service{
-    private final String ides ="savedlastids";
 
-    SharedPreferences prefs = getSharedPreferences(ides, 0);
 
     NotificationManager nt;
 
@@ -60,15 +58,15 @@ public class NotificationService extends Service{
         TimerTask actualizarNotificaciones = new TimerTask() {
             @Override
             public void run() {
-                int lastId= prefs.getInt("id",0);
+                int lastId= 0;
                 try {
                     Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + lastId);
                     for(int i=0;i<notificacionesRestantes.size();i++){
                         Notifications a = new Notifications(cont,notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(), R.drawable.iconoprincipal30x30,true,true,4);
                         nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
                     }
-                    SharedPreferences.Editor editor = prefs.edit();
-                    editor.putInt("id", Integer.parseInt(notificacionesRestantes.get(notificacionesRestantes.size()-1).getId()) );
+
+                    lastId= Integer.parseInt(notificacionesRestantes.get(notificacionesRestantes.size()-1).getId()) ;
                 }
                 catch(Exception ex){
 
@@ -78,13 +76,5 @@ public class NotificationService extends Service{
         notificaciones.schedule(actualizarNotificaciones, new Date(), 60000);
     }
 
-    private void atualizarId(int id){
 
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt("id", id);
-
-
-
-
-    }
 }
