@@ -24,6 +24,8 @@
     <string name="twitter_button">Twitter</string>
     <string name="loadingTwits">Loading...</string>
     <string name="text_button_new_twit">           Nuevo Tweet</string>
+    <string name="settings">configuración</string>
+    <string name="button_reset_notifications">Resetear notificaciones</string>
 
     <!-- strings de los lugares de venta-->
     <string name="venta_basic"> Puntos de venta de las entradas para la VGC  pincha sobre ellos para obtener mas información.</string>
@@ -87,5 +89,6 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_actividades_screeen">actividades_screeen</string>
     <string name="title_activity_web_actividades_screen">webActividades_screen</string>
+    <string name="title_activity_settings">Configuración</string>
 
 </resources>
