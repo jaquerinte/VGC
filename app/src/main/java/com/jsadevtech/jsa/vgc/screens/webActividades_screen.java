@@ -27,11 +27,11 @@ public class webActividades_screen extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         setTitle(bundle.getString("title"));
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
 
         web = (WebView)findViewById(R.id.webActividades);
-        ActionBar actionBar = getSupportActionBar();
-
-        actionBar.setDisplayHomeAsUpEnabled(true);
         abrirWeb(bundle.getString("url"));
     }
 

@@ -3,18 +3,24 @@ package com.jsadevtech.jsa.vgc.screens;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.jsadevtech.jsa.vgc.R;
 
 
-public class zonas_screen extends Activity {
+public class zonas_screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zonas_screen);
+
+        setTitle("Zonas de la VGC");
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
 

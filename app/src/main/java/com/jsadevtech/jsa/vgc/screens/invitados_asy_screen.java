@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,7 +24,7 @@ import java.util.ArrayList;
 /**
  * Created by Ivan on 22/07/2015.
  */
-public class invitados_asy_screen extends Activity {
+public class invitados_asy_screen extends AppCompatActivity {
     // more efficient than HashMap for mapping integers to objects
     SparseArray<Group> groups = new SparseArray<>();
 
@@ -32,6 +34,10 @@ public class invitados_asy_screen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invitados_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
+
+        setTitle("Invitados");
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
       //  createData();
         //ejecutamos la descarga e interpretacion de datos en modo asincrono

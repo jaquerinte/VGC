@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import android.os.StrictMode;
 //import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +24,7 @@ import com.jsadevtech.jsa.vgc.auxiliars.NotificationService;
 //import com.facebook.FacebookSdk;
 
 
-public class main_screen extends Activity {
+public class main_screen extends AppCompatActivity {
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
     private static final String TWITTER_KEY = "XIvJydx7ZcQovBSAOzMltxxyZ";
@@ -40,6 +42,10 @@ public class main_screen extends Activity {
 
         setContentView(R.layout.activity_main_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
+
+        setTitle("VGC");
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         //declaracion de notificaciones
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);

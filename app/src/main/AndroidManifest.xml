@@ -31,10 +31,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".screens.invitados_screen"
-            android:label="VGC Invitados" >
-        </activity>
-        <activity
             android:name=".screens.plano_screen"
             android:label="Plano VGC" >
         </activity>
