@@ -186,6 +186,10 @@ public class main_screen extends AppCompatActivity {
             startActivity(new Intent(main_screen.this, about_screen.class));
             return true;
         }
+        if(id == R.id.action_settings){
+            startActivity(new Intent(main_screen.this,settings_screen.class));
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

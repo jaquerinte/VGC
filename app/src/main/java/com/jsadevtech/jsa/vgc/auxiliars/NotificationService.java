@@ -60,7 +60,7 @@ public class NotificationService extends Service {
                     Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + (lastId+1));
                     for(int i=0; i<notificacionesRestantes.size(); i++){
                         System.out.println("Paso por el for"+i+"; Notificacion: "+notificacionesRestantes.get(i).getId());
-                        Notifications a = new Notifications(cont,notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(), R.drawable.logo_vgc_blanco30x30,true,true,4);
+                        Notifications a = new Notifications(cont,notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getDescripcion(), R.drawable.logo_vgc_blanco30x30,true,true,4);
                         a.setSoundMario();
                         nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
                         lastId++;
