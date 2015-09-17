@@ -30,7 +30,6 @@ public class webActividades_screen extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-
         web = (WebView)findViewById(R.id.webActividades);
         abrirWeb(bundle.getString("url"));
     }

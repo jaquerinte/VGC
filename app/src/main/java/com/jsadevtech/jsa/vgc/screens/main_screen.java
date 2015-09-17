@@ -24,7 +24,7 @@ import com.jsadevtech.jsa.vgc.auxiliars.NotificationService;
 //import com.facebook.FacebookSdk;
 
 
-public class main_screen extends AppCompatActivity {
+public class main_screen extends Activity {
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
     private static final String TWITTER_KEY = "XIvJydx7ZcQovBSAOzMltxxyZ";
@@ -46,7 +46,6 @@ public class main_screen extends AppCompatActivity {
         //declaracion de notificaciones
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         //fin de declaracion de notificaciones
-
 
 
         //buttons declaracion

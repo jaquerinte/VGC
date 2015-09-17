@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.StrictMode;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +21,7 @@ import com.jsadevtech.jsa.vgc.R;
 import com.jsadevtech.jsa.vgc.auxiliars.ExpandableListAdapter;
 import com.jsadevtech.jsa.vgc.auxiliars.Group;
 
-public class actividades_screen extends Activity {
+public class actividades_screen extends AppCompatActivity {
     private SparseArray<Group> groups = new SparseArray<>();
     //private final String[] tipoActividades = {"CAMPEONATOS", "CONCURSOS", "LAN PARTY","TORNEOS"};
     //private final String[][] nombreActividades = {{"Magic", "Infinity", "Krosmaster"}, {"Cosplay", "Adivina la cancion"},
@@ -31,6 +33,10 @@ public class actividades_screen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividades_screeen);
+
+        setTitle("Actividades");
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         Button magicButton = (Button)findViewById(R.id.button_magic);
         Button infinityButton = (Button) findViewById(R.id.button_infinity);
@@ -139,7 +145,7 @@ public class actividades_screen extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
-                i.putExtra("url", parseURL("http://www.vgcomic.com/street-figther-ii-champion-edition/"));
+                i.putExtra("url", "http://www.vgcomic.com/street-figther-ii-champion-edition/");
                 i.putExtra("title", getString(R.string.torneos_SFII));
                 startActivity(i);
             }
@@ -186,6 +192,7 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.revision_portafolios)));
                 i.putExtra("title", getString(R.string.revision_portafolios));
+                startActivity(i);
             }
         });
         youtubersButton.setOnClickListener(new View.OnClickListener() {
@@ -194,6 +201,7 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.youtubers)));
                 i.putExtra("title", getString(R.string.youtubers));
+                startActivity(i);
             }
         });
         heroclixButton.setOnClickListener(new View.OnClickListener() {
@@ -202,6 +210,7 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.campeonatos_heroclix)));
                 i.putExtra("title", getString(R.string.campeonatos_heroclix));
+                startActivity(i);
             }
         });
         diceMasterButton.setOnClickListener(new View.OnClickListener() {
@@ -210,6 +219,7 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.campeonatos_dice_master)));
                 i.putExtra("title", getString(R.string.campeonatos_dice_master));
+                startActivity(i);
             }
         });
         hearthstoneButton.setOnClickListener(new View.OnClickListener() {
@@ -218,6 +228,7 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.torneos_hearthstone)));
                 i.putExtra("title", getString(R.string.torneos_hearthstone));
+                startActivity(i);
             }
         });
         fifa15Button.setOnClickListener(new View.OnClickListener() {
@@ -226,6 +237,7 @@ public class actividades_screen extends Activity {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
                 i.putExtra("url", parseURL(getString(R.string.torneos_fifa15)));
                 i.putExtra("title", getString(R.string.torneos_fifa15));
+                startActivity(i);
             }
         });
     }
