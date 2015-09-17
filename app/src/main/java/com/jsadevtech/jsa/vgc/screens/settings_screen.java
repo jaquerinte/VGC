@@ -29,6 +29,7 @@ public class settings_screen extends Activity {
             public void onClick(View v) {
                 toSaved.putInt("lastid", 0);
                 Toast.makeText(settings_screen.this, "Notificaciones Reseteadas" ,Toast.LENGTH_LONG).show();
+                toSaved.commit();
 
             }
         });
