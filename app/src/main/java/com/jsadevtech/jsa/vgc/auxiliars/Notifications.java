@@ -2,6 +2,7 @@ package com.jsadevtech.jsa.vgc.auxiliars;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -64,6 +65,11 @@ public class Notifications {
     public void setTicket(String miTexto) {
         ticket=miTexto;
         notification.setTicker(ticket);
+    }
+    public void setIntent (Intent destiny, Context source){
+
+        PendingIntent contentIntent = PendingIntent.getActivity(source, 0, destiny, 0);
+        notification.setContentIntent(contentIntent);
     }
 
     public void setContentTitle(String miTexto){
