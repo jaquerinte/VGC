@@ -62,6 +62,8 @@
     <string name="jsadevtech">JSA DevTech®</string>
 
     <!-- strings de actividades_screen -->
+    <string name="revision_portafolios">Revision de Portafolios</string>
+    <string name="youtubers">Youtubers</string>
     <string name="campeonatos_titulo">CAMPEONATOS</string>
     <string name="concursos_titulo">CONCURSOS</string>
     <string name="torneos_titulo">TORNEOS</string>
@@ -69,6 +71,8 @@
     <string name="campeonatos_magic" translatable="false">Magic</string>
     <string name="campeonatos_infinity" translatable="false">Infinity</string>
     <string name="campeonatos_krosmaster" translatable="false">Krosmaster</string>
+    <string name="campeonatos_heroclix" translatable="false">Heroclix</string>
+    <string name="campeonatos_dice_master" translatable="false">Dice Master</string>
     <string name="concursos_cosplay">Cosplay</string>
     <string name="concursos_adivina_cancion">Adivina la cancion</string>
     <string name="lan_party_lol5vs5" translatable="false">LoL 5vs5</string>
@@ -78,6 +82,8 @@
     <string name="torneos_SSB" translatable="false">Super Smash Bros</string>
     <string name="torneos_narutoSunsRevolution" translatable="false">Naruto Suns Revolution</string>
     <string name="torneos_mkX" translatable="false">Mortal Kombat X</string>
+    <string name="torneos_hearthstone" translatable="false">Hearthstone</string>
+    <string name="torneos_fifa15" translatable="false">FIFA15</string>
     <string name="torneos_fusion_freak" translatable="false">Torneos Fusion Freak</string>
 
     <!--string de api facebook -->

@@ -43,10 +43,6 @@ public class main_screen extends AppCompatActivity {
         setContentView(R.layout.activity_main_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
 
-        setTitle("VGC");
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
         //declaracion de notificaciones
         nt = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         //fin de declaracion de notificaciones

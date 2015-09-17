@@ -45,6 +45,12 @@ public class actividades_screen extends Activity {
         Button narutoButton = (Button) findViewById(R.id.button_narutoSunsRevolution);
         Button mkXButton = (Button) findViewById(R.id.button_mkX);
         Button fusionFreakButton = (Button) findViewById(R.id.button_toneosFusionFreak);
+        Button portfolioButton = (Button) findViewById(R.id.button_portafolios);
+        Button youtubersButton = (Button) findViewById(R.id.button_youtubers);
+        Button heroclixButton = (Button) findViewById(R.id.button_heroclix);
+        Button diceMasterButton = (Button) findViewById(R.id.button_dice_master);
+        Button hearthstoneButton = (Button) findViewById(R.id.button_hearthstone);
+        Button fifa15Button = (Button) findViewById(R.id.button_fifa15);
 
         magicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,7 +139,7 @@ public class actividades_screen extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
-                i.putExtra("url", parseURL(getString(R.string.torneos_SFII)));
+                i.putExtra("url", parseURL("http://www.vgcomic.com/street-figther-ii-champion-edition/"));
                 i.putExtra("title", getString(R.string.torneos_SFII));
                 startActivity(i);
             }
@@ -172,6 +178,54 @@ public class actividades_screen extends Activity {
                 i.putExtra("url", parseURL(getString(R.string.torneos_fusion_freak)));
                 i.putExtra("title", getString(R.string.torneos_fusion_freak));
                 startActivity(i);
+            }
+        });
+        portfolioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.revision_portafolios)));
+                i.putExtra("title", getString(R.string.revision_portafolios));
+            }
+        });
+        youtubersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.youtubers)));
+                i.putExtra("title", getString(R.string.youtubers));
+            }
+        });
+        heroclixButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.campeonatos_heroclix)));
+                i.putExtra("title", getString(R.string.campeonatos_heroclix));
+            }
+        });
+        diceMasterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.campeonatos_dice_master)));
+                i.putExtra("title", getString(R.string.campeonatos_dice_master));
+            }
+        });
+        hearthstoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_hearthstone)));
+                i.putExtra("title", getString(R.string.torneos_hearthstone));
+            }
+        });
+        fifa15Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_fifa15)));
+                i.putExtra("title", getString(R.string.torneos_fifa15));
             }
         });
     }
