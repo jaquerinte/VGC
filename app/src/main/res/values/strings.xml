@@ -96,5 +96,6 @@
     <string name="title_activity_actividades_screeen">actividades_screeen</string>
     <string name="title_activity_web_actividades_screen">webActividades_screen</string>
     <string name="title_activity_settings">Configuración</string>
+    <string name="switch_button_notificaciones">Notificaciones </string>
 
 </resources>

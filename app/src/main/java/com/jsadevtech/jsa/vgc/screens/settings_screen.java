@@ -8,6 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +26,7 @@ public class settings_screen extends Activity {
         setContentView(R.layout.activity_settings);
 
         Button buttonResetear =(Button) findViewById(R.id.button_resetear_notificaciones);
+        Switch switchNotificaciones = (Switch) findViewById(R.id.switch_notificactions);
         final SharedPreferences.Editor toSaved = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE).edit();
         buttonResetear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +34,23 @@ public class settings_screen extends Activity {
                 toSaved.putInt("lastid", 0);
                 Toast.makeText(settings_screen.this, "Notificaciones Reseteadas" ,Toast.LENGTH_LONG).show();
                 toSaved.commit();
+
+            }
+        });
+        switchNotificaciones.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+
+                if (isChecked) {
+
+                    //esta on
+
+                } else {
+                     //esta off
+
+                }
 
             }
         });
