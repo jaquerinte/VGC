@@ -55,28 +55,29 @@ public class NotificationService extends Service {
             public void run() {
                 SharedPreferences.Editor toSaved = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE).edit();
                 SharedPreferences toRestored = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE);
+                if(toRestored.getBoolean("notificationsStatus", true)) {
+                    try {
+                        int lastId = toRestored.getInt("lastid", 0);
+                        Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + (lastId + 1));
+                        for (int i = 0; i < notificacionesRestantes.size(); i++) {
+                            System.out.println("Paso por el for" + i + "; Notificacion: " + notificacionesRestantes.get(i).getId());
+                            Notifications a = new Notifications(cont, notificacionesRestantes.get(i).getNombre(), notificacionesRestantes.get(i).getNombre(), notificacionesRestantes.get(i).getDescripcion(), R.drawable.logo_vgc_blanco30x30, true, true, 4);
+                            a.setSoundMario();
+                            a.setIntent(new Intent(cont, main_screen.class), cont);
+                            nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
+                            lastId++;
+                        }
 
-                try {
-                    int lastId= toRestored.getInt("lastid", 0);
-                    Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + (lastId+1));
-                    for(int i=0; i<notificacionesRestantes.size(); i++){
-                        System.out.println("Paso por el for" + i + "; Notificacion: " + notificacionesRestantes.get(i).getId());
-                        Notifications a = new Notifications(cont,notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getNombre(),notificacionesRestantes.get(i).getDescripcion(), R.drawable.logo_vgc_blanco30x30,true,true,4);
-                        a.setSoundMario();
-                        a.setIntent(new Intent(cont,main_screen.class),cont);
-                        nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
-                        lastId++;
+                        lastId = Integer.parseInt(notificacionesRestantes.get(notificacionesRestantes.size() - 1).getId());
+
+                        System.out.println("Almacenamos: " + lastId);
+                        toSaved.putInt("lastid", lastId);
+
+                        toSaved.apply();
+
+                    } catch (Exception ex) {
+                        System.out.println(ex.getMessage());
                     }
-
-                    lastId= Integer.parseInt(notificacionesRestantes.get(notificacionesRestantes.size()-1).getId()) ;
-
-                    System.out.println("Almacenamos: "+lastId);
-                    toSaved.putInt("lastid", lastId);
-
-                    toSaved.commit();
-                }
-                catch(Exception ex){
-                    System.out.println(ex.getMessage());
                 }
             }
         };

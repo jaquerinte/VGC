@@ -28,12 +28,15 @@ public class settings_screen extends Activity {
         Button buttonResetear =(Button) findViewById(R.id.button_resetear_notificaciones);
         Switch switchNotificaciones = (Switch) findViewById(R.id.switch_notificactions);
         final SharedPreferences.Editor toSaved = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE).edit();
+        final SharedPreferences toRestored = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE);
+
+        switchNotificaciones.setChecked(toRestored.getBoolean("notificationsStatus", true));
         buttonResetear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toSaved.putInt("lastid", 0);
                 Toast.makeText(settings_screen.this, "Notificaciones Reseteadas" ,Toast.LENGTH_LONG).show();
-                toSaved.commit();
+                toSaved.apply();
 
             }
         });
@@ -42,12 +45,23 @@ public class settings_screen extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
-
+                boolean notifications= toRestored.getBoolean("notificationsStatus", true);
                 if (isChecked) {
 
+                    if (!notifications){//si esta en false lo pone a true
+                        toSaved.putBoolean("notificationsStatus", true);
+                        toSaved.apply();
+                    }else{} //si esta en true no hace nada
                     //esta on
 
                 } else {
+
+                    if (notifications){
+                        toSaved.putBoolean("notificationsStatus",false);
+                        toSaved.apply();
+
+                    }else{}// si esta a false no hace nada
+
                      //esta off
 
                 }
