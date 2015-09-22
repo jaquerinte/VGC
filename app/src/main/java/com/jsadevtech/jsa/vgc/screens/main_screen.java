@@ -51,10 +51,10 @@ public class main_screen extends Activity {
         //buttons declaracion
         Button buttonInvitados =(Button) findViewById(R.id.buttonInvitados);
         Button buttonComprar =(Button) findViewById(R.id.buttonComprar);
-        Button buttonPlano =(Button) findViewById(R.id.buttonPlano);
         Button buttonMapa =(Button)findViewById(R.id.buttonMap);
         Button buttonTwitter = (Button) findViewById(R.id.button_twitter);
         Button buttonActividades = (Button) findViewById(R.id.button_actividades);
+        Button buttonPlano = (Button) findViewById(R.id.button_plano);
        // ImageButton informacion = (ImageButton) findViewById(R.id.informacionButton);
 
         //fin de buttons
@@ -75,12 +75,6 @@ public class main_screen extends Activity {
             }
         });
 
-        buttonPlano.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(main_screen.this,plano_screen.class));
-            }
-        });
         buttonMapa.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +93,13 @@ public class main_screen extends Activity {
                 startActivity(new Intent(main_screen.this, actividades_screen.class));
             }
         });
+        buttonPlano.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_screen.this, plano_screen.class));
+            }
+        });
+
 
        /* informacion.setOnClickListener(new OnClickListener() {
             @Override
