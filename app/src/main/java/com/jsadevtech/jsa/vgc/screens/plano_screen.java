@@ -1,15 +1,14 @@
 package com.jsadevtech.jsa.vgc.screens;
 
-import android.app.Activity;
+
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
+
 
 import com.jsadevtech.jsa.vgc.R;
 

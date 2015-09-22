@@ -40,15 +40,16 @@
         android:layout_height="wrap_content"
         android:text="@string/dondeComprar"
         android:id="@+id/buttonComprar"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/buttonInvitados"
-        android:layout_centerHorizontal="true"
         android:width="@dimen/buton_width"
         android:drawableLeft="@drawable/entrada_icon30x30"
         android:background="@android:color/black"
         android:textColor="@android:color/white"
         android:alpha="1"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/button_plano"
+        android:layout_alignLeft="@+id/buttonMap"
+        android:layout_alignStart="@+id/buttonMap"
+        android:layout_marginTop="23dp" />
 
     <!-- TODO Volver a ponerlo enabled -->
 
@@ -121,12 +122,15 @@
         android:layout_height="wrap_content"
         android:text="@string/planoRecinto"
         android:id="@+id/button_plano"
-        android:layout_below="@+id/button_actividades"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
         android:width="@dimen/buton_width"
         android:textColor="@android:color/white"
-        android:background="@android:color/black" />
+        android:background="@android:color/black"
+        android:drawableLeft="@drawable/blueprint30x30"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/buttonInvitados"
+        android:layout_alignLeft="@+id/buttonComprar"
+        android:layout_alignStart="@+id/buttonComprar"
+        android:layout_marginTop="25dp" />
 
 
 </RelativeLayout>

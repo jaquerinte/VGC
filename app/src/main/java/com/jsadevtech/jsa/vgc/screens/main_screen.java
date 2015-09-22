@@ -1,20 +1,18 @@
 package com.jsadevtech.jsa.vgc.screens;
 
-import android.app.Activity;
+
 import android.app.NotificationManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.StrictMode;
-//import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 
 import com.jsadevtech.jsa.vgc.auxiliars.Notifications;
 import com.jsadevtech.jsa.vgc.R;
@@ -24,7 +22,7 @@ import com.jsadevtech.jsa.vgc.auxiliars.NotificationService;
 //import com.facebook.FacebookSdk;
 
 
-public class main_screen extends Activity {
+public class main_screen extends AppCompatActivity {
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
     private static final String TWITTER_KEY = "XIvJydx7ZcQovBSAOzMltxxyZ";
@@ -33,6 +31,7 @@ public class main_screen extends Activity {
     private static final int NOTIFICACION_PRUEBA = 1;
     private Notifications newNotificacionConst;
     NotificationManager nt;
+
 
 
 
@@ -59,6 +58,8 @@ public class main_screen extends Activity {
 
         //fin de buttons
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(false);
         //enlace de botones
         buttonInvitados.setOnClickListener(new OnClickListener() {
             @Override
