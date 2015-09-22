@@ -113,32 +113,6 @@ public class main_screen extends Activity {
 
          }
 
-    //TODO Este es el metodo para usar las notificacion, NO BORRAR
-/*
-    private void getData()
-    {
-        Vector<Evento> aux;
-        String result = "RESULTADOS: \n";
-        textoinicio.setText("");
-
-        try
-        {
-            aux = EventoBD.getEventosDesdeFecha("2015/09/14 16:00:00");
-
-            for(int i=0; i<aux.size(); i++) {
-
-                newNotificacionConst = new Notifications(getApplicationContext(),"", aux.get(i).getNombre(), aux.get(i).getLugar()+"\n"+aux.get(i).getPersona_destacada(), R.drawable.icon, true, true, 2);
-                nt.notify(NOTIFICACION_PRUEBA+i, newNotificacionConst.getNotificacion());
-
-                result += aux.get(i).toString();
-            }
-
-            textoinicio.setText(result);
-        }
-        catch(Exception ex)
-        { textoinicio.setText(ex.getMessage()); }
-    }
-*/
     public void startService() {
         startService(new Intent(getBaseContext(), NotificationService.class));
     }
@@ -183,6 +157,10 @@ public class main_screen extends Activity {
         }
         if(id == R.id.action_settings){
             startActivity(new Intent(main_screen.this,settings_screen.class));
+            return true;
+        }
+        if(id == R.id.action_horarios) {
+            startActivity(new Intent(main_screen.this,horarios_screen.class));
             return true;
         }
 

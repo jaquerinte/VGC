@@ -4,6 +4,7 @@
     <string name="action_colaboradores">Colaboradores de la VGC</string>
     <string name="action_principal">Página principal</string>
     <string name="action_zonas">Zonas de la VGC</string>
+    <string name="action_horarios">Horarios</string>
 
     <string name="getNotifications">Descargar notificaciones</string>
     <string name="invitadosEvento">Invitados</string>
@@ -97,5 +98,6 @@
     <string name="title_activity_web_actividades_screen">webActividades_screen</string>
     <string name="title_activity_settings">Configuración</string>
     <string name="switch_button_notificaciones">Notificaciones </string>
+    <string name="title_activity_horarios_screen">Horarios</string>
 
 </resources>
