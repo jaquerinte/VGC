@@ -2,29 +2,32 @@ package com.jsadevtech.jsa.vgc.screens;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.jsadevtech.jsa.vgc.R;
 
 /**
  * Created by Ivan on 01/07/2015.
  */
-public class plano_screen extends AppCompatActivity {
+public class plano_screen extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plano_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
-
         setTitle("Plano del recinto");
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+
 
     }
 

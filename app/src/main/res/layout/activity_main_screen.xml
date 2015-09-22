@@ -51,19 +51,6 @@
         android:paddingLeft="10dp" />
 
     <!-- TODO Volver a ponerlo enabled -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/planoRecinto"
-        android:id="@+id/buttonPlano"
-        android:layout_below="@+id/buttonComprar"
-        android:enabled="false"
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:width="@android:dimen/thumbnail_width"
-        android:alpha="1"
-        android:paddingLeft="10dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -128,6 +115,18 @@
         android:paddingLeft="10dp"
         android:visibility="visible"
         android:drawableLeft="@drawable/torunament_icon30x30"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/planoRecinto"
+        android:id="@+id/button_plano"
+        android:layout_below="@+id/button_actividades"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:width="@dimen/buton_width"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black" />
 
 
 </RelativeLayout>

@@ -33,6 +33,7 @@
         <activity
             android:name=".screens.plano_screen"
             android:label="Plano VGC"
+            android:screenOrientation="landscape"
             android:parentActivityName=".screens.main_screen">
         </activity>
         <activity
