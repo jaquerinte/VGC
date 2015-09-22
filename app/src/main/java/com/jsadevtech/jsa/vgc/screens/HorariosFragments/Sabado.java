@@ -31,8 +31,6 @@ public class Sabado extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sabado_screen, container, false);
-        TextView tvLabel = (TextView) view.findViewById(R.id.textSabado);
-        tvLabel.setText("Texto de prueba en sabado.");
         return view;
     }
 }
