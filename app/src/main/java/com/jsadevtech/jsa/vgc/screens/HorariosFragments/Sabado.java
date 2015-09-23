@@ -32,8 +32,8 @@ public class Sabado extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sabado_screen, container, false);
 
-        TextView sabadoText = (TextView) view.findViewById(R.id.textoSabado);
-        sabadoText.setText("Texto del Sabado noche.");
+        //TextView sabadoText = (TextView) view.findViewById(R.id.textoSabado);
+        //sabadoText.setText("Texto del Sabado noche.");
 
         return view;
     }

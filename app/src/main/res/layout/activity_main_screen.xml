@@ -46,10 +46,10 @@
         android:textColor="@android:color/white"
         android:alpha="1"
         android:paddingLeft="10dp"
-        android:layout_below="@+id/button_plano"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/button_horarios"
         android:layout_alignLeft="@+id/buttonMap"
-        android:layout_alignStart="@+id/buttonMap"
-        android:layout_marginTop="23dp" />
+        android:layout_alignStart="@+id/buttonMap" />
 
     <!-- TODO Volver a ponerlo enabled -->
 
@@ -131,6 +131,21 @@
         android:layout_alignLeft="@+id/buttonComprar"
         android:layout_alignStart="@+id/buttonComprar"
         android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_horarios_text"
+        android:id="@+id/button_horarios"
+        android:width="@dimen/buton_width"
+        android:layout_below="@+id/button_plano"
+        android:layout_alignLeft="@+id/buttonComprar"
+        android:layout_alignStart="@+id/buttonComprar"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"
+        android:drawableLeft="@drawable/calendar"
+        android:paddingLeft="10dp" />
 
 
 </RelativeLayout>

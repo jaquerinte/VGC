@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/textoSabado"/>
+    <com.jsadevtech.jsa.vgc.auxiliars.TouchImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/horarioSabado"
+        android:src="@drawable/sabado_completo" />
 
 </LinearLayout>

@@ -1,12 +1,16 @@
 package com.jsadevtech.jsa.vgc.screens.HorariosFragments;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import com.jsadevtech.jsa.vgc.R;
 
@@ -32,6 +36,7 @@ public class Domingo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_domingo_screen, container, false);
+
       //  TextView tvLabel = (TextView) view.findViewById(R.id.textDomingo);
       //  tvLabel.setText("Texto de prueba en domingo.");
         return view;

@@ -31,8 +31,8 @@ public class Firmas extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_firmas_screen, container, false);
-        TextView tvLabel = (TextView) view.findViewById(R.id.textFirmas);
-        tvLabel.setText("Texto de prueba en firmas.");
+        //TextView tvLabel = (TextView) view.findViewById(R.id.textFirmas);
+        //tvLabel.setText("Texto de prueba en firmas.");
         return view;
     }
 }

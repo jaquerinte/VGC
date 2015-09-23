@@ -2,6 +2,7 @@ package com.jsadevtech.jsa.vgc.screens;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBar;
@@ -20,17 +21,18 @@ public class plano_screen extends AppCompatActivity{
     private TouchImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
+       super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plano_screen);
         StrictMode.enableDefaults();//modo stricto necesario para la conexion a internet
         setTitle("Plano del recinto");
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-        image = (TouchImageView)findViewById(R.id.imageBlueprint);
+       /*  image = (TouchImageView)findViewById(R.id.imageBlueprint);
+        Uri uri = Uri.parse("android.resource://com.jsadevtech.jsa.vgc/" + R.drawable.plano);
+        image.setImageURI(uri);
        // image.setImageResource(findViewById(R.id.imageBlueprint));
 
-
+*/
 
     }
 
