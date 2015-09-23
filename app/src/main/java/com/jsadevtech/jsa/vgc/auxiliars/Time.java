@@ -68,14 +68,10 @@ public class Time {
     private int min;
 
     /**
-     * Default constructor, set the date to 190/01/01 00:00.
+     * Default constructor, set the date to current.
      */
     public Time() {
-        this.day = 1;
-        this.month = 1;
-        this.year = 1970;
-        this.hour = 0;
-        this.min = 0;
+        setTimeByString(fechaHoraActual());
     }
 
     /**
@@ -127,6 +123,11 @@ public class Time {
             this.hour = 0;
             this.min = 0;
         }
+    }
+
+
+    public Time(String date) {
+        setTimeByString(date);
     }
 
     /**
@@ -858,12 +859,26 @@ public class Time {
         }
     }
 
+    private void setTimeByString(String d) {
+        String[] aux = d.split(" ");
+        String[][] date = new String[2][];
+        date[0] = aux[0].split("-");
+        date[1] = aux[1].split(":");
+
+        this.year = Integer.parseInt(date[0][0]);
+        this.month = Integer.parseInt(date[0][1]);
+        this.month = Integer.parseInt(date[0][2]);
+
+        this.hour = Integer.parseInt(date[1][0]);
+        this.min = Integer.parseInt(date[1][1]);
+    }
+
     /**
      * Evaluates if a date is more than other
      * @param t The date to be evaluated
      * @return True if t is greater than the current date, false otherwise.
      */
-    private boolean isFechaMayor(Time t) {
+    public boolean isFechaMayor(Time t) {
     	if(this.equals(t))
     		return false;
     	

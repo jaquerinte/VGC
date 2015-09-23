@@ -20,14 +20,22 @@ import java.util.Vector;
  */
 public class NotificacionesBD
 {
-    private static final String phpFile = "http://jsadevtech.site40.net/getNotificaciones.php";
-    private static final String phpFileFromFecha = "http://jsadevtech.site40.net/getNotificacionesFromFecha.php?argument1=";
-    private static final String phpFileFirstFromFecha = "http://jsadevtech.site40.net/getFirstNotificacionFromFecha.php?argument1=";
-    private static final String phpFileById="http://jsadevtech.site40.net/getNotificacionById.php?argument1=";
+    private static final String phpFile =
+            "http://jsadevtech.site40.net/getNotificaciones.php";
+    private static final String phpFileFromFecha =
+            "http://jsadevtech.site40.net/getNotificacionesFromFecha.php?argument1=";
+    private static final String phpFileEarlierThanFecha =
+            "http://jsadevtech.site40.net/getNotificacionesEarlierThanFecha.php?argument1=";
+    private static final String phpFileFirstFromFecha =
+            "http://jsadevtech.site40.net/getFirstNotificacionFromFecha.php?argument1=";
+    private static final String phpFileById=
+            "http://jsadevtech.site40.net/getNotificacionById.php?argument1=";
 
     public NotificacionesBD(){} //Does Nothing
 
-    public static Vector<Notificacion> getAllNotificaciones() throws ConnectionFailedException, CouldNotConvertFormatException, CouldNotGetInformationException
+    public static Vector<Notificacion> getAllNotificaciones()
+            throws ConnectionFailedException, CouldNotConvertFormatException,
+            CouldNotGetInformationException
     {
         Vector<Notificacion> resultado;
         try
@@ -43,7 +51,10 @@ public class NotificacionesBD
         { throw new CouldNotGetInformationException(); }
     }
 
-    public static Vector<Notificacion> getNotificacionesDesdeFecha(String fecha) throws ConnectionFailedException, CouldNotConvertFormatException, CouldNotGetInformationException
+
+    public static Vector<Notificacion> getNotificacionesDesdeFecha(String fecha)
+            throws ConnectionFailedException, CouldNotConvertFormatException,
+            CouldNotGetInformationException
     {
         Vector<Notificacion> resultado;
 
@@ -60,7 +71,27 @@ public class NotificacionesBD
         { throw new CouldNotGetInformationException(); }
     }
 
-    public static Notificacion getFirstNotificacionFromFecha(String fecha) throws ConnectionFailedException, CouldNotConvertFormatException, CouldNotGetInformationException
+    public static Vector<Notificacion> getNotificacionesEarlierThanFecha(String fecha)
+            throws ConnectionFailedException, CouldNotConvertFormatException,
+            CouldNotGetInformationException {
+        Vector<Notificacion> resultado;
+
+        try
+        {
+            resultado = getDatos(phpFileEarlierThanFecha+fecha);
+            return resultado;
+        }
+        catch(ConnectionFailedException ex)
+        { throw new ConnectionFailedException(); }
+        catch(CouldNotConvertFormatException ex)
+        { throw new CouldNotConvertFormatException(); }
+        catch(CouldNotGetInformationException ex)
+        { throw new CouldNotGetInformationException(); }
+    }
+
+    public static Notificacion getFirstNotificacionFromFecha(String fecha)
+            throws ConnectionFailedException, CouldNotConvertFormatException,
+            CouldNotGetInformationException
     {
         Notificacion resultado;
 
@@ -142,4 +173,30 @@ public class NotificacionesBD
         catch(CouldNotGetInformationException ex)
         { throw new CouldNotGetInformationException(); }
     }
+
+    public static Vector<Notificacion> getNotificacionesEarlierThanDateById(String id, String date) throws ConnectionFailedException, CouldNotConvertFormatException, CouldNotGetInformationException
+    {
+        Vector<Notificacion> resultado, aux;
+        try
+        {
+            resultado = new Vector<>();
+            aux = getDatos(phpFileById+id);
+            Time notificationDate;
+            for(int i=0; i<aux.size(); i++) {
+                Time act = new Time(Time.fechaHoraActual());
+                notificationDate = new Time(aux.get(i).getHora_inicio());
+                if(act.isFechaMayor(notificationDate)) {
+                    resultado.add(aux.get(i));
+                }
+            }
+            return resultado;
+        }
+        catch(ConnectionFailedException ex)
+        { throw new ConnectionFailedException(); }
+        catch(CouldNotConvertFormatException ex)
+        { throw new CouldNotConvertFormatException(); }
+        catch(CouldNotGetInformationException ex)
+        { throw new CouldNotGetInformationException(); }
+    }
+
 }

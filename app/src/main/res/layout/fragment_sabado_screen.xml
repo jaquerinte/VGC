@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo">
 
-    <ImageView
-        android:id="@+id/horarioSabado"
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/horario_sabado_26"/>
+        android:id="@+id/textoSabado"/>
 
 </LinearLayout>

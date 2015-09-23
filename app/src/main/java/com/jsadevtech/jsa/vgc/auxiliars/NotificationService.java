@@ -57,21 +57,21 @@ public class NotificationService extends Service {
                 SharedPreferences toRestored = getSharedPreferences("com.jsadevtech.jsa.vgc.saved", MODE_PRIVATE);
                 if(toRestored.getBoolean("notificationsStatus", true)) {
                     try {
-                        int lastId = toRestored.getInt("lastid", 0);
-                        Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesById("" + (lastId + 1));
+                        String lastDate = toRestored.getString("lastDate", "2015-09-24 00:00");
+                        Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesEarlierThanFecha(lastDate);
                         for (int i = 0; i < notificacionesRestantes.size(); i++) {
                             System.out.println("Paso por el for" + i + "; Notificacion: " + notificacionesRestantes.get(i).getId());
                             Notifications a = new Notifications(cont, notificacionesRestantes.get(i).getNombre(), notificacionesRestantes.get(i).getNombre(), notificacionesRestantes.get(i).getDescripcion(), R.drawable.logo_vgc_blanco30x30, true, true, 4);
                             a.setSoundMario();
                             a.setIntent(new Intent(cont, main_screen.class), cont);
                             nt.notify(Integer.parseInt(notificacionesRestantes.get(i).getId()), a.getNotificacion());
-                            lastId++;
                         }
 
-                        lastId = Integer.parseInt(notificacionesRestantes.get(notificacionesRestantes.size() - 1).getId());
+                        lastDate = Time.fechaHoraActual();
 
-                        System.out.println("Almacenamos: " + lastId);
-                        toSaved.putInt("lastid", lastId);
+                        System.out.println("Almacenamos: " + lastDate);
+                        toSaved.putString("lastDate", lastDate);
+
 
                         toSaved.apply();
 
