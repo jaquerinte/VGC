@@ -11,12 +11,13 @@ import android.view.MenuItem;
 
 
 import com.jsadevtech.jsa.vgc.R;
+import com.jsadevtech.jsa.vgc.auxiliars.TouchImageView;
 
 /**
  * Created by Ivan on 01/07/2015.
  */
 public class plano_screen extends AppCompatActivity{
-
+    private TouchImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -25,6 +26,9 @@ public class plano_screen extends AppCompatActivity{
         setTitle("Plano del recinto");
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        image = (TouchImageView)findViewById(R.id.imageBlueprint);
+       // image.setImageResource(findViewById(R.id.imageBlueprint));
 
 
 
