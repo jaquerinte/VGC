@@ -81,7 +81,7 @@ public class NotificationService extends Service {
                 }
             }
         };
-        notificaciones.schedule(actualizarNotificaciones, new Date(), 300000);
+        notificaciones.schedule(actualizarNotificaciones, new Date(), 600000);
     }
 
 
