@@ -58,7 +58,7 @@ public class NotificationService extends Service {
                 if(toRestored.getBoolean("notificationsStatus", true)) {
                     try {
                         String lastDate = toRestored.getString("lastDate", "2015-09-24 00:00");
-                        Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesEarlierThanFecha(lastDate);
+                        Vector<Notificacion> notificacionesRestantes = NotificacionesBD.getNotificacionesEarlierThanFecha(lastDate, Time.fechaHoraActual());
                         for (int i = 0; i < notificacionesRestantes.size(); i++) {
                             System.out.println("Paso por el for" + i + "; Notificacion: " + notificacionesRestantes.get(i).getId());
                             Notifications a = new Notifications(cont, notificacionesRestantes.get(i).getNombre(), notificacionesRestantes.get(i).getNombre(), notificacionesRestantes.get(i).getDescripcion(), R.drawable.logo_vgc_blanco30x30, true, true, 4);

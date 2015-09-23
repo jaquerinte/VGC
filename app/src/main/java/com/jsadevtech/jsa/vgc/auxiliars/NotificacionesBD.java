@@ -71,14 +71,14 @@ public class NotificacionesBD
         { throw new CouldNotGetInformationException(); }
     }
 
-    public static Vector<Notificacion> getNotificacionesEarlierThanFecha(String fecha)
+    public static Vector<Notificacion> getNotificacionesEarlierThanFecha(String fecha, String fecha2)
             throws ConnectionFailedException, CouldNotConvertFormatException,
             CouldNotGetInformationException {
         Vector<Notificacion> resultado;
 
         try
         {
-            resultado = getDatos(phpFileEarlierThanFecha+fecha);
+            resultado = getDatos(phpFileEarlierThanFecha+fecha+"&argument2="+fecha2);
             return resultado;
         }
         catch(ConnectionFailedException ex)
