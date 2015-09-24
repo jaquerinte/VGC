@@ -57,6 +57,14 @@ public class actividades_screen extends AppCompatActivity {
         Button diceMasterButton = (Button) findViewById(R.id.button_dice_master);
         Button hearthstoneButton = (Button) findViewById(R.id.button_hearthstone);
         Button fifa15Button = (Button) findViewById(R.id.button_fifa15);
+        Button malifauxButton = (Button) findViewById(R.id.button_malifaux);
+        Button torneosDemosButton = (Button) findViewById(R.id.button_torneos_demos);
+        Button heroeEnTiButton = (Button) findViewById(R.id.button_heroe_en_ti);
+        Button csgoButton = (Button) findViewById(R.id.button_csgo);
+        Button tekkenButton = (Button) findViewById(R.id.button_tekken);
+        Button saintSeiyaButton = (Button) findViewById(R.id.button_saint_seiya);
+        Button injusticeButton = (Button) findViewById(R.id.button_injustice);
+        Button pokemonButton = (Button) findViewById(R.id.button_pokemon);
 
         magicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -240,6 +248,83 @@ public class actividades_screen extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        /*
+        malifauxButton torneosDemosButton heroeEnTiButton csgoButton tekkenButton
+        saintSeiyaButton injusticeButton pokemonButton
+         */
+        malifauxButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.campeonatos_malifaux)));
+                i.putExtra("title", getString(R.string.campeonatos_malifaux));
+                startActivity(i);
+            }
+        });
+        torneosDemosButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.campeonatos_torneos_demos)));
+                i.putExtra("title", getString(R.string.campeonatos_torneos_demos));
+                startActivity(i);
+            }
+        });
+        heroeEnTiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.concursos_heroe_en_ti)));
+                i.putExtra("title", getString(R.string.concursos_heroe_en_ti));
+                startActivity(i);
+            }
+        });
+        csgoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.lan_party_csgo)));
+                i.putExtra("title", getString(R.string.lan_party_csgo));
+                startActivity(i);
+            }
+        });
+        tekkenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_tekken)));
+                i.putExtra("title", getString(R.string.torneos_tekken));
+                startActivity(i);
+            }
+        });
+        saintSeiyaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_saint_seiya)));
+                i.putExtra("title", getString(R.string.torneos_saint_seiya));
+                startActivity(i);
+            }
+        });
+        injusticeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_injustice)));
+                i.putExtra("title", getString(R.string.torneos_injustice));
+                startActivity(i);
+            }
+        });
+        pokemonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
+                i.putExtra("url", parseURL(getString(R.string.torneos_pokemon)));
+                i.putExtra("title", getString(R.string.torneos_pokemon));
+                startActivity(i);
+            }
+        });
     }
 
 
@@ -283,6 +368,8 @@ public class actividades_screen extends AppCompatActivity {
         String url = "http://www.vgcomic.com/";
         String[] partes;
 
+        activity.replace(':', ' ');
+        activity.replace('\'', ' ');
         partes = activity.toLowerCase().split(" ");
 
         for(int i=0; i<partes.length; i++)

@@ -120,17 +120,47 @@
             android:background="@android:color/black"/>
 
         <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/campeonatos_dice_master"
+        android:id="@+id/button_dice_master"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/button_heroclix"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"/>
+
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/campeonatos_dice_master"
-            android:id="@+id/button_dice_master"
+            android:text="@string/campeonatos_malifaux"
+            android:id="@+id/button_malifaux"
             android:layout_alignParentLeft="true"
             android:textStyle="bold"
             android:textSize="22dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@id/button_heroclix"
+            android:layout_below="@id/button_dice_master"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campeonatos_torneos_demos"
+            android:id="@+id/button_torneos_demos"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/button_malifaux"
             android:textColor="@android:color/white"
             android:background="@android:color/black"/>
 
@@ -146,7 +176,7 @@
             android:background="@android:color/white"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/button_dice_master"
+            android:layout_below="@id/button_torneos_demos"
             android:gravity="center_horizontal" />
 
         <Button
@@ -179,7 +209,22 @@
             android:textColor="@android:color/white"
             android:background="@android:color/black"/>
 
-        <!-- Concursos -->
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concursos_heroe_en_ti"
+            android:id="@+id/button_heroe_en_ti"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/button_adivina_cancion"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
+        <!-- Lan Party -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -191,7 +236,7 @@
             android:background="@android:color/white"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/button_adivina_cancion"
+            android:layout_below="@id/button_heroe_en_ti"
             android:gravity="center_horizontal" />
 
         <Button
@@ -224,6 +269,23 @@
             android:textColor="@android:color/white"
             android:background="@android:color/black"/>
 
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lan_party_csgo"
+            android:id="@+id/button_csgo"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/button_minecraft"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
+
+
         <!-- Torneos -->
         <TextView
             android:layout_width="fill_parent"
@@ -236,7 +298,7 @@
             android:background="@android:color/white"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/button_minecraft"
+            android:layout_below="@id/button_csgo"
             android:gravity="center_horizontal" />
 
         <Button
@@ -358,6 +420,67 @@
             android:layout_below="@id/button_fifa15"
             android:textColor="@android:color/white"
             android:background="@android:color/black"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_tekken"
+            android:id="@+id/button_tekken"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize= "22dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/button_toneosFusionFreak"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_saint_seiya"
+            android:id="@+id/button_saint_seiya"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/button_tekken"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_injustice"
+            android:id="@+id/button_injustice"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/button_saint_seiya"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/torneos_pokemon"
+            android:id="@+id/button_pokemon"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/button_injustice"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"/>
+
 
     </RelativeLayout>
 </ScrollView>

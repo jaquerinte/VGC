@@ -75,11 +75,15 @@
     <string name="campeonatos_krosmaster" translatable="false">Krosmaster</string>
     <string name="campeonatos_heroclix" translatable="false">Heroclix</string>
     <string name="campeonatos_dice_master" translatable="false">Dice Master</string>
+    <string name="campeonatos_malifaux" translatable="false">Malifaux</string>
+    <string name="campeonatos_torneos_demos" translatable="false">Torneos y Demos</string>
     <string name="concursos_cosplay">Cosplay</string>
     <string name="concursos_adivina_cancion">Adivina la cancion</string>
+    <string name="concursos_heroe_en_ti">Saca el heroe que hay en ti</string>
     <string name="lan_party_lol5vs5" translatable="false">LoL 5vs5</string>
     <string name="lan_party_lol5vs5_forURL" translatable="false">League of Legends 5vs5</string>
     <string name="lan_party_minecraft" translatable="false">Minecraft</string>
+    <string name="lan_party_csgo" translatable="false">CS:GO</string>
     <string name="torneos_USFIV" translatable="false">Ultra Street Fighter IV</string>
     <string name="torneos_SFII" translatable="false">Street Fighter II Champion Edition</string>
     <string name="torneos_SSB" translatable="false">Super Smash Bros</string>
@@ -88,6 +92,11 @@
     <string name="torneos_hearthstone" translatable="false">Hearthstone</string>
     <string name="torneos_fifa15" translatable="false">FIFA15</string>
     <string name="torneos_fusion_freak" translatable="false">Torneos Fusion Freak</string>
+    <string name="torneos_tekken" translatable="false">Tekken Tag Tournament 2</string>
+    <string name="torneos_saint_seiya" translatable="false">Saint Seiya Soldiers\' Soul</string>
+    <string name="torneos_injustice" translatable="false">Injustice Gods Among Us</string>
+    <string name="torneos_pokemon" translatable="false">Pokemon</string>
+
 
     <!--string de api facebook -->
     <string name="facebook_app_id" translatable="false">1440183462973613</string>
