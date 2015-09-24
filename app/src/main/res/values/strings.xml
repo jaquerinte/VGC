@@ -78,6 +78,7 @@
     <string name="concursos_cosplay">Cosplay</string>
     <string name="concursos_adivina_cancion">Adivina la cancion</string>
     <string name="lan_party_lol5vs5" translatable="false">LoL 5vs5</string>
+    <string name="lan_party_lol5vs5_forURL" translatable="false">League of Legends 5vs5</string>
     <string name="lan_party_minecraft" translatable="false">Minecraft</string>
     <string name="torneos_USFIV" translatable="false">Ultra Street Fighter IV</string>
     <string name="torneos_SFII" translatable="false">Street Fighter II Champion Edition</string>

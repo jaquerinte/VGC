@@ -118,7 +118,7 @@ public class actividades_screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(actividades_screen.this, webActividades_screen.class);
-                i.putExtra("url", parseURL(getString(R.string.lan_party_lol5vs5)));
+                i.putExtra("url", parseURL(getString(R.string.lan_party_lol5vs5_forURL))); //http://www.vgcomic.com/league-of-legends-5vs5/
                 i.putExtra("title", getString(R.string.lan_party_lol5vs5));
                 startActivity(i);
             }
